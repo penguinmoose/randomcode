@@ -92,8 +92,9 @@
           }
         }
         var url = "https://visca.com/regexdict/?str=^" + query + "$&search=Search";
-        changeUrl(url);
-        alert(url);
+        console.log(url);
+        changeUrl("loading.html");
+        setTimeout(function(){changeUrl(url);}, 500);
       } else {
          alert("please type something in the input field.");
       }
@@ -105,7 +106,9 @@
       var req = (document.getElementById("req").value);
       if (req !== null) {
         var url = "https://sentence.yourdictionary.com/" + req;
-        alert(url);
+        console.log(url);
+        changeUrl("loading.html");
+        setTimeout(function(){changeUrl(url);}, 500);
         changeUrl(url);
       } else {
          alert("please type something in the input field.");
