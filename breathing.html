@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .heading {
+      font-size: 20pt;
+      font-family: sans-serif;
+      text-align: center;
+      border-width: thick;
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #a7a7a7;
+    }
+
+    #left {
+      top: 50%;
+      left: 625px;
+      background-color: #27fa5b;
+      animation: outer 6s infinite;
+    }
+
+    #right {
+      top: 50%;
+      left: calc(50% + 95px);
+      background-color: #27fa5b;
+      animation: outer 6s infinite;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: #66ff8c;
+      position: absolute;
+      animation: circle 6s infinite;
+    }
+
+    @keyframes circle {
+      0% {
+        background-color: #66ff8c;
+        width: 100px;
+        height: 100px;
+      }
+
+      50% {
+        background-color: #66cdff;
+        width: 300px;
+        height: 300px;
+      }
+
+      100% {
+        background-color: #66ff8c;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @keyframes outer {
+      0% {
+        background-color: #0af946;
+        width: 300px;
+        height: 300px;
+      }
+
+      50% {
+        background-color: #37c3ff;
+        width: 100px;
+        height: 100px;
+      }
+
+      100% {
+        background-color: #0af946;
+        width: 300px;
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heading">Breath with these circles as it gets small then becomes big.</div>
+
+  <div class="circle"></div>
+  <div class="circle" id="left"></div>
+  <div class="circle" id="right"></div>
+</body>
+
+</html>
