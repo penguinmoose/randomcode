@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS animated shape</title>
+
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shape {
+      width: 300px;
+      height: 300px;
+      background-color: #00cca0;
+      animation: changeshape 60s infinite;
+
+    }
+
+    @keyframes changeshape {
+      0% {
+        background-color: #00cca0;
+      }
+
+      10% {
+        border-radius: 50%;
+        background-color: #009bcc;
+      }
+
+      30% {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 15px 15px 0 0 #001bcc;
+      }
+
+      40% {
+        width: 0;
+        height: 0;
+        border-left: 80px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 200px solid #c800cc;
+        border-radius: 50%;
+      }
+
+      60% {
+        border-radius: 0px;
+        width: 100;
+        height: 150px;
+        border-left: 100% solid transparent;
+        border-right: 250px solid transparent;
+        border-bottom: 300px solid red;
+        background-color: #cc0000;
+      }
+
+      70% {
+        width: 150px;
+        height: 100px;
+        border-top: 300px solid #ccbe00;
+        border-right: 200px solid transparent;
+        border-bottom: 250px solid blue;
+      }
+
+      90% {
+        width: 350px;
+        height: 200px;
+        transform: skew(20deg);
+        background-color: #00cc27;
+      }
+
+      100% {
+        width: 300px;
+        height: 300px;
+        background-color: #00cca0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="shape"></div>
+  </div>
+</body>
+
+</html>
