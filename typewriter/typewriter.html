@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Typewriter</title>
+
+  <style>
+    textarea {
+      resize: none;
+      font-family: 'courier', monospace;
+      border: 6px solid #585858;
+      background-color: #cfcfcf;
+      font-size: 14pt;
+      padding: 10px;
+      width: calc(100% - 25px);
+    }
+
+    .keyboard {
+      background-color: #cfcfcf;
+      padding: 20px;
+    }
+
+    .key {
+      font-family: sans-serif;
+      width: 50px;
+      height: 50px;
+      font-size: 30pt;
+      background-color: #b8b8b8;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body onload="load();">
+  <h1 style="font-family: serif;">Typewriter</h1>
+  <textarea name="typewriter-text" id="textarea" rows="8" cols="100" onkeydown="process(event, this);" onkeyup="save();"></textarea>
+
+  <div class="keyboard">
+    <button onclick="addtext('`', 1)" class="key" id="key-192">`</button>
+    <button onclick="addtext('1', 1)" class="key" id="key-49">1</button>
+    <button onclick="addtext('2', 1)" class="key" id="key-50">2</button>
+    <button onclick="addtext('3', 1)" class="key" id="key-51">3</button>
+    <button onclick="addtext('4', 1)" class="key" id="key-52">4</button>
+    <button onclick="addtext('5', 1)" class="key" id="key-53">5</button>
+    <button onclick="addtext('6', 1)" class="key" id="key-54">6</button>
+    <button onclick="addtext('7', 1)" class="key" id="key-55">7</button>
+    <button onclick="addtext('8', 1)" class="key" id="key-56">8</button>
+    <button onclick="addtext('9', 1)" class="key" id="key-57">9</button>
+    <button onclick="addtext('0', 1)" class="key" id="key-48">0</button>
+    <button onclick="addtext('-', 1)" class="key" id="key-189">-</button>
+    <button onclick="addtext('=', 1)" class="key" id="key-187">=</button>
+    <button onclick="addtext('del', 1)" class="key" id="key-8" style="font-size: 16pt; width: 75px;">delete</button><br>
+    <button onclick="addtext('tab', 2)" class="key" id="key-9" style="font-size: 20pt; width: 75px;">tab</button>
+    <button onclick="addtext('q', 1)" class="key" id="key-81">Q</button>
+    <button onclick="addtext('w', 1)" class="key" id="key-87">W</button>
+    <button onclick="addtext('e', 1)" class="key" id="key-69">E</button>
+    <button onclick="addtext('r', 1)" class="key" id="key-82">R</button>
+    <button onclick="addtext('t', 1)" class="key" id="key-84">T</button>
+    <button onclick="addtext('y', 1)" class="key" id="key-89">Y</button>
+    <button onclick="addtext('u', 1)" class="key" id="key-85">U</button>
+    <button onclick="addtext('i', 1)" class="key" id="key-73">I</button>
+    <button onclick="addtext('o', 1)" class="key" id="key-79">O</button>
+    <button onclick="addtext('p', 1)" class="key" id="key-80">P</button>
+    <button onclick="addtext('[', 1)" class="key" id="key-219">[</button>
+    <button onclick="addtext(']', 1)" class="key" id="key-221">]</button>
+    <button onclick="addtext('\', 1)" class="key" id="key-220">\</button><br>
+    <button onclick="addtext('caps', 1)" class="key" id="key-20" style="font-size: 16pt; width: 90px;">caps</button>
+    <button onclick="addtext('a', 1)" class="key" id="key-65">A</button>
+    <button onclick="addtext('s', 1)" class="key" id="key-83">S</button>
+    <button onclick="addtext('d', 1)" class="key" id="key-68">D</button>
+    <button onclick="addtext('f', 1)" class="key" id="key-70">F</button>
+    <button onclick="addtext('g', 1)" class="key" id="key-71">G</button>
+    <button onclick="addtext('h', 1)" class="key" id="key-72">H</button>
+    <button onclick="addtext('j', 1)" class="key" id="key-74">J</button>
+    <button onclick="addtext('k', 1)" class="key" id="key-75">K</button>
+    <button onclick="addtext('l', 1)" class="key" id="key-76">L</button>
+    <button onclick="addtext(';', 1)" class="key" id="key-186">;</button>
+    <button onclick="addtext('squote', 1)" class="key" id="key-222">'</button>
+    <button onclick="addtext('\n', 2)" class="key" id="key-13" style="font-size: 16pt; width: 100px;">return</button><br>
+    <button onclick="addtext('shift', 2)" class="key" id="key-16" style="font-size: 16pt; width: 100px;">shift</button>
+  </div>
+
+  <script>
+    var keyboard = {
+      192: "~",
+      49: "!",
+      50: "@",
+      51: "#",
+      52: "$",
+      53: "%",
+      54: "^",
+      55: "&",
+      56: "*";
+      57: "(",
+      48: ")",
+      189: "_"
+    }
+
+    function load() {
+      document.getElementById("textarea").value = localStorage.getItem("text");
+    }
+
+    function save() {
+      localStorage.setItem("text", document.getElementById("textarea").value);
+      console.log("Saved!");
+    }
+
+    function process(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      document.getElementById("key-" + code).style.backgroundColor = "#9e9e9e";
+
+      if (code == 13 || code == 16 || code == 9 || code == 32 || code == 20) {
+        playSound2();
+      } else if (code == 37 || code == 38 || code == 39 || code == 40 || code == 91 || code == 93 || code == 18 || code == 17 || code == 18) { // ignored keys which are arrow keys and modifier keys
+        return;
+      } else {
+        playSound1();
+      }
+
+      setTimeout(() => {
+        document.getElementById("key-" + code).style.backgroundColor = "#b8b8b8";
+      }, 300);
+    }
+
+    function playSound1() {
+      var audio = new Audio("typewriter-1.wav");
+      audio.play();
+    }
+
+    function playSound2() {
+      var audio = new Audio("typewriter-2.wav");
+      audio.play();
+    }
+
+    function addtext(text, sound) {
+      if (text == "del") {
+        document.getElementById("textarea").value = document.getElementById("textarea").value.slice(0, -1);
+      } else if (text == "tab") {
+        addtext("  ");
+      } else if (text == "squote") { // for qutoes, it requires a third level quotation mark and that is a little hard.
+        addtext("'")
+      } else {
+        var oldText = document.getElementById("textarea").value;
+        document.getElementById("textarea").value = oldText + text;
+      }
+
+      if (sound == 1) {
+        playSound1();
+      } else {
+        playSound2();
+      }
+    }
+  </script>
+</body>
+
+</html>

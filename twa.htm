@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Time With Abba</title>
@@ -22,407 +23,474 @@
 	<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
 	<style>
-		div[data-role='page']
-		{
-			font-size:20px;
+		div[data-role='page'] {
+			font-size: 20px;
 		}
-		div#contentMain
-		{
-			text-align:center;
-			<!-- background:#add8e6; -->
+
+		div#contentMain {
+			text-align: center;
+			< !-- background: #add8e6;
+			-->
 		}
-		div#verses
-		{
-			display:inline-block;
-			text-align:left;
-			<!-- background:#98fb98; -->
+
+		div#verses {
+			display: inline-block;
+			text-align: left;
+			< !-- background: #98fb98;
+			-->
 		}
-		.ui-btn-text {font-size:20px}
-		.ui-header .ui-title
-		{
+
+		.ui-btn-text {
+			font-size: 20px
+		}
+
+		.ui-header .ui-title {
 			margin-right: 20%;
 			margin-left: 20%;
 		}
-		.contentHeader {color:#006699; font-weight:bold}
-	    .style1
-        {
-            width: 22%;
-        }
-        .style6
-        {
-            text-align: center;
-            width: 100%;
-        }
-        .style7
-        {
-            text-align: center;
-            height: 18px;
-            /*width: 82px;*/
-        }
-	    .style8
-        {
-            /*width: 229px;*/
-        }
-        .style9
-        {
-            /*width: 227px;*/
-        }
-	    </style>
+
+		.contentHeader {
+			color: #006699;
+			font-weight: bold
+		}
+
+		.style1 {
+			width: 22%;
+		}
+
+		.style6 {
+			text-align: center;
+			width: 100%;
+		}
+
+		.style7 {
+			text-align: center;
+			height: 18px;
+			/*width: 82px;*/
+		}
+
+		.style8 {
+			/*width: 229px;*/
+		}
+
+		.style9 {
+			/*width: 227px;*/
+		}
+	</style>
 </head>
+
 <body>
 
-<div data-role="page">
+	<div data-role="page">
 
-	<div data-role="header" data-position="fixed">
-		<h1>Time With Abba</h1>
-	</div><!-- /header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Time With Abba</h1>
+		</div><!-- /header -->
 
-	<div data-role="content" id="contentMain">
-		<br/>
-		<div id="date"></div>
-		<p class="style9"/>
-		<div id="verses"></div>
-		<hr />
-        <table cellpadding="0" cellspacing="0" class="style1" align="center" >
-			<tr>
-				<td>
-					<a class="style6" id="link" data-inline="true" data-role="button">Single Version</a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-                    <a class="style6" id="NKJV" data-inline="true" data-role="button">NKJV</a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-                    <a class="style6" id="NIV" data-inline="true" data-role="button">NIV</a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-                    <a class="style6" id="CUV" data-inline="true" data-role="button">和合本(繁)</a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-					<a class="style6" id="CUVS" data-inline="true" data-role="button">和合本(简)</a>
-				</td>
-			</tr>
-            <tr>
-				<td>
-					<a class="style6" id="NKJVCUV" data-inline="true" data-role="button">NKJV/和合本(繁)</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-                    <a class="style6" id="NKJVCUVS" data-inline="true" data-role="button">NKJV/和合本(简)</a>
-				</td>
-            </tr>
-            <tr>
-				<td>
-					<a class="style6" id="NIVCUV" data-inline="true" data-role="button">NIV/和合本(繁)</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a class="style6" id="NIVCUVS" data-inline="true" data-role="button">NIV/和合本(简)</a>
-				</td>
-            </tr>
-        </table>
-		<a id="urlSettings" href="http://www.biblegateway.com/preferences/" style="display:none"></a>
-	</div><!-- /content -->
+		<div data-role="content" id="contentMain">
+			<br />
+			<div id="date"></div>
+			<p class="style9" />
+			<div id="verses"></div>
+			<hr />
+			<table cellpadding="0" cellspacing="0" class="style1" align="center">
+				<tr>
+					<td>
+						<a class="style6" id="link" data-inline="true" data-role="button">Single Version</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NKJV" data-inline="true" data-role="button">NKJV</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NIV" data-inline="true" data-role="button">NIV</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="CUV" data-inline="true" data-role="button">和合本(繁)</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="CUVS" data-inline="true" data-role="button">和合本(简)</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NKJVCUV" data-inline="true" data-role="button">NKJV/和合本(繁)</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NKJVCUVS" data-inline="true" data-role="button">NKJV/和合本(简)</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NIVCUV" data-inline="true" data-role="button">NIV/和合本(繁)</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class="style6" id="NIVCUVS" data-inline="true" data-role="button">NIV/和合本(简)</a>
+					</td>
+				</tr>
+			</table>
+			<a id="urlSettings" href="http://www.biblegateway.com/preferences/" style="display:none"></a>
+		</div><!-- /content -->
 
-	<div data-role="content" id="contentAbout" style="display:none">
-		<span class="contentHeader"><strong>How To Spend Time With Abba (TWA)?</strong></span>
-		<ol start=1 type=1>
-			<li>
-			<strong>READ &ndash; Scribing</strong> - Exercising and reclaiming the <u>gift of obedience</u> to the <strong>FATHER</strong> in order to receive His inheritance as His son/daughter:
-			<p/>
-			<ol start=1 type=A>
-				<li>Scribe down the entire <strong>Psalm</strong> verses.</li>
-				<li>Then read out loud verbally as they go through both <strong>OT</strong> and <strong>NT</strong> passages and jot down without contemplating on the words that jump out at you regarding:
-				<ol start=1 type=i>
-					<li>Nature, virtues and actions of God</li>
-					<li>Nature, condition, character and sins of men</li>
-					<li>Godly inheritance as promised by Abba to His children</li>
-				</ol>
+		<div data-role="content" id="contentAbout" style="display:none">
+			<span class="contentHeader"><strong>How To Spend Time With Abba (TWA)?</strong></span>
+			<ol start=1 type=1>
+				<li>
+					<strong>READ &ndash; Scribing</strong> - Exercising and reclaiming the <u>gift of obedience</u> to the <strong>FATHER</strong> in order to receive His inheritance as His son/daughter:
+					<p />
+					<ol start=1 type=A>
+						<li>Scribe down the entire <strong>Psalm</strong> verses.</li>
+						<li>Then read out loud verbally as they go through both <strong>OT</strong> and <strong>NT</strong> passages and jot down without contemplating on the words that jump out at you regarding:
+							<ol start=1 type=i>
+								<li>Nature, virtues and actions of God</li>
+								<li>Nature, condition, character and sins of men</li>
+								<li>Godly inheritance as promised by Abba to His children</li>
+							</ol>
+						</li>
+						<li>Then scribe the entire <strong>Proverb</strong> verses.</li>
+					</ol>
 				</li>
-				<li>Then scribe the entire <strong>Proverb</strong> verses.</li>
+				<p />
+				<li>
+					<strong>REFLECT &ndash; Color Coding</strong> - Exercising and reclaiming the <u>gift of freedom led by</u> the <strong>HOLY SPIRIT</strong> to identify what has been recorded:
+					<p />
+					<ol start=1 type=A>
+						<li>Nature, virtues and actions of God - <strong>BLUE</strong></li>
+						<li>Nature, condition, character and sins of men - <strong>RED</strong></li>
+						<li>Godly inheritance as promised by God to His children - <strong>GREEN</strong></li>
+					</ol>
+				</li>
+				<p />
+				<li>
+					<strong>RESPOND &ndash; Personal Intercession</strong> - Accessing the <u>Christ-like characters</u> by <u>praying</u> to the Father <u>through</u> the <strong>SON</strong> Jesus Christ based on what has been digested after color-coding:
+					<p />
+					<ol start=1 type=A>
+						<li><strong>Praise</strong> - Praising the nature, virtues and actions of God.</li>
+						<li><strong>Confess</strong> - Confessing and repenting from the nature, condition, character and sins of self and others, i.e. bloodline, cities and nations.</li>
+						<li><strong>Renounce</strong> - Cutting demonic ties and curses with the authority and power given to the child of God as a result of confession.</li>
+						<li><strong>Declare</strong> - Declaring over self and others the God-given rights and inheritance as promised by the Father.</li>
+					</ol>
+				</li>
+				<p />
+				<li>
+					<strong>REST &ndash; Listening Prayer</strong> - In silence wait to hear the <u>VOICE</u> OF <strong>GOD:</strong>
+					<p />
+					<ol start=1 type=A>
+						<li>As you wait, ask the Lord to fill you with His HOLY SPIRIT and give you eyes and ears of the Spirit.</li>
+						<li>As you wait, you may have impressions of words or pictures.</li>
+						<li>Jot down or draw the words or pictures as you hear and see in the Spirit.</li>
+					</ol>
+				</li>
 			</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>REFLECT &ndash; Color Coding</strong> - Exercising and reclaiming the <u>gift of freedom led by</u> the <strong>HOLY SPIRIT</strong> to identify what has been recorded:
-			<p/>
-			<ol start=1 type=A>
-				<li>Nature, virtues and actions of God - <strong>BLUE</strong></li>
-				<li>Nature, condition, character and sins of men - <strong>RED</strong></li>
-				<li>Godly inheritance as promised by God to His children - <strong>GREEN</strong></li>
-			</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>RESPOND &ndash; Personal Intercession</strong> - Accessing the <u>Christ-like characters</u> by <u>praying</u> to the Father <u>through</u> the <strong>SON</strong> Jesus Christ based on what has been digested after color-coding:
-			<p/>
-			<ol start=1 type=A>
-				<li><strong>Praise</strong> - Praising the nature, virtues and actions of God.</li>
-				<li><strong>Confess</strong> - Confessing and repenting from the nature, condition, character and sins of self and others, i.e. bloodline, cities and nations.</li>
-				<li><strong>Renounce</strong> - Cutting demonic ties and curses with the authority and power given to the child of God as a result of confession.</li>
-				<li><strong>Declare</strong> - Declaring over self and others the God-given rights and inheritance as promised by the Father.</li>
-			</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>REST &ndash; Listening Prayer</strong> - In silence wait to hear the <u>VOICE</u> OF <strong>GOD:</strong>
-			<p/>
-			<ol start=1 type=A>
-				<li>As you wait, ask the Lord to fill you with His HOLY SPIRIT and give you eyes and ears of the Spirit.</li>
-				<li>As you wait, you may have impressions of words or pictures.</li>
-				<li>Jot down or draw the words or pictures as you hear and see in the Spirit.</li>
-			</ol>
-			</li>
-		</ol>
-	</div>
+		</div>
 
-	<div data-role="content" id="contentAboutZH" style="display:none">
-		<span class="contentHeader"><strong>如何親親爸父?</strong></span>
-		<ol start=1 type=1>
-			<li>
-				<strong>頌讀 (READ) &ndash; 錄寫</strong> - 操練並重領<u>服從</u><strong>爸父</strong>的恩賜，以致能承受作兒女的產業:
-				<p/>
-				<ol start=1 type=A>
-					<li>錄寫下整段<strong>詩篇</strong>；</li>
-					<li>朗誦<strong>新、舊約</strong>經文 ，不加思索地錄寫下一些觸動你而有關於以下的字句:
-						<ol type=i>
-							<li>神的屬性、美德及祂的作為</li>
-							<li>人的屬性、狀況、性格、 罪孽等</li>
-							<li>神給兒女們的應許/產業</li>
-						</ol>
-					</li>
-					<li>錄寫下整段<strong>箴言</strong></li>
-				</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>反思 (REFLECT) &ndash; 以顏色分類</strong> - 在這過程中，操練和開啟在靈裏的自由去反思你所記錄的字句︰
-			<p/>
-			<ol type=A>
-				<li>神的屬性、美德及祂的作為 - <strong>藍色</strong></li>
-				<li>人的屬性、狀況、性格、 罪孽等 - <strong>紅色</strong></li>
-				<li>神給兒女們的應許/產業 - <strong>綠色</strong></li>
+		<div data-role="content" id="contentAboutZH" style="display:none">
+			<span class="contentHeader"><strong>如何親親爸父?</strong></span>
+			<ol start=1 type=1>
+				<li>
+					<strong>頌讀 (READ) &ndash; 錄寫</strong> - 操練並重領<u>服從</u><strong>爸父</strong>的恩賜，以致能承受作兒女的產業:
+					<p />
+					<ol start=1 type=A>
+						<li>錄寫下整段<strong>詩篇</strong>；</li>
+						<li>朗誦<strong>新、舊約</strong>經文 ，不加思索地錄寫下一些觸動你而有關於以下的字句:
+							<ol type=i>
+								<li>神的屬性、美德及祂的作為</li>
+								<li>人的屬性、狀況、性格、 罪孽等</li>
+								<li>神給兒女們的應許/產業</li>
+							</ol>
+						</li>
+						<li>錄寫下整段<strong>箴言</strong></li>
+					</ol>
+				</li>
+				<p />
+				<li>
+					<strong>反思 (REFLECT) &ndash; 以顏色分類</strong> - 在這過程中，操練和開啟在靈裏的自由去反思你所記錄的字句︰
+					<p />
+					<ol type=A>
+						<li>神的屬性、美德及祂的作為 - <strong>藍色</strong></li>
+						<li>人的屬性、狀況、性格、 罪孽等 - <strong>紅色</strong></li>
+						<li>神給兒女們的應許/產業 - <strong>綠色</strong></li>
+					</ol>
+				</li>
+				<p />
+				<li>
+					<strong>回應 (RESPOND) &ndash; 個人<u>禱告 </u></strong> - 從第二步驟以顏色刻劃出來所領受的， <u>藉著神兒子</u>耶穌基督向爸父禱告以換取基督的性情:
+					<p />
+					<ol type=A>
+						<li><strong>讚美</strong> - 讚美並宣告神的屬性、美德及祂的作為；</li>
+						<li><strong>認罪</strong> - 為個人、家族、城市及國家的屬性、狀況、性情、罪孽等認罪悔改；</li>
+						<li><strong>棄絕</strong> - 憑著認罪而得的權柄和能力，來砍斷從撒但而來的捆鎖及詛咒；</li>
+						<li><strong>宣告</strong> - 領取爸父所應許的名分及產業。</li>
+					</ol>
+				</li>
+				<p />
+				<li>
+					<strong>安歇 (REST) &ndash; 聆聽禱告 </strong> - 安靜等候、聆聽爸父的<u>聲音</u>
+					<p />
+					<ol type=A>
+						<li>在等待中，求聖靈充滿、打開你的眼睛及耳朵；</li>
+						<li>在等待中，你或許會領受一些圖像或字句；</li>
+						<li>寫下在靈裡所聽到、見到的圖片、字眼，亦可以將圖畫劃出來。</li>
+					</ol>
+				</li>
 			</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>回應 (RESPOND) &ndash; 個人<u>禱告 </u></strong> - 從第二步驟以顏色刻劃出來所領受的， <u>藉著神兒子</u>耶穌基督向爸父禱告以換取基督的性情:
-			<p/>
-			<ol type=A>
-				<li><strong>讚美</strong> - 讚美並宣告神的屬性、美德及祂的作為；</li>
-				<li><strong>認罪</strong> - 為個人、家族、城市及國家的屬性、狀況、性情、罪孽等認罪悔改；</li>
-				<li><strong>棄絕</strong> - 憑著認罪而得的權柄和能力，來砍斷從撒但而來的捆鎖及詛咒；</li>
-				<li><strong>宣告</strong> - 領取爸父所應許的名分及產業。</li>
-			</ol>
-			</li>
-			<p/>
-			<li>
-			<strong>安歇 (REST) &ndash; 聆聽禱告 </strong> - 安靜等候、聆聽爸父的<u>聲音</u>
-			<p/>
-			<ol type=A>
-				<li>在等待中，求聖靈充滿、打開你的眼睛及耳朵；</li>
-				<li>在等待中，你或許會領受一些圖像或字句；</li>
-				<li>寫下在靈裡所聽到、見到的圖片、字眼，亦可以將圖畫劃出來。</li>
-			</ol>
-			</li>
-		</ol>
-	</div>
+		</div>
 
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><input type="button" id="btnAbout" data-corners="false" value="About"></li>
-				<li><input type="button" id="btnAboutZH" data-corners="false" value="簡介"></li>
-				<li><input type="button" id="btnSettings" data-corners="false" value="Settings"></li>
-		</ul>
-			<ul>
-				<li><input type="button" id="btnPrev" data-icon="arrow-l" data-corners="false" value="Prev"></li>
-				<li><input type="button" id="btnToday" data-corners="false" value="Today"></li>
-				<li><input type="button" id="btnNext" data-icon="arrow-r" data-corners="false" data-iconpos="right" value="Next"></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><input type="button" id="btnAbout" data-corners="false" value="About"></li>
+					<li><input type="button" id="btnAboutZH" data-corners="false" value="簡介"></li>
+					<li><input type="button" id="btnSettings" data-corners="false" value="Settings"></li>
+				</ul>
+				<ul>
+					<li><input type="button" id="btnPrev" data-icon="arrow-l" data-corners="false" value="Prev"></li>
+					<li><input type="button" id="btnToday" data-corners="false" value="Today"></li>
+					<li><input type="button" id="btnNext" data-icon="arrow-r" data-corners="false" data-iconpos="right" value="Next"></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
 
-</div><!-- /page -->
+	</div><!-- /page -->
 
 </body>
 
 <script language="javascript">
+	$(document).ready(function() {
+		// configuration
+		var urlTemplate = 'http://www.biblegateway.com/passage/?search={verses}&interface=print';
+		var urlTemplateNKJV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv';
+		var urlTemplateNIV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv';
+		var urlTemplateCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=cuvs';
+		var urlTemplateCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=cuv';
+		var urlTemplateNKJVCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv;cuv';
+		var urlTemplateNKJVCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv;cuvs';
+		var urlTemplateNIVCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv;cuv';
+		var urlTemplateNIVCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv;cuvs';
+		var urlPreferences = 'http://www.biblegateway.com/preferences/';
 
-$(document).ready(function()
-{
-	// configuration
-    var urlTemplate = 'http://www.biblegateway.com/passage/?search={verses}&interface=print';
-    var urlTemplateNKJV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv';
-    var urlTemplateNIV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv';
-    var urlTemplateCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=cuvs';
-    var urlTemplateCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=cuv';
-    var urlTemplateNKJVCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv;cuv';
-    var urlTemplateNKJVCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=nkjv;cuvs';
-	var urlTemplateNIVCUV = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv;cuv';
-    var urlTemplateNIVCUVS = 'http://www.biblegateway.com/passage/?search={verses}&interface=print&version=niv;cuvs';
-    var urlPreferences = 'http://www.biblegateway.com/preferences/';
+		// css style
+		$('.ui-title').css('font-size', '20px');
 
-	// css style
-	$('.ui-title').css('font-size', '20px');
+		// load data into object
+		var obj = $.parseJSON(getJsonData());
+		var c_obj = $.parseJSON(c_getJsonData());
 
-	// load data into object
-	var obj = $.parseJSON(getJsonData());
-	var c_obj = $.parseJSON(c_getJsonData());
+		// debug
+		// if ?debug=true then show backgrounds
 
-	// debug
-	// if ?debug=true then show backgrounds
-
-	// select date
-	var selectedDate = new Date(); // get today's date
-	displayVerses(selectedDate);
-
-	//////////////////////////////////////////////////////////
-	// events
-	//////////////////////////////////////////////////////////
-
-	$('#btnPrev').click( function() { clickPrev(); });
-
-	$('#btnToday').click( function() {
-		showContent('#contentMain');
-		selectedDate = new Date(); // get today's date
+		// select date
+		var selectedDate = new Date(); // get today's date
 		displayVerses(selectedDate);
-	});
 
-	$('#btnNext').click( function() { clickNext(); });
+		//////////////////////////////////////////////////////////
+		// events
+		//////////////////////////////////////////////////////////
 
-	$('#btnSettings').click( function() {
-		//window.location = urlPreferences; // opens in ios web app container
-		document.getElementById("urlSettings").click(); // force to open in safari instead of ios web app container
-		//$.mobile.changePage(urlPreferences, {transition: "fade"} );
-	});
+		$('#btnPrev').click(function() {
+			clickPrev();
+		});
 
-	$('#btnAbout').click( function() {
-		showContent('#contentAbout');
-		//$.mobile.changePage(urlPreferences, {transition: "fade"} );
-	});
+		$('#btnToday').click(function() {
+			showContent('#contentMain');
+			selectedDate = new Date(); // get today's date
+			displayVerses(selectedDate);
+		});
 
-	$('#btnAboutZH').click( function() {
-		showContent('#contentAboutZH');
-		//$.mobile.changePage(urlPreferences, {transition: "fade"} );
-	});
+		$('#btnNext').click(function() {
+			clickNext();
+		});
 
-	//$("div[data-role='page']").on( 'swiperight', clickPrev );
-	//$("div[data-role='page']").on( 'swipeleft', clickNext );
+		$('#btnSettings').click(function() {
+			//window.location = urlPreferences; // opens in ios web app container
+			document.getElementById("urlSettings").click(); // force to open in safari instead of ios web app container
+			//$.mobile.changePage(urlPreferences, {transition: "fade"} );
+		});
 
-	//////////////////////////////////////////////////////////
-	// functions
-	//////////////////////////////////////////////////////////
+		$('#btnAbout').click(function() {
+			showContent('#contentAbout');
+			//$.mobile.changePage(urlPreferences, {transition: "fade"} );
+		});
 
-	function clickPrev()
-	{
-		showContent('#contentMain');
-		selectedDate.setDate(selectedDate.getDate() - 1); // subtract 1 day
-		displayVerses(selectedDate);
-	}
+		$('#btnAboutZH').click(function() {
+			showContent('#contentAboutZH');
+			//$.mobile.changePage(urlPreferences, {transition: "fade"} );
+		});
 
-	function clickNext()
-	{
-		showContent('#contentMain');
-		selectedDate.setDate(selectedDate.getDate() + 1); // add 1 day
-		displayVerses(selectedDate);
-	}
+		//$("div[data-role='page']").on( 'swiperight', clickPrev );
+		//$("div[data-role='page']").on( 'swipeleft', clickNext );
 
-	function showContent(div)
-	{
-		$("div[data-role='content']").hide();
-		$(div).show();
-	}
+		//////////////////////////////////////////////////////////
+		// functions
+		//////////////////////////////////////////////////////////
 
-	// convert date to "mmdd" format
-	function convertmmdd(date)
-	{
-		var mm = ('0'+(date.getMonth()+1)).substr(-2, 2); // zero padded month
-		var dd = ('0'+date.getDate()).substr(-2, 2); // zero padded day
-		return mm + dd;
-	}
-
-	function displayVerses(date)
-	{
-		var mmdd = convertmmdd(date); // convert date to "mmdd" format
-		var verses = obj[mmdd]; // get verses for mmdd
-		var c_verses = c_obj[mmdd]; // get verses for mmdd
-
-		// display data
-		$('#date').html(date.toLocaleDateString()); // date
-		$('#verses').html(get_verse_snippet(verses) + "<br><br>" + c_verses.replace(/;/g, "<br>")); // replace semicolons with <br>
-		$('#link').prop('href', urlTemplate.replace('{verses}', verses));
-
-		$('#NKJV').prop('href', urlTemplateNKJV.replace('{verses}', verses));
-		$('#NIV').prop('href', urlTemplateNIV.replace('{verses}', verses));
-		$('#CUV').prop('href', urlTemplateCUV.replace('{verses}', verses));
-		$('#CUVS').prop('href', urlTemplateCUVS.replace('{verses}', verses));
-		$('#NKJVCUV').prop('href', urlTemplateNKJVCUV.replace('{verses}', verses));
-		$('#NKJVCUVS').prop('href', urlTemplateNKJVCUVS.replace('{verses}', verses));
-		$('#NIVCUV').prop('href', urlTemplateNIVCUV.replace('{verses}', verses));
-		$('#NIVCUVS').prop('href', urlTemplateNIVCUVS.replace('{verses}', verses));
-	}
-
-	// center an object vertically and horizontally
-	jQuery.fn.center = function()
-	{
-		this.css("position", "absolute");
-		this.css("top", ($(window).height() - this.height())/2 + $(window).scrollTop() + "px");
-		this.css("left", ($(window).width() - this.width())/2 + $(window).scrollLeft() + "px");
-		return this;
-	};
-
-	// returns json data
-	function getJsonData()
-	{
-		return '{"0101":"Psalm 1:1-6;Genesis 1:1-2:25;Matthew 1:1-2:12;Proverbs 1:1-6","0102":"Psalm 2:1-6;Genesis 3:1-4:26;Matthew 2:13-3:6;Proverbs 1:7-9","0103":"Psalm 2:7-12;Genesis 5:1-7:24;Matthew 3:7-4:11;Proverbs 1:10-19","0104":"Psalm 3:1-8;Genesis 8:1-10:32;Matthew 4:12-25;Proverbs 1:20-23","0105":"Psalm 4:1-8;Genesis 11:1-13:5;Matthew 5:1-26;Proverbs 1:24-28","0106":"Psalm 5:1-3;Genesis 13:6-15:21;Matthew 5:27-48;Proverbs 1:29-33","0107":"Psalm 5:4-12;Genesis 16:1-18:19;Matthew 6:1-24;Proverbs 2:1-5","0108":"Psalm 6:1-3;Genesis 18:20-19:38;Matthew 6:25-7:14;Proverbs 2:6-15","0109":"Psalm 6:4-10;Genesis 20:1-22:24;Matthew 7:15-29;Proverbs 2:16-22","0110":"Psalm 7:1-9;Genesis 23:1-24:51;Matthew 8:1-17;Proverbs 3:1-6","0111":"Psalm 7:10-17;Genesis 24:52-26:16;Matthew 8:18-34;Proverbs 3:7-8","0112":"Psalm 8:1-9;Genesis 26:17-27:46;Matthew 9:1-17;Proverbs 3:9-10","0113":"Psalm 9:1-6;Genesis 28:1-29:35;Matthew 9:18-38;Proverbs 3:11-12","0114":"Psalm 9:7-12;Genesis 30:1-31:16;Matthew 10:1-25;Proverbs 3:13-15","0115":"Psalm 9:13-20;Genesis 31:17-32:12;Matthew 10:26-11:6;Proverbs 3:16-18","0116":"Psalm 10:1-10;Genesis 32:13-34:31;Matthew 11:7-30;Proverbs 3:19-20","0117":"Psalm 10:11-15;Genesis 35:1-36:43;Matthew 12:1-21;Proverbs 3:21-26","0118":"Psalm 10:16-18;Genesis 37:1-38:30;Matthew 12:22-45;Proverbs 3:27-32","0119":"Psalm 11:1-7;Genesis 39:1-41:16;Matthew 12:46-13:23;Proverbs 3:33-35","0120":"Psalm 12:1-8;Genesis 41:17-42:17;Matthew 13:24-46;Proverbs 4:1-6","0121":"Psalm 13:1-6;Genesis 42:18-43:34;Matthew 13:47-14:12;Proverbs 4:7-10","0122":"Psalm 14:1-7;Genesis 44:1-45:28;Matthew 14:13-36;Proverbs 4:11-13","0123":"Psalm 15:1-5;Genesis 46:1-47:31;Matthew 15:1-28;Proverbs 4:14-19","0124":"Psalm 16:1-6;Genesis 48:1-49:33;Matthew 15:29-16:12;Proverbs 4:20-27","0125":"Psalm 16:7-11;Genesis 50:1-26;Exodus 1:1-2:10;Matthew 16:13-17:9;Proverbs 5:1-6","0126":"Psalm 17:1-5;Exodus 2:11-3:22;Matthew 17:10-27;Proverbs 5:7-14","0127":"Psalm 17:6-9;Exodus 4:1-5:21;Matthew 18:1-22;Proverbs 5:15-21","0128":"Psalm 17:10-15;Exodus 5:22-7:24;Matthew 18:23-19:12;Proverbs 5:22-23","0129":"Psalm 18:1-6;Exodus 7:25-9:35;Matthew 19:13-30;Proverbs 6:1-5","0130":"Psalm 18:7-15;Exodus 10:1-12:13;Matthew 20:1-28;Proverbs 6:6-11","0131":"Psalm 18:16-24;Exodus 12:14-13:16;Matthew 20:29-21:22;Proverbs 6:12-15","0201":"Psalm 18:25-36;Exodus 13:17-15:18;Matthew 21:23-46;Proverbs 6:16-19","0202":"Psalm 18:37-50;Exodus 15:19-17:7;Matthew 22:1-33;Proverbs 6:20-26","0203":"Psalm 19:1-6;Exodus 17:8-19:15;Matthew 22:34-23:12;Proverbs 6:27-35","0204":"Psalm 19:7-14;Exodus 19:16-21:21;Matthew 23:13-39;Proverbs 7:1-5","0205":"Psalm 20:1-9;Exodus 21:22-23:13;Matthew 24:1-28;Proverbs 7:6-23","0206":"Psalm 21:1-7;Exodus 23:14-25:40;Matthew 24:29-51;Proverbs 7:24-27","0207":"Psalm 21:8-13;Exodus 26:1-27:21;Matthew 25:1-30;Proverbs 8:1-11","0208":"Psalm 22:1-18;Exodus 28:1-43;Matthew 25:31-26:13;Proverbs 8:12-13","0209":"Psalm 22:19-31;Exodus 29:1-30:10;Matthew 26:14-46;Proverbs 8:14-26","0210":"Psalm 23:1-6;Exodus 30:11-31:18;Matthew 26:47-68;Proverbs 8:27-32","0211":"Psalm 24:1-6;Exodus 32:1-33:23;Matthew 26:69-27:14;Proverbs 8:33-36","0212":"Psalm 24:7-10;Exodus 34:1-35:9;Matthew 27:15-31;Proverbs 9:1-6","0213":"Psalm 25:1-7;Exodus 35:10-36:38;Matthew 27:32-66;Proverbs 9:7-8","0214":"Psalm 25:8-15;Exodus 37:1-38:31;Matthew 28:1-20;Proverbs 9:9-10","0215":"Psalm 25:16-22;Exodus 39:1-40:38;Mark 1:1-28;Proverbs 9:11-12","0216":"Psalm 26:1-12;Leviticus 1:1-3:17;Mark 1:29-2:12;Proverbs 9:13-18","0217":"Psalm 27:1-6;Leviticus 4:1-5:19;Mark 2:13-3:6;Proverbs 10:1-2","0218":"Psalm 27:7-14;Leviticus 6:1-7:27;Mark 3:7-30;Proverbs 10:3-4","0219":"Psalm 28:1-9;Leviticus 7:28-9:6;Mark 3:31-4:25;Proverbs 10:5","0220":"Psalm 29:1-11;Leviticus 9:7-10:20;Mark 4:26-5:20;Proverbs 10:6-7","0221":"Psalm 30:1-5;Leviticus 11:1-12:8;Mark 5:21-43;Proverbs 10:8-9","0222":"Psalm 30:6-12;Leviticus 13:1-59;Mark 6:1-29;Proverbs 10:10","0223":"Psalm 31:1-8;Leviticus 14:1-57;Mark 6:30-56;Proverbs 10:11-12","0224":"Psalm 31:9-18;Leviticus 15:1-16:28;Mark 7:1-23;Proverbs 10:13-14","0225":"Psalm 31:19-24;Leviticus 16:29-18:30;Mark 7:24-8:10;Proverbs 10:15-16","0226":"Psalm 32:1-5;Leviticus 19:1-20:21;Mark 8:11-38;Proverbs 10:17","0227":"Psalm 32:6-11;Leviticus 20:22-22:16;Mark 9:1-29;Proverbs 10:18","0228":"Psalm 33:1-11;Leviticus 22:17-23:44;Mark 9:30-10:12;Proverbs 10:19","0229":"Psalm 91:1-16;Genesis 2:1-25;Revelation 21:1-21;Proverbs 6:16-19","0301":"Psalm 33:12-22;Leviticus 24:1-25:46;Mark 10:13-31;Proverbs 10:20-21","0302":"Psalm 34:1-10;Leviticus 25:47-27:13;Mark 10:32-52;Proverbs 10:22","0303":"Psalm 34:11-22;Leviticus 27:14-27:34;Numbers 1:1-1:54;Mark 11:1-26;Proverbs 10:23","0304":"Psalm 35:1-10;Numbers 2:1-3:51;Mark 11:27-12:17;Proverbs 10:24-25","0305":"Psalm 35:11-18;Numbers 4:1-5:31;Mark 12:18-37;Proverbs 10:26","0306":"Psalm 35:19-28;Numbers 6:1-7:89;Mark 12:38-13:13;Proverbs 10:27-28","0307":"Psalm 36:1-12;Numbers 8:1-9:23;Mark 13:14-37;Proverbs 10:29-30","0308":"Psalm 37:1-11;Numbers 10:1-11:23;Mark 14:1-21;Proverbs 10:31-32","0309":"Psalm 37:12-20;Numbers 11:24-13:33;Mark 14:22-52;Proverbs 11:1-3","0310":"Psalm 37:21-29;Numbers 14:1-15:16;Mark 14:53-72;Proverbs 11:4","0311":"Psalm 37:30-40;Numbers 15:17-16:40;Mark 15:1-47;Proverbs 11:5-6","0312":"Psalm 38:1-12;Numbers 16:41-18:32;Mark 16:1-20;Proverbs 11:7","0313":"Psalm 38:13-22;Numbers 19:1-20:29;Luke 1:1-25;Proverbs 11:8","0314":"Psalm 39:1-6;Numbers 21:1-22:20;Luke 1:26-56;Proverbs 11:9-11","0315":"Psalm 39:7-13;Numbers 22:21-23:30;Luke 1:57-80;Proverbs 11:12-13","0316":"Psalm 40:1-5;Numbers 24:1-25:18;Luke 2:1-35;Proverbs 11:14","0317":"Psalm 40:6-10;Numbers 26:1-51;Luke 2:36-52;Proverbs 11:15","0318":"Psalm 40:11-17;Numbers 26:52-28:15;Luke 3:1-22;Proverbs 11:16-17","0319":"Psalm 41:1-3;Numbers 28:16-29:40;Luke 3:23-38;Proverbs 11:18-19","0320":"Psalm 41:4-9;Numbers 30:1-31:54;Luke 4:1-30;Proverbs 11:20-21","0321":"Psalm 41:10-13;Numbers 32:1-33:39;Luke 4:31-5:11;Proverbs 11:22","0322":"Psalm 42:1-5;Numbers 33:40-35:34;Luke 5:12-28;Proverbs 11:23","0323":"Psalm 42:6-11;Numbers 36:1-36:13;Deuteronomy 1:1-1:46;Luke 5:29-6:11;Proverbs 11:24-26","0324":"Psalm 43:1-5;Deuteronomy 2:1-3:29;Luke 6:12-38;Proverbs 11:27","0325":"Psalm 44:1-3;Deuteronomy 4:1-49;Luke 6:39-7:10;Proverbs 11:28","0326":"Psalm 44:4-8;Deuteronomy 5:1-6:25;Luke 7:11-35;Proverbs 11:29-31","0327":"Psalm 44:9-16;Deuteronomy 7:1-8:20;Luke 7:36-8:3;Proverbs 12:1","0328":"Psalm 44:17-26;Deuteronomy 9:1-10:22;Luke 8:4-21;Proverbs 12:2-3","0329":"Psalm 45:1-9;Deuteronomy 11:1-12:32;Luke 8:22-39;Proverbs 12:4","0330":"Psalm 45:10-17;Deuteronomy 13:1-15:23;Luke 8:40-9:6;Proverbs 12:5-7","0331":"Psalm 46:1-7;Deuteronomy 16:1-17:20;Luke 9:7-27;Proverbs 12:8-9","0401":"Psalm 46:8-11;Deuteronomy 18:1-20:20;Luke 9:28-50;Proverbs 12:10","0402":"Psalm 47:1-4;Deuteronomy 21:1-22:30;Luke 9:51-10:12;Proverbs 12:11","0403":"Psalm 47:5-9;Deuteronomy 23:1-25:19;Luke 10:13-37;Proverbs 12:12-14","0404":"Psalm 48:1-8;Deuteronomy 26:1-27:26;Luke 10:38-11:13;Proverbs 12:15-17","0405":"Psalm 48:9-14;Deuteronomy 28:1-68;Luke 11:14-36;Proverbs 12:18","0406":"Psalm 49:1-13;Deuteronomy 29:1-30:20;Luke 11:37-12:7;Proverbs 12:19-20","0407":"Psalm 49:14-20;Deuteronomy 31:1-32:27;Luke 12:8-34;Proverbs 12:21-23","0408":"Psalm 50:1-6;Deuteronomy 32:28-52;Luke 12:35-59;Proverbs 12:24","0409":"Psalm 50:7-23;Deuteronomy 33:1-29;Luke 13:1-21;Proverbs 12:25","0410":"Psalm 51:1-12;Deuteronomy 34:1-34:12;Joshua 1:1-2:24;Luke 13:22-14:6;Proverbs 12:26","0411":"Psalm 51:13-19;Joshua 3:1-4:24;Luke 14:7-35;Proverbs 12:27-28","0412":"Psalm 52:1-9;Joshua 5:1-7:15;Luke 15:1-32;Proverbs 13:1","0413":"Psalm 53:1-6;Joshua 7:16-9:2;Luke 16:1-18;Proverbs 13:2-3","0414":"Psalm 54:1-7;Joshua 9:3-10:43;Luke 16:19-17:10;Proverbs 13:4","0415":"Psalm 55:1-8;Joshua 11:1-12:24;Luke 17:11-37;Proverbs 13:5-6","0416":"Psalm 55:9-15;Joshua 13:1-14:15;Luke 18:1-17;Proverbs 13:7-8","0417":"Psalm 55:16-23;Joshua 15:1-63;Luke 18:18-43;Proverbs 13:9-10","0418":"Psalm 56:1-8;Joshua 16:1-18:28;Luke 19:1-27;Proverbs 13:11","0419":"Psalm 56:9-13;Joshua 19:1-20:9;Luke 19:28-48;Proverbs 13:12-14","0420":"Psalm 57:1-6;Joshua 21:1-22:20;Luke 20:1-26;Proverbs 13:15-16","0421":"Psalm 57:7-11;Joshua 22:21-23:16;Luke 20:27-47;Proverbs 13:17-19","0422":"Psalm 58:1-11;Joshua 24:1-33;Luke 21:1-28;Proverbs 13:20-23","0423":"Psalm 59:1-5;Judges 1:1-2:9;Luke 21:29-22:13;Proverbs 13:24-25","0424":"Psalm 59:6-13;Judges 2:10-3:31;Luke 22:14-34;Proverbs 14:1-2","0425":"Psalm 59:14-17;Judges 4:1-5:31;Luke 22:35-53;Proverbs 14:3-4","0426":"Psalm 60:1-4;Judges 6:1-6:40;Luke 22:54-23:12;Proverbs 14:5-6","0427":"Psalm 60:5-12;Judges 7:1-8:17;Luke 23:13-43;Proverbs 14:7-8","0428":"Psalm 61:1-4;Judges 8:18-9:21;Luke 23:44-24:12;Proverbs 14:9-10","0429":"Psalm 61:5-8;Judges 9:22-10:18;Luke 24:13-53;Proverbs 14:11-12","0430":"Psalm 62:1-12;Judges 11:1-12:15;John 1:1-28;Proverbs 14:13-14","0501":"Psalm 63:1-11;Judges 13:1-14:20;John 1:29-51;Proverbs 14:15-16","0502":"Psalm 64:1-10;Judges 15:1-16:31;John 2:1-25;Proverbs 14:17-19","0503":"Psalm 65:1-8;Judges 17:1-18:31;John 3:1-21;Proverbs 14:20-21","0504":"Psalm 65:9-13;Judges 19:1-20:48;John 3:22-4:3;Proverbs 14:22-24","0505":"Psalm 66:1-4;Judges 21:1-21:25;Ruth 1:1-1:22;John 4:4-42;Proverbs 14:25","0506":"Psalm 66:5-15;Ruth 2:1-4:22;John 4:43-54;Proverbs 14:26-27","0507":"Psalm 66:16-20;1Samuel 1:1-2:21;John 5:1-23;Proverbs 14:28-29","0508":"Psalm 67:1-7;1Samuel 2:22-4:22;John 5:24-47;Proverbs 14:30-31","0509":"Psalm 68:1-6;1Samuel 5:1-7:17;John 6:1-21;Proverbs 14:32-33","0510":"Psalm 68:7-18;1Samuel 8:1-9:27;John 6:22-42;Proverbs 14:34-35","0511":"Psalm 68:19-27;1Samuel 10:1-11:15;John 6:43-71;Proverbs 15:1-3","0512":"Psalm 68:28-35;1Samuel 12:1-13:22;John 7:1-29;Proverbs 15:4","0513":"Psalm 69:1-4;1Samuel 13:23-14:52;John 7:30-52;Proverbs 15:5-7","0514":"Psalm 69:5-12;1Samuel 15:1-16:23;John 8:1-20;Proverbs 15:8-10","0515":"Psalm 69:13-18;1Samuel 17:1-18:4;John 8:21-30;Proverbs 15:11","0516":"Psalm 69:19-28;1Samuel 18:5-19:24;John 8:31-59;Proverbs 15:12-14","0517":"Psalm 69:29-36;1Samuel 20:1-21:15;John 9:1-41;Proverbs 15:15-17","0518":"Psalm 70:1-5;1Samuel 22:1-23:29;John 10:1-21;Proverbs 15:18-19","0519":"Psalm 71:1-8;1Samuel 24:1-25:44;John 10:22-42;Proverbs 15:20-21","0520":"Psalm 71:9-14;1Samuel 26:1-28:25;John 11:1-53;Proverbs 15:22-23","0521":"Psalm 71:15-18;1Samuel 29:1-31:13;John 11:54-12:19;Proverbs 15:24-26","0522":"Psalm 71:19-24;2Samuel 1:1-2:11;John 12:20-50;Proverbs 15:27-28","0523":"Psalm 72:1-7;2Samuel 2:12-3:39;John 13:1-30;Proverbs 15:29-30","0524":"Psalm 72:8-14;2Samuel 4:1-6:23;John 13:31-14:14;Proverbs 15:31-32","0525":"Psalm 72:15-20;2Samuel 7:1-8:18;John 14:15-31;Proverbs 15:33","0526":"Psalm 120:1-7;2Samuel 9:1-11:27;John 15:1-27;Proverbs 16:1-3","0527":"Psalm 121:1-8;2Samuel 12:1-31;John 16:1-33;Proverbs 16:4-5","0528":"Psalm 122:1-5;2Samuel 13:1-39;John 17:1-26;Proverbs 16:6-7","0529":"Psalm 122:6-9;2Samuel 14:1-15:22;John 18:1-24;Proverbs 16:8-9","0530":"Psalm 123:1-4;2Samuel 15:23-16:23;John 18:25-19:22;Proverbs 16:10-11","0531":"Psalm 124:1-5;2Samuel 17:1-29;John 19:23-42;Proverbs 16:12-13","0601":"Psalm 124:6-8;2Samuel 18:1-19:10;John 20:1-31;Proverbs 16:14-15","0602":"Psalm 125:1-5;2Samuel 19:11-20:13;John 21:1-25;Proverbs 16:16-17","0603":"Psalm 126:1-3;2Samuel 20:14-22:20;Acts 1:1-26;Proverbs 16:18","0604":"Psalm 126:4-6;2Samuel 22:21-23:23;Acts 2:1-47;Proverbs 16:19-20","0605":"Psalm 127:1-2;2Samuel 23:24-24:25;Acts 3:1-26;Proverbs 16:21-23","0606":"Psalm 127:3-5;1Kings 1:1-53;Acts 4:1-37;Proverbs 16:24","0607":"Psalm 128:1-6;1Kings 2:1-3:3;Acts 5:1-42;Proverbs 16:25","0608":"Psalm 129:1-8;1Kings 3:4-4:34;Acts 6:1-15;Proverbs 16:26-27","0609":"Psalm 130:1-4;1Kings 5:1-6:38;Acts 7:1-29;Proverbs 16:28-30","0610":"Psalm 130:5-8;1Kings 7:1-51;Acts 7:30-50;Proverbs 16:31-33","0611":"Psalm 131:1-3;1Kings 8:1-66;Acts 7:51-8:13;Proverbs 17:1","0612":"Psalm 132:1-5;1Kings 9:1-10:29;Acts 8:14-40;Proverbs 17:2-3","0613":"Psalm 132:6-12;1Kings 11:1-12:19;Acts 9:1-25;Proverbs 17:4-5","0614":"Psalm 132:13-18;1Kings 12:20-13:34;Acts 9:26-43;Proverbs 17:6","0615":"Psalm 133:1-3;1Kings 14:1-15:24;Acts 10:1-23;Proverbs 17:7-8","0616":"Psalm 134:1-3;1Kings 15:25-17:24;Acts 10:23-48;Proverbs 17:9-11","0617":"Psalm 135:1-7;1Kings 18:1-46;Acts 11:1-30;Proverbs 17:12-13","0618":"Psalm 135:8-14;1Kings 19:1-21;Acts 12:1-23;Proverbs 17:14-15","0619":"Psalm 135:15-21;1Kings 20:1-21:29;Acts 12:24-13:15;Proverbs 17:16","0620":"Psalm 136:1-9;1Kings 22:1-53;Acts 13:16-41;Proverbs 17:17-18","0621":"Psalm 136:10-22;2Kings 1:1-2:25;Acts 13:42-14:7;Proverbs 17:19-21","0622":"Psalm 136:23-26;2Kings 3:1-4:17;Acts 14:8-28;Proverbs 17:22","0623":"Psalm 137:1-9;2Kings 4:18-5:27;Acts 15:1-35;Proverbs 17:23","0624":"Psalm 138:1-8;2Kings 6:1-7:20;Acts 15:36-16:15;Proverbs 17:24-25","0625":"Psalm 139:1-12;2Kings 8:1-9:13;Acts 16:16-40;Proverbs 17:26","0626":"Psalm 139:13-24;2Kings 9:14-10:31;Acts 17:1-34;Proverbs 17:27-28","0627":"Psalm 140:1-8;2Kings 10:32-12:21;Acts 18:1-22;Proverbs 18:1","0628":"Psalm 140:9-13;2Kings 13:1-14:29;Acts 18:23-19:12;Proverbs 18:2-3","0629":"Psalm 141:1-10;2Kings 15:1-16:20;Acts 19:13-41;Proverbs 18:4-5","0630":"Psalm 142:1-7;2Kings 17:1-18:12;Acts 20:1-38;Proverbs 18:6-7","0701":"Psalm 143:1-6;2Kings 18:13-19:37;Acts 21:1-16;Proverbs 18:8","0702":"Psalm 143:7-12;2Kings 20:1-22:2;Acts 21:17-36;Proverbs 18:9-10","0703":"Psalm 144:1-8;2Kings 22:3-23:30;Acts 21:37-22:16;Proverbs 18:11-12","0704":"Psalm 144:9-15;2Kings 23:31-25:30;Acts 22:17-23:10;Proverbs 18:13","0705":"Psalm 145:1-7;1Chronicles 1:1-2:17;Acts 23:11-35;Proverbs 18:14-15","0706":"Psalm 145:8-13;1Chronicles 2:18-4:4;Acts 24:1-27;Proverbs 18:16-18","0707":"Psalm 145:14-21;1Chronicles 4:5-5:17;Acts 25:1-27;Proverbs 18:19","0708":"Psalm 146:1-10;1Chronicles 5:18-6:81;Acts 26:1-32;Proverbs 18:20-21","0709":"Psalm 147:1-11;1Chronicles 7:1-8:40;Acts 27:1-20;Proverbs 18:22","0710":"Psalm 147:12-20;1Chronicles 9:1-10:14;Acts 27:21-44;Proverbs 18:23-24","0711":"Psalm 148:1-14;1Chronicles 11:1-12:18;Acts 28:1-31;Proverbs 19:1-3","0712":"Psalm 149:1-9;1Chronicles 12:19-14:17;Romans 1:1-17;Proverbs 19:4-5","0713":"Psalm 150:1-6;1Chronicles 15:1-16:36;Romans 1:18-32;Proverbs 19:6-7","0714":"Psalm 73:1-14;1Chronicles 16:37-18:17;Romans 2:1-24;Proverbs 19:8-9","0715":"Psalm 73:15-28;1Chronicles 19:1-21:30;Romans 2:25-3:8;Proverbs 19:10-12","0716":"Psalm 74:1-11;1Chronicles 22:1-23:32;Romans 3:9-31;Proverbs 19:13-14","0717":"Psalm 74:12-23;1Chronicles 24:1-26:11;Romans 4:1-12;Proverbs 19:15-16","0718":"Psalm 75:1-10;1Chronicles 26:12-27:34;Romans 4:13-5:5;Proverbs 19:17","0719":"Psalm 76:1-9;1Chronicles 28:1-29:30;Romans 5:6-21;Proverbs 19:18-19","0720":"Psalm 76:10-12;2Chronicles 1:1-3:17;Romans 6:1-23;Proverbs 19:20-21","0721":"Psalm 77:1-15;2Chronicles 4:1-6:11;Romans 7:1-13;Proverbs 19:22-23","0722":"Psalm 77:16-20;2Chronicles 6:12-7:10;Romans 7:14-8:8;Proverbs 19:24-25","0723":"Psalm 78:1-16;2Chronicles 7:11-10:19;Romans 8:9-21;Proverbs 19:26","0724":"Psalm 78:17-31;2Chronicles 11:1-13:22;Romans 8:22-39;Proverbs 19:27-29","0725":"Psalm 78:32-55;2Chronicles 14:1-16:14;Romans 9:1-21;Proverbs 20:1","0726":"Psalm 78:56-64;2Chronicles 17:1-18:34;Romans 9:22-10:13;Proverbs 20:2-3","0727":"Psalm 78:65-72;2Chronicles 19:1-20:37;Romans 10:14-11:12;Proverbs 20:4-6","0728":"Psalm 79:1-8;2Chronicles 21:1-23:21;Romans 11:13-36;Proverbs 20:7","0729":"Psalm 79:9-13;2Chronicles 24:1-25:28;Romans 12:1-21;Proverbs 20:8-10","0730":"Psalm 80:1-7;2Chronicles 26:1-28:27;Romans 13:1-14;Proverbs 20:11","0731":"Psalm 80:8-19;2Chronicles 29:1-36;Romans 14:1-23;Proverbs 20:12","0801":"Psalm 81:1-7;2Chronicles 30:1-31:21;Romans 15:1-22;Proverbs 20:13-15","0802":"Psalm 81:8-16;2Chronicles 32:1-33:13;Romans 15:23-16:7;Proverbs 20:16-18","0803":"Psalm 82:1-8;2Chronicles 33:14-34:33;Romans 16:8-27;Proverbs 20:19","0804":"Psalm 83:1-8;2Chronicles 35:1-36:23;1Corinthians 1:1-17;Proverbs 20:20-21","0805":"Psalm 83:9-18;Ezra 1:1-2:70;1Corinthians 1:18-2:5;Proverbs 20:22-23","0806":"Psalm 84:1-4;Ezra 3:1-4:24;1Corinthians 2:6-3:4;Proverbs 20:24-25","0807":"Psalm 84:5-8;Ezra 5:1-6:22;1Corinthians 3:5-23;Proverbs 20:26-27","0808":"Psalm 84:9-12;Ezra 7:1-8:20;1Corinthians 4:1-21;Proverbs 20:28-30","0809":"Psalm 85:1-7;Ezra 8:21-9:15;1Corinthians 5:1-13;Proverbs 21:1-2","0810":"Psalm 85:8-13;Ezra 10:1-44;1Corinthians 6:1-20;Proverbs 21:3","0811":"Psalm 86:1-7;Nehemiah 1:1-3:14;1Corinthians 7:1-24;Proverbs 21:4","0812":"Psalm 86:8-17;Nehemiah 3:15-5:13;1Corinthians 7:25-40;Proverbs 21:5-7","0813":"Psalm 87:1-7;Nehemiah 5:14-7:60;1Corinthians 8:1-13;Proverbs 21:8-10","0814":"Psalm 88:1-7;Nehemiah 7:61-9:21;1Corinthians 9:1-18;Proverbs 21:11-12","0815":"Psalm 88:8-18;Nehemiah 9:22-10:39;1Corinthians 9:19-10:13;Proverbs 21:13","0816":"Psalm 89:1-13;Nehemiah 11:1-12:26;1Corinthians 10:14-11:2;Proverbs 21:14-16","0817":"Psalm 89:14-37;Nehemiah 12:27-13:31;1Corinthians 11:3-16;Proverbs 21:17-18","0818":"Psalm 89:38-45;Esth 1:1-3:15;1Corinthians 11:17-34;Proverbs 21:19-20","0819":"Psalm 89:46-52;Esth 4:1-7:10;1Corinthians 12:1-26;Proverbs 21:21-22","0820":"Psalm 90:1-10;Esth 8:1-10:3;1Corinthians 12:27-13:13;Proverbs 21:23-24","0821":"Psalm 90:11-17;Job 1:1-3:26;1Corinthians 14:1-17;Proverbs 21:25-26","0822":"Psalm 91:1-8;Job 4:1-7:21;1Corinthians 14:18-40;Proverbs 21:27","0823":"Psalm 91:9-16;Job 8:1-11:20;1Corinthians 15:1-28;Proverbs 21:28-29","0824":"Psalm 92:1-8;Job 12:1-15:35;1Corinthians 15:29-58;Proverbs 21:30-31","0825":"Psalm 92:9-15;Job 16:1-19:29;1Corinthians 16:1-24;Proverbs 22:1","0826":"Psalm 93:1-5;Job 20:1-22:30;2Corinthians 1:1-11;Proverbs 22:2-4","0827":"Psalm 94:1-11;Job 23:1-27:23;2Corinthians 1:12-2:11;Proverbs 22:5-6","0828":"Psalm 94:12-23;Job 28:1-30:31;2Corinthians 2:12-17;Proverbs 22:7","0829":"Psalm 95:1-11;Job 31:1-33:33;2Corinthians 3:1-18;Proverbs 22:8-9","0830":"Psalm 96:1-6;Job 34:1-36:33;2Corinthians 4:1-12;Proverbs 22:10-12","0831":"Psalm 96:7-13;Job 37:1-39:30;2Corinthians 4:13-5:10;Proverbs 22:13","0901":"Psalm 97:1-6;Job 40:1-42:17;2Corinthians 5:11-21;Proverbs 22:14","0902":"Psalm 97:7-12;Ecclesiastes 1:1-3:22;2Corinthians 6:1-13;Proverbs 22:15","0903":"Psalm 98:1-9;Ecclesiastes 4:1-6:12;2Corinthians 6:14-7:7;Proverbs 22:16","0904":"Psalm 99:1-9;Ecclesiastes 7:1-9:18;2Corinthians 7:8-16;Proverbs 22:17-19","0905":"Psalm 100:1-5;Ecclesiastes 10:1-12:14;2Corinthians 8:1-15;Proverbs 22:20-21","0906":"Psalm 101:1-8;Song 1:1-4:16;2Corinthians 8:16-24;Proverbs 22:22-23","0907":"Psalm 102:1-11;Song 5:1-8:14;2Corinthians 9:1-15;Proverbs 22:24-25","0908":"Psalm 102:12-17;Isaiah 1:1-2:22;2Corinthians 10:1-18;Proverbs 22:26-27","0909":"Psalm 102:18-28;Isaiah 3:1-5:30;2Corinthians 11:1-15;Proverbs 22:28-29","0910":"Psalm 103:1-5;Isaiah 6:1-7:25;2Corinthians 11:16-33;Proverbs 23:1-3","0911":"Psalm 103:6-19;Isaiah 8:1-9:21;2Corinthians 12:1-10;Proverbs 23:4-5","0912":"Psalm 103:20-22;Isaiah 10:1-11:16;2Corinthians 12:11-21;Proverbs 23:6-8","0913":"Psalm 104:1-9;Isaiah 12:1-14:32;2Corinthians 13:1-14;Proverbs 23:9-11","0914":"Psalm 104:10-18;Isaiah 15:1-18:7;Galatians 1:1-24;Proverbs 23:12","0915":"Psalm 104:19-30;Isaiah 19:1-21:17;Galatians 2:1-16;Proverbs 23:13-14","0916":"Psalm 104:31-35;Isaiah 22:1-24:23;Galatians 2:17-3:9;Proverbs 23:15-16","0917":"Psalm 105:1-7;Isaiah 25:1-28:13;Galatians 3:10-22;Proverbs 23:17-18","0918":"Psalm 105:8-15;Isaiah 28:14-30:11;Galatians 3:23-4:31;Proverbs 23:19-21","0919":"Psalm 105:16-22;Isaiah 30:12-33:12;Galatians 5:1-12;Proverbs 23:22","0920":"Psalm 105:23-36;Isaiah 33:13-36:22;Galatians 5:13-26;Proverbs 23:23","0921":"Psalm 105:37-45;Isaiah 37:1-38:22;Galatians 6:1-18;Proverbs 23:24","0922":"Psalm 106:1-5;Isaiah 39:1-41:16;Ephesians 1:1-23;Proverbs 23:25-28","0923":"Psalm 106:6-12;Isaiah 41:17-43:13;Ephesians 2:1-22;Proverbs 23:29-35","0924":"Psalm 106:13-23;Isaiah 43:14-45:10;Ephesians 3:1-21;Proverbs 24:1-2","0925":"Psalm 106:24-31;Isaiah 45:11-48:11;Ephesians 4:1-16;Proverbs 24:3-4","0926":"Psalm 106:32-39;Isaiah 48:12-50:11;Ephesians 4:17-32;Proverbs 24:5-6","0927":"Psalm 106:40-48;Isaiah 51:1-53:12;Ephesians 5:1-33;Proverbs 24:7","0928":"Psalm 107:1-9;Isaiah 54:1-57:13;Ephesians 6:1-24;Proverbs 24:8","0929":"Psalm 107:10-16;Isaiah 57:14-59:21;Philippians 1:1-26;Proverbs 24:9-10","0930":"Psalm 107:17-22;Isaiah 60:1-62:5;Philippians 1:27-2:18;Proverbs 24:11-12","1001":"Psalm 107:23-32;Isaiah 62:6-65:25;Philippians 2:19-3:4;Proverbs 24:13-14","1002":"Psalm 107:33-43;Isaiah 66:1-24;Philippians 3:4-21;Proverbs 24:15-16","1003":"Psalm 108:1-5;Jeremiah 1:1-2:30;Philippians 4:1-23;Proverbs 24:17-20","1004":"Psalm 108:6-13;Jeremiah 2:31-4:18;Colossians 1:1-20;Proverbs 24:21-22","1005":"Psalm 109:1-15;Jeremiah 4:19-6:14;Colossians 1:21-2:7;Proverbs 24:23-25","1006":"Psalm 109:16-31;Jeremiah 6:15-8:7;Colossians 2:8-23;Proverbs 24:26","1007":"Psalm 110:1-7;Jeremiah 8:8-9:26;Colossians 3:1-17;Proverbs 24:27","1008":"Psalm 111:1-10;Jeremiah 10:1-11:23;Colossians 3:18-4:18;Proverbs 24:28-29","1009":"Psalm 112:1-10;Jeremiah 12:1-14:10;1Thessalonians 1:1-2:9;Proverbs 24:30-34","1010":"Psalm 113:1-9;Jeremiah 14:11-16:15;1Thessalonians 2:10-3:13;Proverbs 25:1-5","1011":"Psalm 114:1-8;Jeremiah 16:16-18:23;1Thessalonians 4:1-5:3;Proverbs 25:6-7","1012":"Psalm 115:1-8;Jeremiah 19:1-21:14;1Thessalonians 5:4-28;Proverbs 25:8-10","1013":"Psalm 115:9-13;Jeremiah 22:1-23:20;2Thessalonians 1:1-12;Proverbs 25:11-14","1014":"Psalm 115:14-18;Jeremiah 23:21-25:38;2Thessalonians 2:1-17;Proverbs 25:15","1015":"Psalm 116:1-6;Jeremiah 26:1-27:22;2Thessalonians 3:1-18;Proverbs 25:16","1016":"Psalm 116:7-14;Jeremiah 28:1-29:32;1Timothy 1:1-20;Proverbs 25:17","1017":"Psalm 116:15-19;Jeremiah 30:1-31:26;1Timothy 2:1-15;Proverbs 25:18-19","1018":"Psalm 117:1-2;Jeremiah 31:27-32:44;1Timothy 3:1-16;Proverbs 25:20-22","1019":"Psalm 118:1-4;Jeremiah 33:1-34:22;1Timothy 4:1-16;Proverbs 25:23-24","1020":"Psalm 118:5-21;Jeremiah 35:1-36:32;1Timothy 5:1-25;Proverbs 25:25-27","1021":"Psalm 118:22-29;Jeremiah 37:1-38:28;1Timothy 6:1-21;Proverbs 25:28","1022":"Psalm 119:1-8;Jeremiah 39:1-41:18;2Timothy 1:1-18;Proverbs 26:1-2","1023":"Psalm 119:9-16;Jeremiah 42:1-44:23;2Timothy 2:1-21;Proverbs 26:3-5","1024":"Psalm 119:17-24;Jeremiah 44:24-47:7;2Timothy 2:22-3:17;Proverbs 26:6-8","1025":"Psalm 119:25-32;Jeremiah 48:1-49:22;2Timothy 4:1-22;Proverbs 26:9-12","1026":"Psalm 119:33-40;Jeremiah 49:23-50:46;Titus 1:1-16;Proverbs 26:13-16","1027":"Psalm 119:41-48;Jeremiah 51:1-53;Titus 2:1-15;Proverbs 26:17","1028":"Psalm 119:49-56;Jeremiah 51:54-52:34;Titus 3:1-15;Proverbs 26:18-19","1029":"Psalm 119:57-64;Lamentations 1:1-2:19;Philemon 1-25;Proverbs 26:20","1030":"Psalm 119:65-72;Lamentations 2:20-3:66;Hebrews 1:1-14;Proverbs 26:21-22","1031":"Psalm 119:73-80;Lamentations 4:1-5:22;Hebrews 2:1-18;Proverbs 26:23","1101":"Psalm 119:81-88;Ezekiel 1:1-3:15;Hebrews 3:1-19;Proverbs 26:24-26","1102":"Psalm 119:89-96;Ezekiel 3:16-6:14;Hebrews 4:1-16;Proverbs 26:27","1103":"Psalm 119:97-104;Ezekiel 7:1-9:11;Hebrews 5:1-14;Proverbs 26:28","1104":"Psalm 119:105-112;Ezekiel 10:1-11:25;Hebrews 6:1-20;Proverbs 27:1-2","1105":"Psalm 119:113-120;Ezekiel 12:1-14:11;Hebrews 7:1-17;Proverbs 27:3","1106":"Psalm 119:121-128;Ezekiel 14:12-16:42;Hebrews 7:18-28;Proverbs 27:4-6","1107":"Psalm 119:129-136;Ezekiel 16:43-17:24;Hebrews 8:1-13;Proverbs 27:7-9","1108":"Psalm 119:137-144;Ezekiel 18:1-19:14;Hebrews 9:1-10;Proverbs 27:10","1109":"Psalm 119:145-152;Ezekiel 20:1-49;Hebrews 9:11-28;Proverbs 27:11","1110":"Psalm 119:153-160;Ezekiel 21:1-22:31;Hebrews 10:1-17;Proverbs 27:12","1111":"Psalm 119:161-168;Ezekiel 23:1-49;Hebrews 10:18-39;Proverbs 27:13","1112":"Psalm 119:169-176;Ezekiel 24:1-26:21;Hebrews 11:1-16;Proverbs 27:14","1113":"Psalm 120:1-7;Ezekiel 27:1-28:26;Hebrews 11:17-31;Proverbs 27:15-16","1114":"Psalm 121:1-8;Ezekiel 29:1-30:26;Hebrews 11:32-12:13;Proverbs 27:17","1115":"Psalm 122:1-9;Ezekiel 31:1-32:32;Hebrews 12:14-29;Proverbs 27:18-20","1116":"Psalm 123:1-4;Ezekiel 33:1-34:31;Hebrews 13:1-25;Proverbs 27:21-22","1117":"Psalm 124:1-5;Ezekiel 35:1-36:38;James 1:1-18;Proverbs 27:23-27","1118":"Psalm 124:6-8;Ezekiel 37:1-38:23;James 1:19-2:17;Proverbs 28:1","1119":"Psalm 125:1-5;Ezekiel 39:1-40:27;James 2:18-3:18;Proverbs 28:2","1120":"Psalm 126:1-3;Ezekiel 40:28-41:26;James 4:1-17;Proverbs 28:3-5","1121":"Psalm 126:4-6;Ezekiel 42:1-43:27;James 5:1-20;Proverbs 28:6-7","1122":"Psalm 127:1-5;Ezekiel 44:1-45:12;1Peter 1:1-12;Proverbs 28:8-10","1123":"Psalm 128:1-6;Ezekiel 45:13-46:24;1Peter 1:13-2:10;Proverbs 28:11","1124":"Psalm 129:1-8;Ezekiel 47:1-48:35;1Peter 2:11-3:7;Proverbs 28:12-13","1125":"Psalm 130:1-4;Daniel 1:1-2:23;1Peter 3:8-4:6;Proverbs 28:14","1126":"Psalm 130:5-8;Daniel 2:24-3:30;1Peter 4:7-5:14;Proverbs 28:15-16","1127":"Psalm 131:1-3;Daniel 4:1-37;2Peter 1:1-21;Proverbs 28:17-18","1128":"Psalm 132:1-5;Daniel 5:1-31;2Peter 2:1-22;Proverbs 28:19-20","1129":"Psalm 132:6-12;Daniel 6:1-28;2Peter 3:1-18;Proverbs 28:21-22","1130":"Psalm 132:13-18;Daniel 7:1-28;1John 1:1-10;Proverbs 28:23-24","1201":"Psalm 133:1-3;Daniel 8:1-27;1John 2:1-17;Proverbs 28:25-26","1202":"Psalm 134:1-3;Daniel 9:1-11:1;1John 2:18-3:6;Proverbs 28:27-28","1203":"Psalm 135:1-7;Daniel 11:2-35;1John 3:7-24;Proverbs 29:1","1204":"Psalm 135:8-14;Daniel 11:36-12:13;1John 4:1-21;Proverbs 29:2-4","1205":"Psalm 135:15-21;Hosea 1:1-3:5;1John 5:1-21;Proverbs 29:5-8","1206":"Psalm 136:1-9;Hosea 4:1-5:15;2John 1-13;Proverbs 29:9-11","1207":"Psalm 136:10-26;Hosea 6:1-9:17;3John 1-15;Proverbs 29:12-14","1208":"Psalm 137:1-9;Hosea 10:1-14:9;Jude 1-25;Proverbs 29:15-17","1209":"Psalm 138:1-8;Joel 1:1-3:21;Revelation 1:1-20;Proverbs 29:18","1210":"Psalm 139:1-6;Amos 1:1-3:15;Revelation 2:1-17;Proverbs 29:19-20","1211":"Psalm 139:7-12;Amos 4:1-6:14;Revelation 2:18-3:6;Proverbs 29:21-22","1212":"Psalm 139:13-18;Amos 7:1-9:15;Revelation 3:7-22;Proverbs 29:23","1213":"Psalm 139:19-24;Obadiah 1-21;Revelation 4:1-11;Proverbs 29:24-25","1214":"Psalm 140:1-8;Jonah 1:1-4:11;Revelation 5:1-14;Proverbs 29:26-27","1215":"Psalm 140:9-13;Micah 1:1-4:13;Revelation 6:1-17;Proverbs 30:1-4","1216":"Psalm 141:1-10;Micah 5:1-7:20;Revelation 7:1-17;Proverbs 30:5-6","1217":"Psalm 142:1-7;Nahum 1:1-3:19;Revelation 8:1-13;Proverbs 30:7-9","1218":"Psalm 143:1-6;Habakkuk 1:1-3:19;Revelation 9:1-21;Proverbs 30:10","1219":"Psalm 143:7-12;Zephaniah 1:1-3:20;Revelation 10:1-11;Proverbs 30:11-14","1220":"Psalm 144:1-8;Haggai 1:1-2:23;Revelation 11:1-19;Proverbs 30:15-16","1221":"Psalm 144:9-15;Zechariah 1:1-21;Revelation 12:1-13:1;Proverbs 30:17","1222":"Psalm 145:1-7;Zechariah 2:1-3:10;Revelation 13:2-18;Proverbs 30:18-20","1223":"Psalm 145:8-13;Zechariah 4:1-5:11;Revelation 14:1-20;Proverbs 30:21-23","1224":"Psalm 145:14-21;Zechariah 6:1-7:14;Revelation 15:1-8;Proverbs 30:24-28","1225":"Psalm 146:1-10;Zechariah 8:1-23;Revelation 16:1-21;Proverbs 30:29-31","1226":"Psalm 147:1-11;Zechariah 9:1-17;Revelation 17:1-18;Proverbs 30:32","1227":"Psalm 147:12-20;Zechariah 10:1-11:17;Revelation 18:1-24;Proverbs 30:33","1228":"Psalm 148:1-6;Zechariah 12:1-13:9;Revelation 19:1-21;Proverbs 31:1-7","1229":"Psalm 148:7-14;Zechariah 14:1-21;Revelation 20:1-15;Proverbs 31:8-9","1230":"Psalm 149:1-9;Malachi 1:1-2:17;Revelation 21:1-27;Proverbs 31:10-24","1231":"Psalm 150:1-6;Malachi 3:1-4:6;Revelation 22:1-21;Proverbs 31:25-31"}';
-	}
-
-	function get_youversion_link(input)
-	{
-		m = {"Genesis":"GEN","Exodus":"EXO","Leviticus":"LEV","Numbers":"NUM","Deuteronomy":"DEU","Joshua":"JOS","Judges":"JDG","Ruth":"RUT","1Samuel":"1SA","2Samuel":"2SA","1Kings":"1KI","2Kings":"2KI","1Chronicles":"1CH","2Chronicles":"2CH","Ezra":"EZR","Nehemiah":"NEH","Esth":"EST","Job":"JOB","Psalm":"PSA","Proverbs":"PRO","Ecclesiastes":"ECC","Song":"SNG","Isaiah":"ISA","Jeremiah":"JER","Lamentations":"LAM","Ezekiel":"EZK","Daniel":"DAN","Hosea":"HOS","Joel":"JOL","Amos":"AMO","Obadiah":"OBA","Jonah":"JON","Micah":"MIC","Nahum":"NAM","Habakkuk":"HAB","Zephaniah":"ZEP","Haggai":"HAG","Zechariah":"ZEC","Malachi":"MAL","Matthew":"MAT","Mark":"MRK","Luke":"LUK","John":"JHN","Acts":"ACT","Romans":"ROM","1Corinthians":"1CO","2Corinthians":"2CO","Galatians":"GAL","Ephesians":"EPH","Philippians":"PHP","Colossians":"COL","1Thessalonians":"1TH","2Thessalonians":"2TH","1Timothy":"1TI","2Timothy":"2TI","Titus":"TIT","Philemon":"PHM","Hebrews":"HEB","James":"JAS","1Peter":"1PE","2Peter":"2PE","1John":"1JN","2John":"2JN","3John":"3JN","Jude":"JUD","Revelation":"REV"};
-		v = input.split(" ");
-		if (v[1].split(":").length-1 == 1) { // within 1 chapter
-			verse = v[1].replace(/:/,".");
-		} else {
-			verse = v[1].substr(0, v[1].indexOf(':')); // more than 1 chapters
+		function clickPrev() {
+			showContent('#contentMain');
+			selectedDate.setDate(selectedDate.getDate() - 1); // subtract 1 day
+			displayVerses(selectedDate);
 		}
-		return "https://www2.bible.com/bible/139/" + m[v[0]] + "." + verse;
-	}
 
-	function get_verse_snippet(input)
-	{
-		verses = input.split(";");
-		s = "";
-		verses.forEach(function(item, index) {
-			s = s + item + ' <a href="' + get_youversion_link(item) + '"><img borther="0" src="https://www.bible.com/assets/icons/bible/58/en.png" width="22" height="22"></a><br>';
-		})
-		return s;
-	}
+		function clickNext() {
+			showContent('#contentMain');
+			selectedDate.setDate(selectedDate.getDate() + 1); // add 1 day
+			displayVerses(selectedDate);
+		}
 
-	function c_getJsonData()
-	{
-		return '{"0101":"詩 1:1-6;創 1:1-2:25;太 1:1-2:12;箴 1:1-6","0102":"詩 2:1-6;創 3:1-4:26;太 2:13-3:6;箴 1:7-9","0103":"詩 2:7-12;創 5:1-7:24;太 3:7-4:11;箴 1:10-19","0104":"詩 3:1-8;創 8:1-10:32;太 4:12-25;箴 1:20-23","0105":"詩 4:1-8;創 11:1-13:5;太 5:1-26;箴 1:24-28","0106":"詩 5:1-3;創 13:6-15:21;太 5:27-48;箴 1:29-33","0107":"詩 5:4-12;創 16:1-18:19;太 6:1-24;箴 2:1-5","0108":"詩 6:1-3;創 18:20-19:38;太 6:25-7:14;箴 2:6-15","0109":"詩 6:4-10;創 20:1-22:24;太 7:15-29;箴 2:16-22","0110":"詩 7:1-9;創 23:1-24:51;太 8:1-17;箴 3:1-6","0111":"詩 7:10-17;創 24:52-26:16;太 8:18-34;箴 3:7-8","0112":"詩 8:1-9;創 26:17-27:46;太 9:1-17;箴 3:9-10","0113":"詩 9:1-6;創 28:1-29:35;太 9:18-38;箴 3:11-12","0114":"詩 9:7-12;創 30:1-31:16;太 10:1-25;箴 3:13-15","0115":"詩 9:13-20;創 31:17-32:12;太 10:26-11:6;箴 3:16-18","0116":"詩 10:1-10;創 32:13-34:31;太 11:7-30;箴 3:19-20","0117":"詩 10:11-15;創 35:1-36:43;太 12:1-21;箴 3:21-26","0118":"詩 10:16-18;創 37:1-38:30;太 12:22-45;箴 3:27-32","0119":"詩 11:1-7;創 39:1-41:16;太 12:46-13:23;箴 3:33-35","0120":"詩 12:1-8;創 41:17-42:17;太 13:24-46;箴 4:1-6","0121":"詩 13:1-6;創 42:18-43:34;太 13:47-14:12;箴 4:7-10","0122":"詩 14:1-7;創 44:1-45:28;太 14:13-36;箴 4:11-13","0123":"詩 15:1-5;創 46:1-47:31;太 15:1-28;箴 4:14-19","0124":"詩 16:1-6;創 48:1-49:33;太 15:29-16:12;箴 4:20-27","0125":"詩 16:7-11;創 50:1-26;出 1:1-2:10;太 16:13-17:9;箴 5:1-6","0126":"詩 17:1-5;出 2:11-3:22;太 17:10-27;箴 5:7-14","0127":"詩 17:6-9;出 4:1-5:21;太 18:1-22;箴 5:15-21","0128":"詩 17:10-15;出 5:22-7:24;太 18:23-19:12;箴 5:22-23","0129":"詩 18:1-6;出 7:25-9:35;太 19:13-30;箴 6:1-5","0130":"詩 18:7-15;出 10:1-12:13;太 20:1-28;箴 6:6-11","0131":"詩 18:16-24;出 12:14-13:16;太 20:29-21:22;箴 6:12-15","0201":"詩 18:25-36;出 13:17-15:18;太 21:23-46;箴 6:16-19","0202":"詩 18:37-50;出 15:19-17:7;太 22:1-33;箴 6:20-26","0203":"詩 19:1-6;出 17:8-19:15;太 22:34-23:12;箴 6:27-35","0204":"詩 19:7-14;出 19:16-21:21;太 23:13-39;箴 7:1-5","0205":"詩 20:1-9;出 21:22-23:13;太 24:1-28;箴 7:6-23","0206":"詩 21:1-7;出 23:14-25:40;太 24:29-51;箴 7:24-27","0207":"詩 21:8-13;出 26:1-27:21;太 25:1-30;箴 8:1-11","0208":"詩 22:1-18;出 28:1-43;太 25:31-26:13;箴 8:12-13","0209":"詩 22:19-31;出 29:1-30:10;太 26:14-46;箴 8:14-26","0210":"詩 23:1-6;出 30:11-31:18;太 26:47-68;箴 8:27-32","0211":"詩 24:1-6;出 32:1-33:23;太 26:69-27:14;箴 8:33-36","0212":"詩 24:7-10;出 34:1-35:9;太 27:15-31;箴 9:1-6","0213":"詩 25:1-7;出 35:10-36:38;太 27:32-66;箴 9:7-8","0214":"詩 25:8-15;出 37:1-38:31;太 28:1-20;箴 9:9-10","0215":"詩 25:16-22;出 39:1-40:38;可 1:1-28;箴 9:11-12","0216":"詩 26:1-12;利 1:1-3:17;可 1:29-2:12;箴 9:13-18","0217":"詩 27:1-6;利 4:1-5:19;可 2:13-3:6;箴 10:1-2","0218":"詩 27:7-14;利 6:1-7:27;可 3:7-30;箴 10:3-4","0219":"詩 28:1-9;利 7:28-9:6;可 3:31-4:25;箴 10:5","0220":"詩 29:1-11;利 9:7-10:20;可 4:26-5:20;箴 10:6-7","0221":"詩 30:1-5;利 11:1-12:8;可 5:21-43;箴 10:8-9","0222":"詩 30:6-12;利 13:1-59;可 6:1-29;箴 10:10","0223":"詩 31:1-8;利 14:1-57;可 6:30-56;箴 10:11-12","0224":"詩 31:9-18;利 15:1-16:28;可 7:1-23;箴 10:13-14","0225":"詩 31:19-24;利 16:29-18:30;可 7:24-8:10;箴 10:15-16","0226":"詩 32:1-5;利 19:1-20:21;可 8:11-38;箴 10:17","0227":"詩 32:6-11;利 20:22-22:16;可 9:1-29;箴 10:18","0228":"詩 33:1-11;利 22:17-23:44;可 9:30-10:12;箴 10:19","0229":"詩 91:1-16;創 2:1-25;啟 21:1-21;箴 6:16-19","0301":"詩 33:12-22;利 24:1-25:46;可 10:13-31;箴 10:20-21","0302":"詩 34:1-10;利 25:47-27:13;可 10:32-52;箴 10:22","0303":"詩 34:11-22;利 27:14-27:34;民 1:1-1:54;可 11:1-26;箴 10:23","0304":"詩 35:1-10;民 2:1-3:51;可 11:27-12:17;箴 10:24-25","0305":"詩 35:11-18;民 4:1-5:31;可 12:18-37;箴 10:26","0306":"詩 35:19-28;民 6:1-7:89;可 12:38-13:13;箴 10:27-28","0307":"詩 36:1-12;民 8:1-9:23;可 13:14-37;箴 10:29-30","0308":"詩 37:1-11;民 10:1-11:23;可 14:1-21;箴 10:31-32","0309":"詩 37:12-20;民 11:24-13:33;可 14:22-52;箴 11:1-3","0310":"詩 37:21-29;民 14:1-15:16;可 14:53-72;箴 11:4","0311":"詩 37:30-40;民 15:17-16:40;可 15:1-47;箴 11:5-6","0312":"詩 38:1-12;民 16:41-18:32;可 16:1-20;箴 11:7","0313":"詩 38:13-22;民 19:1-20:29;路 1:1-25;箴 11:8","0314":"詩 39:1-6;民 21:1-22:20;路 1:26-56;箴 11:9-11","0315":"詩 39:7-13;民 22:21-23:30;路 1:57-80;箴 11:12-13","0316":"詩 40:1-5;民 24:1-25:18;路 2:1-35;箴 11:14","0317":"詩 40:6-10;民 26:1-51;路 2:36-52;箴 11:15","0318":"詩 40:11-17;民 26:52-28:15;路 3:1-22;箴 11:16-17","0319":"詩 41:1-3;民 28:16-29:40;路 3:23-38;箴 11:18-19","0320":"詩 41:4-9;民 30:1-31:54;路 4:1-30;箴 11:20-21","0321":"詩 41:10-13;民 32:1-33:39;路 4:31-5:11;箴 11:22","0322":"詩 42:1-5;民 33:40-35:34;路 5:12-28;箴 11:23","0323":"詩 42:6-11;民 36:1-36:13;申 1:1-1:46;路 5:29-6:11;箴 11:24-26","0324":"詩 43:1-5;申 2:1-3:29;路 6:12-38;箴 11:27","0325":"詩 44:1-3;申 4:1-49;路 6:39-7:10;箴 11:28","0326":"詩 44:4-8;申 5:1-6:25;路 7:11-35;箴 11:29-31","0327":"詩 44:9-16;申 7:1-8:20;路 7:36-8:3;箴 12:1","0328":"詩 44:17-26;申 9:1-10:22;路 8:4-21;箴 12:2-3","0329":"詩 45:1-9;申 11:1-12:32;路 8:22-39;箴 12:4","0330":"詩 45:10-17;申 13:1-15:23;路 8:40-9:6;箴 12:5-7","0331":"詩 46:1-7;申 16:1-17:20;路 9:7-27;箴 12:8-9","0401":"詩 46:8-11;申 18:1-20:20;路 9:28-50;箴 12:10","0402":"詩 47:1-4;申 21:1-22:30;路 9:51-10:12;箴 12:11","0403":"詩 47:5-9;申 23:1-25:19;路 10:13-37;箴 12:12-14","0404":"詩 48:1-8;申 26:1-27:26;路 10:38-11:13;箴 12:15-17","0405":"詩 48:9-14;申 28:1-68;路 11:14-36;箴 12:18","0406":"詩 49:1-13;申 29:1-30:20;路 11:37-12:7;箴 12:19-20","0407":"詩 49:14-20;申 31:1-32:27;路 12:8-34;箴 12:21-23","0408":"詩 50:1-6;申 32:28-52;路 12:35-59;箴 12:24","0409":"詩 50:7-23;申 33:1-29;路 13:1-21;箴 12:25","0410":"詩 51:1-12;申 34:1-34:12;書 1:1-2:24;路 13:22-14:6;箴 12:26","0411":"詩 51:13-19;書 3:1-4:24;路 14:7-35;箴 12:27-28","0412":"詩 52:1-9;書 5:1-7:15;路 15:1-32;箴 13:1","0413":"詩 53:1-6;書 7:16-9:2;路 16:1-18;箴 13:2-3","0414":"詩 54:1-7;書 9:3-10:43;路 16:19-17:10;箴 13:4","0415":"詩 55:1-8;書 11:1-12:24;路 17:11-37;箴 13:5-6","0416":"詩 55:9-15;書 13:1-14:15;路 18:1-17;箴 13:7-8","0417":"詩 55:16-23;書 15:1-63;路 18:18-43;箴 13:9-10","0418":"詩 56:1-8;書 16:1-18:28;路 19:1-27;箴 13:11","0419":"詩 56:9-13;書 19:1-20:9;路 19:28-48;箴 13:12-14","0420":"詩 57:1-6;書 21:1-22:20;路 20:1-26;箴 13:15-16","0421":"詩 57:7-11;書 22:21-23:16;路 20:27-47;箴 13:17-19","0422":"詩 58:1-11;書 24:1-33;路 21:1-28;箴 13:20-23","0423":"詩 59:1-5;士 1:1-2:9;路 21:29-22:13;箴 13:24-25","0424":"詩 59:6-13;士 2:10-3:31;路 22:14-34;箴 14:1-2","0425":"詩 59:14-17;士 4:1-5:31;路 22:35-53;箴 14:3-4","0426":"詩 60:1-4;士 6:1-6:40;路 22:54-23:12;箴 14:5-6","0427":"詩 60:5-12;士 7:1-8:17;路 23:13-43;箴 14:7-8","0428":"詩 61:1-4;士 8:18-9:21;路 23:44-24:12;箴 14:9-10","0429":"詩 61:5-8;士 9:22-10:18;路 24:13-53;箴 14:11-12","0430":"詩 62:1-12;士 11:1-12:15;約 1:1-28;箴 14:13-14","0501":"詩 63:1-11;士 13:1-14:20;約 1:29-51;箴 14:15-16","0502":"詩 64:1-10;士 15:1-16:31;約 2:1-25;箴 14:17-19","0503":"詩 65:1-8;士 17:1-18:31;約 3:1-21;箴 14:20-21","0504":"詩 65:9-13;士 19:1-20:48;約 3:22-4:3;箴 14:22-24","0505":"詩 66:1-4;士 21:1-21:25;得 1:1-1:22;約 4:4-42;箴 14:25","0506":"詩 66:5-15;得 2:1-4:22;約 4:43-54;箴 14:26-27","0507":"詩 66:16-20;撒上 1:1-2:21;約 5:1-23;箴 14:28-29","0508":"詩 67:1-7;撒上 2:22-4:22;約 5:24-47;箴 14:30-31","0509":"詩 68:1-6;撒上 5:1-7:17;約 6:1-21;箴 14:32-33","0510":"詩 68:7-18;撒上 8:1-9:27;約 6:22-42;箴 14:34-35","0511":"詩 68:19-27;撒上 10:1-11:15;約 6:43-71;箴 15:1-3","0512":"詩 68:28-35;撒上 12:1-13:22;約 7:1-29;箴 15:4","0513":"詩 69:1-4;撒上 13:23-14:52;約 7:30-52;箴 15:5-7","0514":"詩 69:5-12;撒上 15:1-16:23;約 8:1-20;箴 15:8-10","0515":"詩 69:13-18;撒上 17:1-18:4;約 8:21-30;箴 15:11","0516":"詩 69:19-28;撒上 18:5-19:24;約 8:31-59;箴 15:12-14","0517":"詩 69:29-36;撒上 20:1-21:15;約 9:1-41;箴 15:15-17","0518":"詩 70:1-5;撒上 22:1-23:29;約 10:1-21;箴 15:18-19","0519":"詩 71:1-8;撒上 24:1-25:44;約 10:22-42;箴 15:20-21","0520":"詩 71:9-14;撒上 26:1-28:25;約 11:1-53;箴 15:22-23","0521":"詩 71:15-18;撒上 29:1-31:13;約 11:54-12:19;箴 15:24-26","0522":"詩 71:19-24;撒下 1:1-2:11;約 12:20-50;箴 15:27-28","0523":"詩 72:1-7;撒下 2:12-3:39;約 13:1-30;箴 15:29-30","0524":"詩 72:8-14;撒下 4:1-6:23;約 13:31-14:14;箴 15:31-32","0525":"詩 72:15-20;撒下 7:1-8:18;約 14:15-31;箴 15:33","0526":"詩 120:1-7;撒下 9:1-11:27;約 15:1-27;箴 16:1-3","0527":"詩 121:1-8;撒下 12:1-31;約 16:1-33;箴 16:4-5","0528":"詩 122:1-5;撒下 13:1-39;約 17:1-26;箴 16:6-7","0529":"詩 122:6-9;撒下 14:1-15:22;約 18:1-24;箴 16:8-9","0530":"詩 123:1-4;撒下 15:23-16:23;約 18:25-19:22;箴 16:10-11","0531":"詩 124:1-5;撒下 17:1-29;約 19:23-42;箴 16:12-13","0601":"詩 124:6-8;撒下 18:1-19:10;約 20:1-31;箴 16:14-15","0602":"詩 125:1-5;撒下 19:11-20:13;約 21:1-25;箴 16:16-17","0603":"詩 126:1-3;撒下 20:14-22:20;徒 1:1-26;箴 16:18","0604":"詩 126:4-6;撒下 22:21-23:23;徒 2:1-47;箴 16:19-20","0605":"詩 127:1-2;撒下 23:24-24:25;徒 3:1-26;箴 16:21-23","0606":"詩 127:3-5;王上 1:1-53;徒 4:1-37;箴 16:24","0607":"詩 128:1-6;王上 2:1-3:3;徒 5:1-42;箴 16:25","0608":"詩 129:1-8;王上 3:4-4:34;徒 6:1-15;箴 16:26-27","0609":"詩 130:1-4;王上 5:1-6:38;徒 7:1-29;箴 16:28-30","0610":"詩 130:5-8;王上 7:1-51;徒 7:30-50;箴 16:31-33","0611":"詩 131:1-3;王上 8:1-66;徒 7:51-8:13;箴 17:1","0612":"詩 132:1-5;王上 9:1-10:29;徒 8:14-40;箴 17:2-3","0613":"詩 132:6-12;王上 11:1-12:19;徒 9:1-25;箴 17:4-5","0614":"詩 132:13-18;王上 12:20-13:34;徒 9:26-43;箴 17:6","0615":"詩 133:1-3;王上 14:1-15:24;徒 10:1-23;箴 17:7-8","0616":"詩 134:1-3;王上 15:25-17:24;徒 10:23-48;箴 17:9-11","0617":"詩 135:1-7;王上 18:1-46;徒 11:1-30;箴 17:12-13","0618":"詩 135:8-14;王上 19:1-21;徒 12:1-23;箴 17:14-15","0619":"詩 135:15-21;王上 20:1-21:29;徒 12:24-13:15;箴 17:16","0620":"詩 136:1-9;王上 22:1-53;徒 13:16-41;箴 17:17-18","0621":"詩 136:10-22;王下 1:1-2:25;徒 13:42-14:7;箴 17:19-21","0622":"詩 136:23-26;王下 3:1-4:17;徒 14:8-28;箴 17:22","0623":"詩 137:1-9;王下 4:18-5:27;徒 15:1-35;箴 17:23","0624":"詩 138:1-8;王下 6:1-7:20;徒 15:36-16:15;箴 17:24-25","0625":"詩 139:1-12;王下 8:1-9:13;徒 16:16-40;箴 17:26","0626":"詩 139:13-24;王下 9:14-10:31;徒 17:1-34;箴 17:27-28","0627":"詩 140:1-8;王下 10:32-12:21;徒 18:1-22;箴 18:1","0628":"詩 140:9-13;王下 13:1-14:29;徒 18:23-19:12;箴 18:2-3","0629":"詩 141:1-10;王下 15:1-16:20;徒 19:13-41;箴 18:4-5","0630":"詩 142:1-7;王下 17:1-18:12;徒 20:1-38;箴 18:6-7","0701":"詩 143:1-6;王下 18:13-19:37;徒 21:1-16;箴 18:8","0702":"詩 143:7-12;王下 20:1-22:2;徒 21:17-36;箴 18:9-10","0703":"詩 144:1-8;王下 22:3-23:30;徒 21:37-22:16;箴 18:11-12","0704":"詩 144:9-15;王下 23:31-25:30;徒 22:17-23:10;箴 18:13","0705":"詩 145:1-7;代上 1:1-2:17;徒 23:11-35;箴 18:14-15","0706":"詩 145:8-13;代上 2:18-4:4;徒 24:1-27;箴 18:16-18","0707":"詩 145:14-21;代上 4:5-5:17;徒 25:1-27;箴 18:19","0708":"詩 146:1-10;代上 5:18-6:81;徒 26:1-32;箴 18:20-21","0709":"詩 147:1-11;代上 7:1-8:40;徒 27:1-20;箴 18:22","0710":"詩 147:12-20;代上 9:1-10:14;徒 27:21-44;箴 18:23-24","0711":"詩 148:1-14;代上 11:1-12:18;徒 28:1-31;箴 19:1-3","0712":"詩 149:1-9;代上 12:19-14:17;羅 1:1-17;箴 19:4-5","0713":"詩 150:1-6;代上 15:1-16:36;羅 1:18-32;箴 19:6-7","0714":"詩 73:1-14;代上 16:37-18:17;羅 2:1-24;箴 19:8-9","0715":"詩 73:15-28;代上 19:1-21:30;羅 2:25-3:8;箴 19:10-12","0716":"詩 74:1-11;代上 22:1-23:32;羅 3:9-31;箴 19:13-14","0717":"詩 74:12-23;代上 24:1-26:11;羅 4:1-12;箴 19:15-16","0718":"詩 75:1-10;代上 26:12-27:34;羅 4:13-5:5;箴 19:17","0719":"詩 76:1-9;代上 28:1-29:30;羅 5:6-21;箴 19:18-19","0720":"詩 76:10-12;代下 1:1-3:17;羅 6:1-23;箴 19:20-21","0721":"詩 77:1-15;代下 4:1-6:11;羅 7:1-13;箴 19:22-23","0722":"詩 77:16-20;代下 6:12-7:10;羅 7:14-8:8;箴 19:24-25","0723":"詩 78:1-16;代下 7:11-10:19;羅 8:9-21;箴 19:26","0724":"詩 78:17-31;代下 11:1-13:22;羅 8:22-39;箴 19:27-29","0725":"詩 78:32-55;代下 14:1-16:14;羅 9:1-21;箴 20:1","0726":"詩 78:56-64;代下 17:1-18:34;羅 9:22-10:13;箴 20:2-3","0727":"詩 78:65-72;代下 19:1-20:37;羅 10:14-11:12;箴 20:4-6","0728":"詩 79:1-8;代下 21:1-23:21;羅 11:13-36;箴 20:7","0729":"詩 79:9-13;代下 24:1-25:28;羅 12:1-21;箴 20:8-10","0730":"詩 80:1-7;代下 26:1-28:27;羅 13:1-14;箴 20:11","0731":"詩 80:8-19;代下 29:1-36;羅 14:1-23;箴 20:12","0801":"詩 81:1-7;代下 30:1-31:21;羅 15:1-22;箴 20:13-15","0802":"詩 81:8-16;代下 32:1-33:13;羅 15:23-16:7;箴 20:16-18","0803":"詩 82:1-8;代下 33:14-34:33;羅 16:8-27;箴 20:19","0804":"詩 83:1-8;代下 35:1-36:23;林前 1:1-17;箴 20:20-21","0805":"詩 83:9-18;拉 1:1-2:70;林前 1:18-2:5;箴 20:22-23","0806":"詩 84:1-4;拉 3:1-4:24;林前 2:6-3:4;箴 20:24-25","0807":"詩 84:5-8;拉 5:1-6:22;林前 3:5-23;箴 20:26-27","0808":"詩 84:9-12;拉 7:1-8:20;林前 4:1-21;箴 20:28-30","0809":"詩 85:1-7;拉 8:21-9:15;林前 5:1-13;箴 21:1-2","0810":"詩 85:8-13;拉 10:1-44;林前 6:1-20;箴 21:3","0811":"詩 86:1-7;尼 1:1-3:14;林前 7:1-24;箴 21:4","0812":"詩 86:8-17;尼 3:15-5:13;林前 7:25-40;箴 21:5-7","0813":"詩 87:1-7;尼 5:14-7:60;林前 8:1-13;箴 21:8-10","0814":"詩 88:1-7;尼 7:61-9:21;林前 9:1-18;箴 21:11-12","0815":"詩 88:8-18;尼 9:22-10:39;林前 9:19-10:13;箴 21:13","0816":"詩 89:1-13;尼 11:1-12:26;林前 10:14-11:2;箴 21:14-16","0817":"詩 89:14-37;尼 12:27-13:31;林前 11:3-16;箴 21:17-18","0818":"詩 89:38-45;斯 1:1-3:15;林前 11:17-34;箴 21:19-20","0819":"詩 89:46-52;斯 4:1-7:10;林前 12:1-26;箴 21:21-22","0820":"詩 90:1-10;斯 8:1-10:3;林前 12:27-13:13;箴 21:23-24","0821":"詩 90:11-17;伯 1:1-3:26;林前 14:1-17;箴 21:25-26","0822":"詩 91:1-8;伯 4:1-7:21;林前 14:18-40;箴 21:27","0823":"詩 91:9-16;伯 8:1-11:20;林前 15:1-28;箴 21:28-29","0824":"詩 92:1-8;伯 12:1-15:35;林前 15:29-58;箴 21:30-31","0825":"詩 92:9-15;伯 16:1-19:29;林前 16:1-24;箴 22:1","0826":"詩 93:1-5;伯 20:1-22:30;林後 1:1-11;箴 22:2-4","0827":"詩 94:1-11;伯 23:1-27:23;林後 1:12-2:11;箴 22:5-6","0828":"詩 94:12-23;伯 28:1-30:31;林後 2:12-17;箴 22:7","0829":"詩 95:1-11;伯 31:1-33:33;林後 3:1-18;箴 22:8-9","0830":"詩 96:1-6;伯 34:1-36:33;林後 4:1-12;箴 22:10-12","0831":"詩 96:7-13;伯 37:1-39:30;林後 4:13-5:10;箴 22:13","0901":"詩 97:1-6;伯 40:1-42:17;林後 5:11-21;箴 22:14","0902":"詩 97:7-12;傳 1:1-3:22;林後 6:1-13;箴 22:15","0903":"詩 98:1-9;傳 4:1-6:12;林後 6:14-7:7;箴 22:16","0904":"詩 99:1-9;傳 7:1-9:18;林後 7:8-16;箴 22:17-19","0905":"詩 100:1-5;傳 10:1-12:14;林後 8:1-15;箴 22:20-21","0906":"詩 101:1-8;歌 1:1-4:16;林後 8:16-24;箴 22:22-23","0907":"詩 102:1-11;歌 5:1-8:14;林後 9:1-15;箴 22:24-25","0908":"詩 102:12-17;賽 1:1-2:22;林後 10:1-18;箴 22:26-27","0909":"詩 102:18-28;賽 3:1-5:30;林後 11:1-15;箴 22:28-29","0910":"詩 103:1-5;賽 6:1-7:25;林後 11:16-33;箴 23:1-3","0911":"詩 103:6-19;賽 8:1-9:21;林後 12:1-10;箴 23:4-5","0912":"詩 103:20-22;賽 10:1-11:16;林後 12:11-21;箴 23:6-8","0913":"詩 104:1-9;賽 12:1-14:32;林後 13:1-14;箴 23:9-11","0914":"詩 104:10-18;賽 15:1-18:7;加 1:1-24;箴 23:12","0915":"詩 104:19-30;賽 19:1-21:17;加 2:1-16;箴 23:13-14","0916":"詩 104:31-35;賽 22:1-24:23;加 2:17-3:9;箴 23:15-16","0917":"詩 105:1-7;賽 25:1-28:13;加 3:10-22;箴 23:17-18","0918":"詩 105:8-15;賽 28:14-30:11;加 3:23-4:31;箴 23:19-21","0919":"詩 105:16-22;賽 30:12-33:12;加 5:1-12;箴 23:22","0920":"詩 105:23-36;賽 33:13-36:22;加 5:13-26;箴 23:23","0921":"詩 105:37-45;賽 37:1-38:22;加 6:1-18;箴 23:24","0922":"詩 106:1-5;賽 39:1-41:16;弗 1:1-23;箴 23:25-28","0923":"詩 106:6-12;賽 41:17-43:13;弗 2:1-22;箴 23:29-35","0924":"詩 106:13-23;賽 43:14-45:10;弗 3:1-21;箴 24:1-2","0925":"詩 106:24-31;賽 45:11-48:11;弗 4:1-16;箴 24:3-4","0926":"詩 106:32-39;賽 48:12-50:11;弗 4:17-32;箴 24:5-6","0927":"詩 106:40-48;賽 51:1-53:12;弗 5:1-33;箴 24:7","0928":"詩 107:1-9;賽 54:1-57:13;弗 6:1-24;箴 24:8","0929":"詩 107:10-16;賽 57:14-59:21;腓 1:1-26;箴 24:9-10","0930":"詩 107:17-22;賽 60:1-62:5;腓 1:27-2:18;箴 24:11-12","1001":"詩 107:23-32;賽 62:6-65:25;腓 2:19-3:4;箴 24:13-14","1002":"詩 107:33-43;賽 66:1-24;腓 3:4-21;箴 24:15-16","1003":"詩 108:1-5;耶 1:1-2:30;腓 4:1-23;箴 24:17-20","1004":"詩 108:6-13;耶 2:31-4:18;西 1:1-20;箴 24:21-22","1005":"詩 109:1-15;耶 4:19-6:14;西 1:21-2:7;箴 24:23-25","1006":"詩 109:16-31;耶 6:15-8:7;西 2:8-23;箴 24:26","1007":"詩 110:1-7;耶 8:8-9:26;西 3:1-17;箴 24:27","1008":"詩 111:1-10;耶 10:1-11:23;西 3:18-4:18;箴 24:28-29","1009":"詩 112:1-10;耶 12:1-14:10;帖前 1:1-2:9;箴 24:30-34","1010":"詩 113:1-9;耶 14:11-16:15;帖前 2:10-3:13;箴 25:1-5","1011":"詩 114:1-8;耶 16:16-18:23;帖前 4:1-5:3;箴 25:6-7","1012":"詩 115:1-8;耶 19:1-21:14;帖前 5:4-28;箴 25:8-10","1013":"詩 115:9-13;耶 22:1-23:20;帖後 1:1-12;箴 25:11-14","1014":"詩 115:14-18;耶 23:21-25:38;帖後 2:1-17;箴 25:15","1015":"詩 116:1-6;耶 26:1-27:22;帖後 3:1-18;箴 25:16","1016":"詩 116:7-14;耶 28:1-29:32;提前 1:1-20;箴 25:17","1017":"詩 116:15-19;耶 30:1-31:26;提前 2:1-15;箴 25:18-19","1018":"詩 117:1-2;耶 31:27-32:44;提前 3:1-16;箴 25:20-22","1019":"詩 118:1-4;耶 33:1-34:22;提前 4:1-16;箴 25:23-24","1020":"詩 118:5-21;耶 35:1-36:32;提前 5:1-25;箴 25:25-27","1021":"詩 118:22-29;耶 37:1-38:28;提前 6:1-21;箴 25:28","1022":"詩 119:1-8;耶 39:1-41:18;提後 1:1-18;箴 26:1-2","1023":"詩 119:9-16;耶 42:1-44:23;提後 2:1-21;箴 26:3-5","1024":"詩 119:17-24;耶 44:24-47:7;提後 2:22-3:17;箴 26:6-8","1025":"詩 119:25-32;耶 48:1-49:22;提後 4:1-22;箴 26:9-12","1026":"詩 119:33-40;耶 49:23-50:46;多 1:1-16;箴 26:13-16","1027":"詩 119:41-48;耶 51:1-53;多 2:1-15;箴 26:17","1028":"詩 119:49-56;耶 51:54-52:34;多 3:1-15;箴 26:18-19","1029":"詩 119:57-64;哀 1:1-2:19;門 1-25;箴 26:20","1030":"詩 119:65-72;哀 2:20-3:66;來 1:1-14;箴 26:21-22","1031":"詩 119:73-80;哀 4:1-5:22;來 2:1-18;箴 26:23","1101":"詩 119:81-88;結 1:1-3:15;來 3:1-19;箴 26:24-26","1102":"詩 119:89-96;結 3:16-6:14;來 4:1-16;箴 26:27","1103":"詩 119:97-104;結 7:1-9:11;來 5:1-14;箴 26:28","1104":"詩 119:105-112;結 10:1-11:25;來 6:1-20;箴 27:1-2","1105":"詩 119:113-120;結 12:1-14:11;來 7:1-17;箴 27:3","1106":"詩 119:121-128;結 14:12-16:42;來 7:18-28;箴 27:4-6","1107":"詩 119:129-136;結 16:43-17:24;來 8:1-13;箴 27:7-9","1108":"詩 119:137-144;結 18:1-19:14;來 9:1-10;箴 27:10","1109":"詩 119:145-152;結 20:1-49;來 9:11-28;箴 27:11","1110":"詩 119:153-160;結 21:1-22:31;來 10:1-17;箴 27:12","1111":"詩 119:161-168;結 23:1-49;來 10:18-39;箴 27:13","1112":"詩 119:169-176;結 24:1-26:21;來 11:1-16;箴 27:14","1113":"詩 120:1-7;結 27:1-28:26;來 11:17-31;箴 27:15-16","1114":"詩 121:1-8;結 29:1-30:26;來 11:32-12:13;箴 27:17","1115":"詩 122:1-9;結 31:1-32:32;來 12:14-29;箴 27:18-20","1116":"詩 123:1-4;結 33:1-34:31;來 13:1-25;箴 27:21-22","1117":"詩 124:1-5;結 35:1-36:38;雅 1:1-18;箴 27:23-27","1118":"詩 124:6-8;結 37:1-38:23;雅 1:19-2:17;箴 28:1","1119":"詩 125:1-5;結 39:1-40:27;雅 2:18-3:18;箴 28:2","1120":"詩 126:1-3;結 40:28-41:26;雅 4:1-17;箴 28:3-5","1121":"詩 126:4-6;結 42:1-43:27;雅 5:1-20;箴 28:6-7","1122":"詩 127:1-5;結 44:1-45:12;彼前 1:1-12;箴 28:8-10","1123":"詩 128:1-6;結 45:13-46:24;彼前 1:13-2:10;箴 28:11","1124":"詩 129:1-8;結 47:1-48:35;彼前 2:11-3:7;箴 28:12-13","1125":"詩 130:1-4;但 1:1-2:23;彼前 3:8-4:6;箴 28:14","1126":"詩 130:5-8;但 2:24-3:30;彼前 4:7-5:14;箴 28:15-16","1127":"詩 131:1-3;但 4:1-37;彼後 1:1-21;箴 28:17-18","1128":"詩 132:1-5;但 5:1-31;彼後 2:1-22;箴 28:19-20","1129":"詩 132:6-12;但 6:1-28;彼後 3:1-18;箴 28:21-22","1130":"詩 132:13-18;但 7:1-28;約一 1:1-10;箴 28:23-24","1201":"詩 133:1-3;但 8:1-27;約一 2:1-17;箴 28:25-26","1202":"詩 134:1-3;但 9:1-11:1;約一 2:18-3:6;箴 28:27-28","1203":"詩 135:1-7;但 11:2-35;約一 3:7-24;箴 29:1","1204":"詩 135:8-14;但 11:36-12:13;約一 4:1-21;箴 29:2-4","1205":"詩 135:15-21;何 1:1-3:5;約一 5:1-21;箴 29:5-8","1206":"詩 136:1-9;何 4:1-5:15;約二 1-13;箴 29:9-11","1207":"詩 136:10-26;何 6:1-9:17;約三 1-15;箴 29:12-14","1208":"詩 137:1-9;何 10:1-14:9;猶 1-25;箴 29:15-17","1209":"詩 138:1-8;珥 1:1-3:21;啟 1:1-20;箴 29:18","1210":"詩 139:1-6;摩 1:1-3:15;啟 2:1-17;箴 29:19-20","1211":"詩 139:7-12;摩 4:1-6:14;啟 2:18-3:6;箴 29:21-22","1212":"詩 139:13-18;摩 7:1-9:15;啟 3:7-22;箴 29:23","1213":"詩 139:19-24;俄 1-21;啟 4:1-11;箴 29:24-25","1214":"詩 140:1-8;拿 1:1-4:11;啟 5:1-14;箴 29:26-27","1215":"詩 140:9-13;彌 1:1-4:13;啟 6:1-17;箴 30:1-4","1216":"詩 141:1-10;彌 5:1-7:20;啟 7:1-17;箴 30:5-6","1217":"詩 142:1-7;鴻 1:1-3:19;啟 8:1-13;箴 30:7-9","1218":"詩 143:1-6;哈 1:1-3:19;啟 9:1-21;箴 30:10","1219":"詩 143:7-12;番 1:1-3:20;啟 10:1-11;箴 30:11-14","1220":"詩 144:1-8;該 1:1-2:23;啟 11:1-19;箴 30:15-16","1221":"詩 144:9-15;亞 1:1-21;啟 12:1-13:1;箴 30:17","1222":"詩 145:1-7;亞 2:1-3:10;啟 13:2-18;箴 30:18-20","1223":"詩 145:8-13;亞 4:1-5:11;啟 14:1-20;箴 30:21-23","1224":"詩 145:14-21;亞 6:1-7:14;啟 15:1-8;箴 30:24-28","1225":"詩 146:1-10;亞 8:1-23;啟 16:1-21;箴 30:29-31","1226":"詩 147:1-11;亞 9:1-17;啟 17:1-18;箴 30:32","1227":"詩 147:12-20;亞 10:1-11:17;啟 18:1-24;箴 30:33","1228":"詩 148:1-6;亞 12:1-13:9;啟 19:1-21;箴 31:1-7","1229":"詩 148:7-14;亞 14:1-21;啟 20:1-15;箴 31:8-9","1230":"詩 149:1-9;瑪 1:1-2:17;啟 21:1-27;箴 31:10-24","1231":"詩 150:1-6;瑪 3:1-4:6;啟 22:1-21;箴 31:25-31"}';
-	}
-	//////////////////////////////////////////////////////////
-	// final steps
-	//////////////////////////////////////////////////////////
+		function showContent(div) {
+			$("div[data-role='content']").hide();
+			$(div).show();
+		}
 
-	// last step: center content vertically and horizontally
-	//$(window).resize(function() { $("div[data-role='content']").center(); });
-	//$(window).resize();
-	window.scrollTo(0, 1); // hide URL bar
-});
+		// convert date to "mmdd" format
+		function convertmmdd(date) {
+			var mm = ('0' + (date.getMonth() + 1)).substr(-2, 2); // zero padded month
+			var dd = ('0' + date.getDate()).substr(-2, 2); // zero padded day
+			return mm + dd;
+		}
 
+		function displayVerses(date) {
+			var mmdd = convertmmdd(date); // convert date to "mmdd" format
+			var verses = obj[mmdd]; // get verses for mmdd
+			var c_verses = c_obj[mmdd]; // get verses for mmdd
+
+			// display data
+			$('#date').html(date.toLocaleDateString()); // date
+			$('#verses').html(get_verse_snippet(verses) + "<br><br>" + c_verses.replace(/;/g, "<br>")); // replace semicolons with <br>
+			$('#link').prop('href', urlTemplate.replace('{verses}', verses));
+
+			$('#NKJV').prop('href', urlTemplateNKJV.replace('{verses}', verses));
+			$('#NIV').prop('href', urlTemplateNIV.replace('{verses}', verses));
+			$('#CUV').prop('href', urlTemplateCUV.replace('{verses}', verses));
+			$('#CUVS').prop('href', urlTemplateCUVS.replace('{verses}', verses));
+			$('#NKJVCUV').prop('href', urlTemplateNKJVCUV.replace('{verses}', verses));
+			$('#NKJVCUVS').prop('href', urlTemplateNKJVCUVS.replace('{verses}', verses));
+			$('#NIVCUV').prop('href', urlTemplateNIVCUV.replace('{verses}', verses));
+			$('#NIVCUVS').prop('href', urlTemplateNIVCUVS.replace('{verses}', verses));
+		}
+
+		// center an object vertically and horizontally
+		jQuery.fn.center = function() {
+			this.css("position", "absolute");
+			this.css("top", ($(window).height() - this.height()) / 2 + $(window).scrollTop() + "px");
+			this.css("left", ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px");
+			return this;
+		};
+
+		// returns json data
+		function getJsonData() {
+			return '{"0101":"Psalm 1:1-6;Genesis 1:1-2:25;Matthew 1:1-2:12;Proverbs 1:1-6","0102":"Psalm 2:1-6;Genesis 3:1-4:26;Matthew 2:13-3:6;Proverbs 1:7-9","0103":"Psalm 2:7-12;Genesis 5:1-7:24;Matthew 3:7-4:11;Proverbs 1:10-19","0104":"Psalm 3:1-8;Genesis 8:1-10:32;Matthew 4:12-25;Proverbs 1:20-23","0105":"Psalm 4:1-8;Genesis 11:1-13:5;Matthew 5:1-26;Proverbs 1:24-28","0106":"Psalm 5:1-3;Genesis 13:6-15:21;Matthew 5:27-48;Proverbs 1:29-33","0107":"Psalm 5:4-12;Genesis 16:1-18:19;Matthew 6:1-24;Proverbs 2:1-5","0108":"Psalm 6:1-3;Genesis 18:20-19:38;Matthew 6:25-7:14;Proverbs 2:6-15","0109":"Psalm 6:4-10;Genesis 20:1-22:24;Matthew 7:15-29;Proverbs 2:16-22","0110":"Psalm 7:1-9;Genesis 23:1-24:51;Matthew 8:1-17;Proverbs 3:1-6","0111":"Psalm 7:10-17;Genesis 24:52-26:16;Matthew 8:18-34;Proverbs 3:7-8","0112":"Psalm 8:1-9;Genesis 26:17-27:46;Matthew 9:1-17;Proverbs 3:9-10","0113":"Psalm 9:1-6;Genesis 28:1-29:35;Matthew 9:18-38;Proverbs 3:11-12","0114":"Psalm 9:7-12;Genesis 30:1-31:16;Matthew 10:1-25;Proverbs 3:13-15","0115":"Psalm 9:13-20;Genesis 31:17-32:12;Matthew 10:26-11:6;Proverbs 3:16-18","0116":"Psalm 10:1-10;Genesis 32:13-34:31;Matthew 11:7-30;Proverbs 3:19-20","0117":"Psalm 10:11-15;Genesis 35:1-36:43;Matthew 12:1-21;Proverbs 3:21-26","0118":"Psalm 10:16-18;Genesis 37:1-38:30;Matthew 12:22-45;Proverbs 3:27-32","0119":"Psalm 11:1-7;Genesis 39:1-41:16;Matthew 12:46-13:23;Proverbs 3:33-35","0120":"Psalm 12:1-8;Genesis 41:17-42:17;Matthew 13:24-46;Proverbs 4:1-6","0121":"Psalm 13:1-6;Genesis 42:18-43:34;Matthew 13:47-14:12;Proverbs 4:7-10","0122":"Psalm 14:1-7;Genesis 44:1-45:28;Matthew 14:13-36;Proverbs 4:11-13","0123":"Psalm 15:1-5;Genesis 46:1-47:31;Matthew 15:1-28;Proverbs 4:14-19","0124":"Psalm 16:1-6;Genesis 48:1-49:33;Matthew 15:29-16:12;Proverbs 4:20-27","0125":"Psalm 16:7-11;Genesis 50:1-26;Exodus 1:1-2:10;Matthew 16:13-17:9;Proverbs 5:1-6","0126":"Psalm 17:1-5;Exodus 2:11-3:22;Matthew 17:10-27;Proverbs 5:7-14","0127":"Psalm 17:6-9;Exodus 4:1-5:21;Matthew 18:1-22;Proverbs 5:15-21","0128":"Psalm 17:10-15;Exodus 5:22-7:24;Matthew 18:23-19:12;Proverbs 5:22-23","0129":"Psalm 18:1-6;Exodus 7:25-9:35;Matthew 19:13-30;Proverbs 6:1-5","0130":"Psalm 18:7-15;Exodus 10:1-12:13;Matthew 20:1-28;Proverbs 6:6-11","0131":"Psalm 18:16-24;Exodus 12:14-13:16;Matthew 20:29-21:22;Proverbs 6:12-15","0201":"Psalm 18:25-36;Exodus 13:17-15:18;Matthew 21:23-46;Proverbs 6:16-19","0202":"Psalm 18:37-50;Exodus 15:19-17:7;Matthew 22:1-33;Proverbs 6:20-26","0203":"Psalm 19:1-6;Exodus 17:8-19:15;Matthew 22:34-23:12;Proverbs 6:27-35","0204":"Psalm 19:7-14;Exodus 19:16-21:21;Matthew 23:13-39;Proverbs 7:1-5","0205":"Psalm 20:1-9;Exodus 21:22-23:13;Matthew 24:1-28;Proverbs 7:6-23","0206":"Psalm 21:1-7;Exodus 23:14-25:40;Matthew 24:29-51;Proverbs 7:24-27","0207":"Psalm 21:8-13;Exodus 26:1-27:21;Matthew 25:1-30;Proverbs 8:1-11","0208":"Psalm 22:1-18;Exodus 28:1-43;Matthew 25:31-26:13;Proverbs 8:12-13","0209":"Psalm 22:19-31;Exodus 29:1-30:10;Matthew 26:14-46;Proverbs 8:14-26","0210":"Psalm 23:1-6;Exodus 30:11-31:18;Matthew 26:47-68;Proverbs 8:27-32","0211":"Psalm 24:1-6;Exodus 32:1-33:23;Matthew 26:69-27:14;Proverbs 8:33-36","0212":"Psalm 24:7-10;Exodus 34:1-35:9;Matthew 27:15-31;Proverbs 9:1-6","0213":"Psalm 25:1-7;Exodus 35:10-36:38;Matthew 27:32-66;Proverbs 9:7-8","0214":"Psalm 25:8-15;Exodus 37:1-38:31;Matthew 28:1-20;Proverbs 9:9-10","0215":"Psalm 25:16-22;Exodus 39:1-40:38;Mark 1:1-28;Proverbs 9:11-12","0216":"Psalm 26:1-12;Leviticus 1:1-3:17;Mark 1:29-2:12;Proverbs 9:13-18","0217":"Psalm 27:1-6;Leviticus 4:1-5:19;Mark 2:13-3:6;Proverbs 10:1-2","0218":"Psalm 27:7-14;Leviticus 6:1-7:27;Mark 3:7-30;Proverbs 10:3-4","0219":"Psalm 28:1-9;Leviticus 7:28-9:6;Mark 3:31-4:25;Proverbs 10:5","0220":"Psalm 29:1-11;Leviticus 9:7-10:20;Mark 4:26-5:20;Proverbs 10:6-7","0221":"Psalm 30:1-5;Leviticus 11:1-12:8;Mark 5:21-43;Proverbs 10:8-9","0222":"Psalm 30:6-12;Leviticus 13:1-59;Mark 6:1-29;Proverbs 10:10","0223":"Psalm 31:1-8;Leviticus 14:1-57;Mark 6:30-56;Proverbs 10:11-12","0224":"Psalm 31:9-18;Leviticus 15:1-16:28;Mark 7:1-23;Proverbs 10:13-14","0225":"Psalm 31:19-24;Leviticus 16:29-18:30;Mark 7:24-8:10;Proverbs 10:15-16","0226":"Psalm 32:1-5;Leviticus 19:1-20:21;Mark 8:11-38;Proverbs 10:17","0227":"Psalm 32:6-11;Leviticus 20:22-22:16;Mark 9:1-29;Proverbs 10:18","0228":"Psalm 33:1-11;Leviticus 22:17-23:44;Mark 9:30-10:12;Proverbs 10:19","0229":"Psalm 91:1-16;Genesis 2:1-25;Revelation 21:1-21;Proverbs 6:16-19","0301":"Psalm 33:12-22;Leviticus 24:1-25:46;Mark 10:13-31;Proverbs 10:20-21","0302":"Psalm 34:1-10;Leviticus 25:47-27:13;Mark 10:32-52;Proverbs 10:22","0303":"Psalm 34:11-22;Leviticus 27:14-27:34;Numbers 1:1-1:54;Mark 11:1-26;Proverbs 10:23","0304":"Psalm 35:1-10;Numbers 2:1-3:51;Mark 11:27-12:17;Proverbs 10:24-25","0305":"Psalm 35:11-18;Numbers 4:1-5:31;Mark 12:18-37;Proverbs 10:26","0306":"Psalm 35:19-28;Numbers 6:1-7:89;Mark 12:38-13:13;Proverbs 10:27-28","0307":"Psalm 36:1-12;Numbers 8:1-9:23;Mark 13:14-37;Proverbs 10:29-30","0308":"Psalm 37:1-11;Numbers 10:1-11:23;Mark 14:1-21;Proverbs 10:31-32","0309":"Psalm 37:12-20;Numbers 11:24-13:33;Mark 14:22-52;Proverbs 11:1-3","0310":"Psalm 37:21-29;Numbers 14:1-15:16;Mark 14:53-72;Proverbs 11:4","0311":"Psalm 37:30-40;Numbers 15:17-16:40;Mark 15:1-47;Proverbs 11:5-6","0312":"Psalm 38:1-12;Numbers 16:41-18:32;Mark 16:1-20;Proverbs 11:7","0313":"Psalm 38:13-22;Numbers 19:1-20:29;Luke 1:1-25;Proverbs 11:8","0314":"Psalm 39:1-6;Numbers 21:1-22:20;Luke 1:26-56;Proverbs 11:9-11","0315":"Psalm 39:7-13;Numbers 22:21-23:30;Luke 1:57-80;Proverbs 11:12-13","0316":"Psalm 40:1-5;Numbers 24:1-25:18;Luke 2:1-35;Proverbs 11:14","0317":"Psalm 40:6-10;Numbers 26:1-51;Luke 2:36-52;Proverbs 11:15","0318":"Psalm 40:11-17;Numbers 26:52-28:15;Luke 3:1-22;Proverbs 11:16-17","0319":"Psalm 41:1-3;Numbers 28:16-29:40;Luke 3:23-38;Proverbs 11:18-19","0320":"Psalm 41:4-9;Numbers 30:1-31:54;Luke 4:1-30;Proverbs 11:20-21","0321":"Psalm 41:10-13;Numbers 32:1-33:39;Luke 4:31-5:11;Proverbs 11:22","0322":"Psalm 42:1-5;Numbers 33:40-35:34;Luke 5:12-28;Proverbs 11:23","0323":"Psalm 42:6-11;Numbers 36:1-36:13;Deuteronomy 1:1-1:46;Luke 5:29-6:11;Proverbs 11:24-26","0324":"Psalm 43:1-5;Deuteronomy 2:1-3:29;Luke 6:12-38;Proverbs 11:27","0325":"Psalm 44:1-3;Deuteronomy 4:1-49;Luke 6:39-7:10;Proverbs 11:28","0326":"Psalm 44:4-8;Deuteronomy 5:1-6:25;Luke 7:11-35;Proverbs 11:29-31","0327":"Psalm 44:9-16;Deuteronomy 7:1-8:20;Luke 7:36-8:3;Proverbs 12:1","0328":"Psalm 44:17-26;Deuteronomy 9:1-10:22;Luke 8:4-21;Proverbs 12:2-3","0329":"Psalm 45:1-9;Deuteronomy 11:1-12:32;Luke 8:22-39;Proverbs 12:4","0330":"Psalm 45:10-17;Deuteronomy 13:1-15:23;Luke 8:40-9:6;Proverbs 12:5-7","0331":"Psalm 46:1-7;Deuteronomy 16:1-17:20;Luke 9:7-27;Proverbs 12:8-9","0401":"Psalm 46:8-11;Deuteronomy 18:1-20:20;Luke 9:28-50;Proverbs 12:10","0402":"Psalm 47:1-4;Deuteronomy 21:1-22:30;Luke 9:51-10:12;Proverbs 12:11","0403":"Psalm 47:5-9;Deuteronomy 23:1-25:19;Luke 10:13-37;Proverbs 12:12-14","0404":"Psalm 48:1-8;Deuteronomy 26:1-27:26;Luke 10:38-11:13;Proverbs 12:15-17","0405":"Psalm 48:9-14;Deuteronomy 28:1-68;Luke 11:14-36;Proverbs 12:18","0406":"Psalm 49:1-13;Deuteronomy 29:1-30:20;Luke 11:37-12:7;Proverbs 12:19-20","0407":"Psalm 49:14-20;Deuteronomy 31:1-32:27;Luke 12:8-34;Proverbs 12:21-23","0408":"Psalm 50:1-6;Deuteronomy 32:28-52;Luke 12:35-59;Proverbs 12:24","0409":"Psalm 50:7-23;Deuteronomy 33:1-29;Luke 13:1-21;Proverbs 12:25","0410":"Psalm 51:1-12;Deuteronomy 34:1-34:12;Joshua 1:1-2:24;Luke 13:22-14:6;Proverbs 12:26","0411":"Psalm 51:13-19;Joshua 3:1-4:24;Luke 14:7-35;Proverbs 12:27-28","0412":"Psalm 52:1-9;Joshua 5:1-7:15;Luke 15:1-32;Proverbs 13:1","0413":"Psalm 53:1-6;Joshua 7:16-9:2;Luke 16:1-18;Proverbs 13:2-3","0414":"Psalm 54:1-7;Joshua 9:3-10:43;Luke 16:19-17:10;Proverbs 13:4","0415":"Psalm 55:1-8;Joshua 11:1-12:24;Luke 17:11-37;Proverbs 13:5-6","0416":"Psalm 55:9-15;Joshua 13:1-14:15;Luke 18:1-17;Proverbs 13:7-8","0417":"Psalm 55:16-23;Joshua 15:1-63;Luke 18:18-43;Proverbs 13:9-10","0418":"Psalm 56:1-8;Joshua 16:1-18:28;Luke 19:1-27;Proverbs 13:11","0419":"Psalm 56:9-13;Joshua 19:1-20:9;Luke 19:28-48;Proverbs 13:12-14","0420":"Psalm 57:1-6;Joshua 21:1-22:20;Luke 20:1-26;Proverbs 13:15-16","0421":"Psalm 57:7-11;Joshua 22:21-23:16;Luke 20:27-47;Proverbs 13:17-19","0422":"Psalm 58:1-11;Joshua 24:1-33;Luke 21:1-28;Proverbs 13:20-23","0423":"Psalm 59:1-5;Judges 1:1-2:9;Luke 21:29-22:13;Proverbs 13:24-25","0424":"Psalm 59:6-13;Judges 2:10-3:31;Luke 22:14-34;Proverbs 14:1-2","0425":"Psalm 59:14-17;Judges 4:1-5:31;Luke 22:35-53;Proverbs 14:3-4","0426":"Psalm 60:1-4;Judges 6:1-6:40;Luke 22:54-23:12;Proverbs 14:5-6","0427":"Psalm 60:5-12;Judges 7:1-8:17;Luke 23:13-43;Proverbs 14:7-8","0428":"Psalm 61:1-4;Judges 8:18-9:21;Luke 23:44-24:12;Proverbs 14:9-10","0429":"Psalm 61:5-8;Judges 9:22-10:18;Luke 24:13-53;Proverbs 14:11-12","0430":"Psalm 62:1-12;Judges 11:1-12:15;John 1:1-28;Proverbs 14:13-14","0501":"Psalm 63:1-11;Judges 13:1-14:20;John 1:29-51;Proverbs 14:15-16","0502":"Psalm 64:1-10;Judges 15:1-16:31;John 2:1-25;Proverbs 14:17-19","0503":"Psalm 65:1-8;Judges 17:1-18:31;John 3:1-21;Proverbs 14:20-21","0504":"Psalm 65:9-13;Judges 19:1-20:48;John 3:22-4:3;Proverbs 14:22-24","0505":"Psalm 66:1-4;Judges 21:1-21:25;Ruth 1:1-1:22;John 4:4-42;Proverbs 14:25","0506":"Psalm 66:5-15;Ruth 2:1-4:22;John 4:43-54;Proverbs 14:26-27","0507":"Psalm 66:16-20;1Samuel 1:1-2:21;John 5:1-23;Proverbs 14:28-29","0508":"Psalm 67:1-7;1Samuel 2:22-4:22;John 5:24-47;Proverbs 14:30-31","0509":"Psalm 68:1-6;1Samuel 5:1-7:17;John 6:1-21;Proverbs 14:32-33","0510":"Psalm 68:7-18;1Samuel 8:1-9:27;John 6:22-42;Proverbs 14:34-35","0511":"Psalm 68:19-27;1Samuel 10:1-11:15;John 6:43-71;Proverbs 15:1-3","0512":"Psalm 68:28-35;1Samuel 12:1-13:22;John 7:1-29;Proverbs 15:4","0513":"Psalm 69:1-4;1Samuel 13:23-14:52;John 7:30-52;Proverbs 15:5-7","0514":"Psalm 69:5-12;1Samuel 15:1-16:23;John 8:1-20;Proverbs 15:8-10","0515":"Psalm 69:13-18;1Samuel 17:1-18:4;John 8:21-30;Proverbs 15:11","0516":"Psalm 69:19-28;1Samuel 18:5-19:24;John 8:31-59;Proverbs 15:12-14","0517":"Psalm 69:29-36;1Samuel 20:1-21:15;John 9:1-41;Proverbs 15:15-17","0518":"Psalm 70:1-5;1Samuel 22:1-23:29;John 10:1-21;Proverbs 15:18-19","0519":"Psalm 71:1-8;1Samuel 24:1-25:44;John 10:22-42;Proverbs 15:20-21","0520":"Psalm 71:9-14;1Samuel 26:1-28:25;John 11:1-53;Proverbs 15:22-23","0521":"Psalm 71:15-18;1Samuel 29:1-31:13;John 11:54-12:19;Proverbs 15:24-26","0522":"Psalm 71:19-24;2Samuel 1:1-2:11;John 12:20-50;Proverbs 15:27-28","0523":"Psalm 72:1-7;2Samuel 2:12-3:39;John 13:1-30;Proverbs 15:29-30","0524":"Psalm 72:8-14;2Samuel 4:1-6:23;John 13:31-14:14;Proverbs 15:31-32","0525":"Psalm 72:15-20;2Samuel 7:1-8:18;John 14:15-31;Proverbs 15:33","0526":"Psalm 120:1-7;2Samuel 9:1-11:27;John 15:1-27;Proverbs 16:1-3","0527":"Psalm 121:1-8;2Samuel 12:1-31;John 16:1-33;Proverbs 16:4-5","0528":"Psalm 122:1-5;2Samuel 13:1-39;John 17:1-26;Proverbs 16:6-7","0529":"Psalm 122:6-9;2Samuel 14:1-15:22;John 18:1-24;Proverbs 16:8-9","0530":"Psalm 123:1-4;2Samuel 15:23-16:23;John 18:25-19:22;Proverbs 16:10-11","0531":"Psalm 124:1-5;2Samuel 17:1-29;John 19:23-42;Proverbs 16:12-13","0601":"Psalm 124:6-8;2Samuel 18:1-19:10;John 20:1-31;Proverbs 16:14-15","0602":"Psalm 125:1-5;2Samuel 19:11-20:13;John 21:1-25;Proverbs 16:16-17","0603":"Psalm 126:1-3;2Samuel 20:14-22:20;Acts 1:1-26;Proverbs 16:18","0604":"Psalm 126:4-6;2Samuel 22:21-23:23;Acts 2:1-47;Proverbs 16:19-20","0605":"Psalm 127:1-2;2Samuel 23:24-24:25;Acts 3:1-26;Proverbs 16:21-23","0606":"Psalm 127:3-5;1Kings 1:1-53;Acts 4:1-37;Proverbs 16:24","0607":"Psalm 128:1-6;1Kings 2:1-3:3;Acts 5:1-42;Proverbs 16:25","0608":"Psalm 129:1-8;1Kings 3:4-4:34;Acts 6:1-15;Proverbs 16:26-27","0609":"Psalm 130:1-4;1Kings 5:1-6:38;Acts 7:1-29;Proverbs 16:28-30","0610":"Psalm 130:5-8;1Kings 7:1-51;Acts 7:30-50;Proverbs 16:31-33","0611":"Psalm 131:1-3;1Kings 8:1-66;Acts 7:51-8:13;Proverbs 17:1","0612":"Psalm 132:1-5;1Kings 9:1-10:29;Acts 8:14-40;Proverbs 17:2-3","0613":"Psalm 132:6-12;1Kings 11:1-12:19;Acts 9:1-25;Proverbs 17:4-5","0614":"Psalm 132:13-18;1Kings 12:20-13:34;Acts 9:26-43;Proverbs 17:6","0615":"Psalm 133:1-3;1Kings 14:1-15:24;Acts 10:1-23;Proverbs 17:7-8","0616":"Psalm 134:1-3;1Kings 15:25-17:24;Acts 10:23-48;Proverbs 17:9-11","0617":"Psalm 135:1-7;1Kings 18:1-46;Acts 11:1-30;Proverbs 17:12-13","0618":"Psalm 135:8-14;1Kings 19:1-21;Acts 12:1-23;Proverbs 17:14-15","0619":"Psalm 135:15-21;1Kings 20:1-21:29;Acts 12:24-13:15;Proverbs 17:16","0620":"Psalm 136:1-9;1Kings 22:1-53;Acts 13:16-41;Proverbs 17:17-18","0621":"Psalm 136:10-22;2Kings 1:1-2:25;Acts 13:42-14:7;Proverbs 17:19-21","0622":"Psalm 136:23-26;2Kings 3:1-4:17;Acts 14:8-28;Proverbs 17:22","0623":"Psalm 137:1-9;2Kings 4:18-5:27;Acts 15:1-35;Proverbs 17:23","0624":"Psalm 138:1-8;2Kings 6:1-7:20;Acts 15:36-16:15;Proverbs 17:24-25","0625":"Psalm 139:1-12;2Kings 8:1-9:13;Acts 16:16-40;Proverbs 17:26","0626":"Psalm 139:13-24;2Kings 9:14-10:31;Acts 17:1-34;Proverbs 17:27-28","0627":"Psalm 140:1-8;2Kings 10:32-12:21;Acts 18:1-22;Proverbs 18:1","0628":"Psalm 140:9-13;2Kings 13:1-14:29;Acts 18:23-19:12;Proverbs 18:2-3","0629":"Psalm 141:1-10;2Kings 15:1-16:20;Acts 19:13-41;Proverbs 18:4-5","0630":"Psalm 142:1-7;2Kings 17:1-18:12;Acts 20:1-38;Proverbs 18:6-7","0701":"Psalm 143:1-6;2Kings 18:13-19:37;Acts 21:1-16;Proverbs 18:8","0702":"Psalm 143:7-12;2Kings 20:1-22:2;Acts 21:17-36;Proverbs 18:9-10","0703":"Psalm 144:1-8;2Kings 22:3-23:30;Acts 21:37-22:16;Proverbs 18:11-12","0704":"Psalm 144:9-15;2Kings 23:31-25:30;Acts 22:17-23:10;Proverbs 18:13","0705":"Psalm 145:1-7;1Chronicles 1:1-2:17;Acts 23:11-35;Proverbs 18:14-15","0706":"Psalm 145:8-13;1Chronicles 2:18-4:4;Acts 24:1-27;Proverbs 18:16-18","0707":"Psalm 145:14-21;1Chronicles 4:5-5:17;Acts 25:1-27;Proverbs 18:19","0708":"Psalm 146:1-10;1Chronicles 5:18-6:81;Acts 26:1-32;Proverbs 18:20-21","0709":"Psalm 147:1-11;1Chronicles 7:1-8:40;Acts 27:1-20;Proverbs 18:22","0710":"Psalm 147:12-20;1Chronicles 9:1-10:14;Acts 27:21-44;Proverbs 18:23-24","0711":"Psalm 148:1-14;1Chronicles 11:1-12:18;Acts 28:1-31;Proverbs 19:1-3","0712":"Psalm 149:1-9;1Chronicles 12:19-14:17;Romans 1:1-17;Proverbs 19:4-5","0713":"Psalm 150:1-6;1Chronicles 15:1-16:36;Romans 1:18-32;Proverbs 19:6-7","0714":"Psalm 73:1-14;1Chronicles 16:37-18:17;Romans 2:1-24;Proverbs 19:8-9","0715":"Psalm 73:15-28;1Chronicles 19:1-21:30;Romans 2:25-3:8;Proverbs 19:10-12","0716":"Psalm 74:1-11;1Chronicles 22:1-23:32;Romans 3:9-31;Proverbs 19:13-14","0717":"Psalm 74:12-23;1Chronicles 24:1-26:11;Romans 4:1-12;Proverbs 19:15-16","0718":"Psalm 75:1-10;1Chronicles 26:12-27:34;Romans 4:13-5:5;Proverbs 19:17","0719":"Psalm 76:1-9;1Chronicles 28:1-29:30;Romans 5:6-21;Proverbs 19:18-19","0720":"Psalm 76:10-12;2Chronicles 1:1-3:17;Romans 6:1-23;Proverbs 19:20-21","0721":"Psalm 77:1-15;2Chronicles 4:1-6:11;Romans 7:1-13;Proverbs 19:22-23","0722":"Psalm 77:16-20;2Chronicles 6:12-7:10;Romans 7:14-8:8;Proverbs 19:24-25","0723":"Psalm 78:1-16;2Chronicles 7:11-10:19;Romans 8:9-21;Proverbs 19:26","0724":"Psalm 78:17-31;2Chronicles 11:1-13:22;Romans 8:22-39;Proverbs 19:27-29","0725":"Psalm 78:32-55;2Chronicles 14:1-16:14;Romans 9:1-21;Proverbs 20:1","0726":"Psalm 78:56-64;2Chronicles 17:1-18:34;Romans 9:22-10:13;Proverbs 20:2-3","0727":"Psalm 78:65-72;2Chronicles 19:1-20:37;Romans 10:14-11:12;Proverbs 20:4-6","0728":"Psalm 79:1-8;2Chronicles 21:1-23:21;Romans 11:13-36;Proverbs 20:7","0729":"Psalm 79:9-13;2Chronicles 24:1-25:28;Romans 12:1-21;Proverbs 20:8-10","0730":"Psalm 80:1-7;2Chronicles 26:1-28:27;Romans 13:1-14;Proverbs 20:11","0731":"Psalm 80:8-19;2Chronicles 29:1-36;Romans 14:1-23;Proverbs 20:12","0801":"Psalm 81:1-7;2Chronicles 30:1-31:21;Romans 15:1-22;Proverbs 20:13-15","0802":"Psalm 81:8-16;2Chronicles 32:1-33:13;Romans 15:23-16:7;Proverbs 20:16-18","0803":"Psalm 82:1-8;2Chronicles 33:14-34:33;Romans 16:8-27;Proverbs 20:19","0804":"Psalm 83:1-8;2Chronicles 35:1-36:23;1Corinthians 1:1-17;Proverbs 20:20-21","0805":"Psalm 83:9-18;Ezra 1:1-2:70;1Corinthians 1:18-2:5;Proverbs 20:22-23","0806":"Psalm 84:1-4;Ezra 3:1-4:24;1Corinthians 2:6-3:4;Proverbs 20:24-25","0807":"Psalm 84:5-8;Ezra 5:1-6:22;1Corinthians 3:5-23;Proverbs 20:26-27","0808":"Psalm 84:9-12;Ezra 7:1-8:20;1Corinthians 4:1-21;Proverbs 20:28-30","0809":"Psalm 85:1-7;Ezra 8:21-9:15;1Corinthians 5:1-13;Proverbs 21:1-2","0810":"Psalm 85:8-13;Ezra 10:1-44;1Corinthians 6:1-20;Proverbs 21:3","0811":"Psalm 86:1-7;Nehemiah 1:1-3:14;1Corinthians 7:1-24;Proverbs 21:4","0812":"Psalm 86:8-17;Nehemiah 3:15-5:13;1Corinthians 7:25-40;Proverbs 21:5-7","0813":"Psalm 87:1-7;Nehemiah 5:14-7:60;1Corinthians 8:1-13;Proverbs 21:8-10","0814":"Psalm 88:1-7;Nehemiah 7:61-9:21;1Corinthians 9:1-18;Proverbs 21:11-12","0815":"Psalm 88:8-18;Nehemiah 9:22-10:39;1Corinthians 9:19-10:13;Proverbs 21:13","0816":"Psalm 89:1-13;Nehemiah 11:1-12:26;1Corinthians 10:14-11:2;Proverbs 21:14-16","0817":"Psalm 89:14-37;Nehemiah 12:27-13:31;1Corinthians 11:3-16;Proverbs 21:17-18","0818":"Psalm 89:38-45;Esth 1:1-3:15;1Corinthians 11:17-34;Proverbs 21:19-20","0819":"Psalm 89:46-52;Esth 4:1-7:10;1Corinthians 12:1-26;Proverbs 21:21-22","0820":"Psalm 90:1-10;Esth 8:1-10:3;1Corinthians 12:27-13:13;Proverbs 21:23-24","0821":"Psalm 90:11-17;Job 1:1-3:26;1Corinthians 14:1-17;Proverbs 21:25-26","0822":"Psalm 91:1-8;Job 4:1-7:21;1Corinthians 14:18-40;Proverbs 21:27","0823":"Psalm 91:9-16;Job 8:1-11:20;1Corinthians 15:1-28;Proverbs 21:28-29","0824":"Psalm 92:1-8;Job 12:1-15:35;1Corinthians 15:29-58;Proverbs 21:30-31","0825":"Psalm 92:9-15;Job 16:1-19:29;1Corinthians 16:1-24;Proverbs 22:1","0826":"Psalm 93:1-5;Job 20:1-22:30;2Corinthians 1:1-11;Proverbs 22:2-4","0827":"Psalm 94:1-11;Job 23:1-27:23;2Corinthians 1:12-2:11;Proverbs 22:5-6","0828":"Psalm 94:12-23;Job 28:1-30:31;2Corinthians 2:12-17;Proverbs 22:7","0829":"Psalm 95:1-11;Job 31:1-33:33;2Corinthians 3:1-18;Proverbs 22:8-9","0830":"Psalm 96:1-6;Job 34:1-36:33;2Corinthians 4:1-12;Proverbs 22:10-12","0831":"Psalm 96:7-13;Job 37:1-39:30;2Corinthians 4:13-5:10;Proverbs 22:13","0901":"Psalm 97:1-6;Job 40:1-42:17;2Corinthians 5:11-21;Proverbs 22:14","0902":"Psalm 97:7-12;Ecclesiastes 1:1-3:22;2Corinthians 6:1-13;Proverbs 22:15","0903":"Psalm 98:1-9;Ecclesiastes 4:1-6:12;2Corinthians 6:14-7:7;Proverbs 22:16","0904":"Psalm 99:1-9;Ecclesiastes 7:1-9:18;2Corinthians 7:8-16;Proverbs 22:17-19","0905":"Psalm 100:1-5;Ecclesiastes 10:1-12:14;2Corinthians 8:1-15;Proverbs 22:20-21","0906":"Psalm 101:1-8;Song 1:1-4:16;2Corinthians 8:16-24;Proverbs 22:22-23","0907":"Psalm 102:1-11;Song 5:1-8:14;2Corinthians 9:1-15;Proverbs 22:24-25","0908":"Psalm 102:12-17;Isaiah 1:1-2:22;2Corinthians 10:1-18;Proverbs 22:26-27","0909":"Psalm 102:18-28;Isaiah 3:1-5:30;2Corinthians 11:1-15;Proverbs 22:28-29","0910":"Psalm 103:1-5;Isaiah 6:1-7:25;2Corinthians 11:16-33;Proverbs 23:1-3","0911":"Psalm 103:6-19;Isaiah 8:1-9:21;2Corinthians 12:1-10;Proverbs 23:4-5","0912":"Psalm 103:20-22;Isaiah 10:1-11:16;2Corinthians 12:11-21;Proverbs 23:6-8","0913":"Psalm 104:1-9;Isaiah 12:1-14:32;2Corinthians 13:1-14;Proverbs 23:9-11","0914":"Psalm 104:10-18;Isaiah 15:1-18:7;Galatians 1:1-24;Proverbs 23:12","0915":"Psalm 104:19-30;Isaiah 19:1-21:17;Galatians 2:1-16;Proverbs 23:13-14","0916":"Psalm 104:31-35;Isaiah 22:1-24:23;Galatians 2:17-3:9;Proverbs 23:15-16","0917":"Psalm 105:1-7;Isaiah 25:1-28:13;Galatians 3:10-22;Proverbs 23:17-18","0918":"Psalm 105:8-15;Isaiah 28:14-30:11;Galatians 3:23-4:31;Proverbs 23:19-21","0919":"Psalm 105:16-22;Isaiah 30:12-33:12;Galatians 5:1-12;Proverbs 23:22","0920":"Psalm 105:23-36;Isaiah 33:13-36:22;Galatians 5:13-26;Proverbs 23:23","0921":"Psalm 105:37-45;Isaiah 37:1-38:22;Galatians 6:1-18;Proverbs 23:24","0922":"Psalm 106:1-5;Isaiah 39:1-41:16;Ephesians 1:1-23;Proverbs 23:25-28","0923":"Psalm 106:6-12;Isaiah 41:17-43:13;Ephesians 2:1-22;Proverbs 23:29-35","0924":"Psalm 106:13-23;Isaiah 43:14-45:10;Ephesians 3:1-21;Proverbs 24:1-2","0925":"Psalm 106:24-31;Isaiah 45:11-48:11;Ephesians 4:1-16;Proverbs 24:3-4","0926":"Psalm 106:32-39;Isaiah 48:12-50:11;Ephesians 4:17-32;Proverbs 24:5-6","0927":"Psalm 106:40-48;Isaiah 51:1-53:12;Ephesians 5:1-33;Proverbs 24:7","0928":"Psalm 107:1-9;Isaiah 54:1-57:13;Ephesians 6:1-24;Proverbs 24:8","0929":"Psalm 107:10-16;Isaiah 57:14-59:21;Philippians 1:1-26;Proverbs 24:9-10","0930":"Psalm 107:17-22;Isaiah 60:1-62:5;Philippians 1:27-2:18;Proverbs 24:11-12","1001":"Psalm 107:23-32;Isaiah 62:6-65:25;Philippians 2:19-3:4;Proverbs 24:13-14","1002":"Psalm 107:33-43;Isaiah 66:1-24;Philippians 3:4-21;Proverbs 24:15-16","1003":"Psalm 108:1-5;Jeremiah 1:1-2:30;Philippians 4:1-23;Proverbs 24:17-20","1004":"Psalm 108:6-13;Jeremiah 2:31-4:18;Colossians 1:1-20;Proverbs 24:21-22","1005":"Psalm 109:1-15;Jeremiah 4:19-6:14;Colossians 1:21-2:7;Proverbs 24:23-25","1006":"Psalm 109:16-31;Jeremiah 6:15-8:7;Colossians 2:8-23;Proverbs 24:26","1007":"Psalm 110:1-7;Jeremiah 8:8-9:26;Colossians 3:1-17;Proverbs 24:27","1008":"Psalm 111:1-10;Jeremiah 10:1-11:23;Colossians 3:18-4:18;Proverbs 24:28-29","1009":"Psalm 112:1-10;Jeremiah 12:1-14:10;1Thessalonians 1:1-2:9;Proverbs 24:30-34","1010":"Psalm 113:1-9;Jeremiah 14:11-16:15;1Thessalonians 2:10-3:13;Proverbs 25:1-5","1011":"Psalm 114:1-8;Jeremiah 16:16-18:23;1Thessalonians 4:1-5:3;Proverbs 25:6-7","1012":"Psalm 115:1-8;Jeremiah 19:1-21:14;1Thessalonians 5:4-28;Proverbs 25:8-10","1013":"Psalm 115:9-13;Jeremiah 22:1-23:20;2Thessalonians 1:1-12;Proverbs 25:11-14","1014":"Psalm 115:14-18;Jeremiah 23:21-25:38;2Thessalonians 2:1-17;Proverbs 25:15","1015":"Psalm 116:1-6;Jeremiah 26:1-27:22;2Thessalonians 3:1-18;Proverbs 25:16","1016":"Psalm 116:7-14;Jeremiah 28:1-29:32;1Timothy 1:1-20;Proverbs 25:17","1017":"Psalm 116:15-19;Jeremiah 30:1-31:26;1Timothy 2:1-15;Proverbs 25:18-19","1018":"Psalm 117:1-2;Jeremiah 31:27-32:44;1Timothy 3:1-16;Proverbs 25:20-22","1019":"Psalm 118:1-4;Jeremiah 33:1-34:22;1Timothy 4:1-16;Proverbs 25:23-24","1020":"Psalm 118:5-21;Jeremiah 35:1-36:32;1Timothy 5:1-25;Proverbs 25:25-27","1021":"Psalm 118:22-29;Jeremiah 37:1-38:28;1Timothy 6:1-21;Proverbs 25:28","1022":"Psalm 119:1-8;Jeremiah 39:1-41:18;2Timothy 1:1-18;Proverbs 26:1-2","1023":"Psalm 119:9-16;Jeremiah 42:1-44:23;2Timothy 2:1-21;Proverbs 26:3-5","1024":"Psalm 119:17-24;Jeremiah 44:24-47:7;2Timothy 2:22-3:17;Proverbs 26:6-8","1025":"Psalm 119:25-32;Jeremiah 48:1-49:22;2Timothy 4:1-22;Proverbs 26:9-12","1026":"Psalm 119:33-40;Jeremiah 49:23-50:46;Titus 1:1-16;Proverbs 26:13-16","1027":"Psalm 119:41-48;Jeremiah 51:1-53;Titus 2:1-15;Proverbs 26:17","1028":"Psalm 119:49-56;Jeremiah 51:54-52:34;Titus 3:1-15;Proverbs 26:18-19","1029":"Psalm 119:57-64;Lamentations 1:1-2:19;Philemon 1-25;Proverbs 26:20","1030":"Psalm 119:65-72;Lamentations 2:20-3:66;Hebrews 1:1-14;Proverbs 26:21-22","1031":"Psalm 119:73-80;Lamentations 4:1-5:22;Hebrews 2:1-18;Proverbs 26:23","1101":"Psalm 119:81-88;Ezekiel 1:1-3:15;Hebrews 3:1-19;Proverbs 26:24-26","1102":"Psalm 119:89-96;Ezekiel 3:16-6:14;Hebrews 4:1-16;Proverbs 26:27","1103":"Psalm 119:97-104;Ezekiel 7:1-9:11;Hebrews 5:1-14;Proverbs 26:28","1104":"Psalm 119:105-112;Ezekiel 10:1-11:25;Hebrews 6:1-20;Proverbs 27:1-2","1105":"Psalm 119:113-120;Ezekiel 12:1-14:11;Hebrews 7:1-17;Proverbs 27:3","1106":"Psalm 119:121-128;Ezekiel 14:12-16:42;Hebrews 7:18-28;Proverbs 27:4-6","1107":"Psalm 119:129-136;Ezekiel 16:43-17:24;Hebrews 8:1-13;Proverbs 27:7-9","1108":"Psalm 119:137-144;Ezekiel 18:1-19:14;Hebrews 9:1-10;Proverbs 27:10","1109":"Psalm 119:145-152;Ezekiel 20:1-49;Hebrews 9:11-28;Proverbs 27:11","1110":"Psalm 119:153-160;Ezekiel 21:1-22:31;Hebrews 10:1-17;Proverbs 27:12","1111":"Psalm 119:161-168;Ezekiel 23:1-49;Hebrews 10:18-39;Proverbs 27:13","1112":"Psalm 119:169-176;Ezekiel 24:1-26:21;Hebrews 11:1-16;Proverbs 27:14","1113":"Psalm 120:1-7;Ezekiel 27:1-28:26;Hebrews 11:17-31;Proverbs 27:15-16","1114":"Psalm 121:1-8;Ezekiel 29:1-30:26;Hebrews 11:32-12:13;Proverbs 27:17","1115":"Psalm 122:1-9;Ezekiel 31:1-32:32;Hebrews 12:14-29;Proverbs 27:18-20","1116":"Psalm 123:1-4;Ezekiel 33:1-34:31;Hebrews 13:1-25;Proverbs 27:21-22","1117":"Psalm 124:1-5;Ezekiel 35:1-36:38;James 1:1-18;Proverbs 27:23-27","1118":"Psalm 124:6-8;Ezekiel 37:1-38:23;James 1:19-2:17;Proverbs 28:1","1119":"Psalm 125:1-5;Ezekiel 39:1-40:27;James 2:18-3:18;Proverbs 28:2","1120":"Psalm 126:1-3;Ezekiel 40:28-41:26;James 4:1-17;Proverbs 28:3-5","1121":"Psalm 126:4-6;Ezekiel 42:1-43:27;James 5:1-20;Proverbs 28:6-7","1122":"Psalm 127:1-5;Ezekiel 44:1-45:12;1Peter 1:1-12;Proverbs 28:8-10","1123":"Psalm 128:1-6;Ezekiel 45:13-46:24;1Peter 1:13-2:10;Proverbs 28:11","1124":"Psalm 129:1-8;Ezekiel 47:1-48:35;1Peter 2:11-3:7;Proverbs 28:12-13","1125":"Psalm 130:1-4;Daniel 1:1-2:23;1Peter 3:8-4:6;Proverbs 28:14","1126":"Psalm 130:5-8;Daniel 2:24-3:30;1Peter 4:7-5:14;Proverbs 28:15-16","1127":"Psalm 131:1-3;Daniel 4:1-37;2Peter 1:1-21;Proverbs 28:17-18","1128":"Psalm 132:1-5;Daniel 5:1-31;2Peter 2:1-22;Proverbs 28:19-20","1129":"Psalm 132:6-12;Daniel 6:1-28;2Peter 3:1-18;Proverbs 28:21-22","1130":"Psalm 132:13-18;Daniel 7:1-28;1John 1:1-10;Proverbs 28:23-24","1201":"Psalm 133:1-3;Daniel 8:1-27;1John 2:1-17;Proverbs 28:25-26","1202":"Psalm 134:1-3;Daniel 9:1-11:1;1John 2:18-3:6;Proverbs 28:27-28","1203":"Psalm 135:1-7;Daniel 11:2-35;1John 3:7-24;Proverbs 29:1","1204":"Psalm 135:8-14;Daniel 11:36-12:13;1John 4:1-21;Proverbs 29:2-4","1205":"Psalm 135:15-21;Hosea 1:1-3:5;1John 5:1-21;Proverbs 29:5-8","1206":"Psalm 136:1-9;Hosea 4:1-5:15;2John 1-13;Proverbs 29:9-11","1207":"Psalm 136:10-26;Hosea 6:1-9:17;3John 1-15;Proverbs 29:12-14","1208":"Psalm 137:1-9;Hosea 10:1-14:9;Jude 1-25;Proverbs 29:15-17","1209":"Psalm 138:1-8;Joel 1:1-3:21;Revelation 1:1-20;Proverbs 29:18","1210":"Psalm 139:1-6;Amos 1:1-3:15;Revelation 2:1-17;Proverbs 29:19-20","1211":"Psalm 139:7-12;Amos 4:1-6:14;Revelation 2:18-3:6;Proverbs 29:21-22","1212":"Psalm 139:13-18;Amos 7:1-9:15;Revelation 3:7-22;Proverbs 29:23","1213":"Psalm 139:19-24;Obadiah 1-21;Revelation 4:1-11;Proverbs 29:24-25","1214":"Psalm 140:1-8;Jonah 1:1-4:11;Revelation 5:1-14;Proverbs 29:26-27","1215":"Psalm 140:9-13;Micah 1:1-4:13;Revelation 6:1-17;Proverbs 30:1-4","1216":"Psalm 141:1-10;Micah 5:1-7:20;Revelation 7:1-17;Proverbs 30:5-6","1217":"Psalm 142:1-7;Nahum 1:1-3:19;Revelation 8:1-13;Proverbs 30:7-9","1218":"Psalm 143:1-6;Habakkuk 1:1-3:19;Revelation 9:1-21;Proverbs 30:10","1219":"Psalm 143:7-12;Zephaniah 1:1-3:20;Revelation 10:1-11;Proverbs 30:11-14","1220":"Psalm 144:1-8;Haggai 1:1-2:23;Revelation 11:1-19;Proverbs 30:15-16","1221":"Psalm 144:9-15;Zechariah 1:1-21;Revelation 12:1-13:1;Proverbs 30:17","1222":"Psalm 145:1-7;Zechariah 2:1-3:10;Revelation 13:2-18;Proverbs 30:18-20","1223":"Psalm 145:8-13;Zechariah 4:1-5:11;Revelation 14:1-20;Proverbs 30:21-23","1224":"Psalm 145:14-21;Zechariah 6:1-7:14;Revelation 15:1-8;Proverbs 30:24-28","1225":"Psalm 146:1-10;Zechariah 8:1-23;Revelation 16:1-21;Proverbs 30:29-31","1226":"Psalm 147:1-11;Zechariah 9:1-17;Revelation 17:1-18;Proverbs 30:32","1227":"Psalm 147:12-20;Zechariah 10:1-11:17;Revelation 18:1-24;Proverbs 30:33","1228":"Psalm 148:1-6;Zechariah 12:1-13:9;Revelation 19:1-21;Proverbs 31:1-7","1229":"Psalm 148:7-14;Zechariah 14:1-21;Revelation 20:1-15;Proverbs 31:8-9","1230":"Psalm 149:1-9;Malachi 1:1-2:17;Revelation 21:1-27;Proverbs 31:10-24","1231":"Psalm 150:1-6;Malachi 3:1-4:6;Revelation 22:1-21;Proverbs 31:25-31"}';
+		}
+
+		function get_youversion_link(input) {
+			m = {
+				"Genesis": "GEN",
+				"Exodus": "EXO",
+				"Leviticus": "LEV",
+				"Numbers": "NUM",
+				"Deuteronomy": "DEU",
+				"Joshua": "JOS",
+				"Judges": "JDG",
+				"Ruth": "RUT",
+				"1Samuel": "1SA",
+				"2Samuel": "2SA",
+				"1Kings": "1KI",
+				"2Kings": "2KI",
+				"1Chronicles": "1CH",
+				"2Chronicles": "2CH",
+				"Ezra": "EZR",
+				"Nehemiah": "NEH",
+				"Esth": "EST",
+				"Job": "JOB",
+				"Psalm": "PSA",
+				"Proverbs": "PRO",
+				"Ecclesiastes": "ECC",
+				"Song": "SNG",
+				"Isaiah": "ISA",
+				"Jeremiah": "JER",
+				"Lamentations": "LAM",
+				"Ezekiel": "EZK",
+				"Daniel": "DAN",
+				"Hosea": "HOS",
+				"Joel": "JOL",
+				"Amos": "AMO",
+				"Obadiah": "OBA",
+				"Jonah": "JON",
+				"Micah": "MIC",
+				"Nahum": "NAM",
+				"Habakkuk": "HAB",
+				"Zephaniah": "ZEP",
+				"Haggai": "HAG",
+				"Zechariah": "ZEC",
+				"Malachi": "MAL",
+				"Matthew": "MAT",
+				"Mark": "MRK",
+				"Luke": "LUK",
+				"John": "JHN",
+				"Acts": "ACT",
+				"Romans": "ROM",
+				"1Corinthians": "1CO",
+				"2Corinthians": "2CO",
+				"Galatians": "GAL",
+				"Ephesians": "EPH",
+				"Philippians": "PHP",
+				"Colossians": "COL",
+				"1Thessalonians": "1TH",
+				"2Thessalonians": "2TH",
+				"1Timothy": "1TI",
+				"2Timothy": "2TI",
+				"Titus": "TIT",
+				"Philemon": "PHM",
+				"Hebrews": "HEB",
+				"James": "JAS",
+				"1Peter": "1PE",
+				"2Peter": "2PE",
+				"1John": "1JN",
+				"2John": "2JN",
+				"3John": "3JN",
+				"Jude": "JUD",
+				"Revelation": "REV"
+			};
+			v = input.split(" ");
+			if (v[1].split(":").length - 1 == 1) { // within 1 chapter
+				verse = v[1].replace(/:/, ".");
+			} else {
+				verse = v[1].substr(0, v[1].indexOf(':')); // more than 1 chapters
+			}
+			return "https://www2.bible.com/bible/139/" + m[v[0]] + "." + verse;
+		}
+
+		function get_verse_snippet(input) {
+			verses = input.split(";");
+			s = "";
+			verses.forEach(function(item, index) {
+				s = s + item + ' <a href="' + get_youversion_link(item) + '"><img borther="0" src="https://www.bible.com/assets/icons/bible/58/en.png" width="22" height="22"></a><br>';
+			})
+			return s;
+		}
+
+		function c_getJsonData() {
+			return '{"0101":"詩 1:1-6;創 1:1-2:25;太 1:1-2:12;箴 1:1-6","0102":"詩 2:1-6;創 3:1-4:26;太 2:13-3:6;箴 1:7-9","0103":"詩 2:7-12;創 5:1-7:24;太 3:7-4:11;箴 1:10-19","0104":"詩 3:1-8;創 8:1-10:32;太 4:12-25;箴 1:20-23","0105":"詩 4:1-8;創 11:1-13:5;太 5:1-26;箴 1:24-28","0106":"詩 5:1-3;創 13:6-15:21;太 5:27-48;箴 1:29-33","0107":"詩 5:4-12;創 16:1-18:19;太 6:1-24;箴 2:1-5","0108":"詩 6:1-3;創 18:20-19:38;太 6:25-7:14;箴 2:6-15","0109":"詩 6:4-10;創 20:1-22:24;太 7:15-29;箴 2:16-22","0110":"詩 7:1-9;創 23:1-24:51;太 8:1-17;箴 3:1-6","0111":"詩 7:10-17;創 24:52-26:16;太 8:18-34;箴 3:7-8","0112":"詩 8:1-9;創 26:17-27:46;太 9:1-17;箴 3:9-10","0113":"詩 9:1-6;創 28:1-29:35;太 9:18-38;箴 3:11-12","0114":"詩 9:7-12;創 30:1-31:16;太 10:1-25;箴 3:13-15","0115":"詩 9:13-20;創 31:17-32:12;太 10:26-11:6;箴 3:16-18","0116":"詩 10:1-10;創 32:13-34:31;太 11:7-30;箴 3:19-20","0117":"詩 10:11-15;創 35:1-36:43;太 12:1-21;箴 3:21-26","0118":"詩 10:16-18;創 37:1-38:30;太 12:22-45;箴 3:27-32","0119":"詩 11:1-7;創 39:1-41:16;太 12:46-13:23;箴 3:33-35","0120":"詩 12:1-8;創 41:17-42:17;太 13:24-46;箴 4:1-6","0121":"詩 13:1-6;創 42:18-43:34;太 13:47-14:12;箴 4:7-10","0122":"詩 14:1-7;創 44:1-45:28;太 14:13-36;箴 4:11-13","0123":"詩 15:1-5;創 46:1-47:31;太 15:1-28;箴 4:14-19","0124":"詩 16:1-6;創 48:1-49:33;太 15:29-16:12;箴 4:20-27","0125":"詩 16:7-11;創 50:1-26;出 1:1-2:10;太 16:13-17:9;箴 5:1-6","0126":"詩 17:1-5;出 2:11-3:22;太 17:10-27;箴 5:7-14","0127":"詩 17:6-9;出 4:1-5:21;太 18:1-22;箴 5:15-21","0128":"詩 17:10-15;出 5:22-7:24;太 18:23-19:12;箴 5:22-23","0129":"詩 18:1-6;出 7:25-9:35;太 19:13-30;箴 6:1-5","0130":"詩 18:7-15;出 10:1-12:13;太 20:1-28;箴 6:6-11","0131":"詩 18:16-24;出 12:14-13:16;太 20:29-21:22;箴 6:12-15","0201":"詩 18:25-36;出 13:17-15:18;太 21:23-46;箴 6:16-19","0202":"詩 18:37-50;出 15:19-17:7;太 22:1-33;箴 6:20-26","0203":"詩 19:1-6;出 17:8-19:15;太 22:34-23:12;箴 6:27-35","0204":"詩 19:7-14;出 19:16-21:21;太 23:13-39;箴 7:1-5","0205":"詩 20:1-9;出 21:22-23:13;太 24:1-28;箴 7:6-23","0206":"詩 21:1-7;出 23:14-25:40;太 24:29-51;箴 7:24-27","0207":"詩 21:8-13;出 26:1-27:21;太 25:1-30;箴 8:1-11","0208":"詩 22:1-18;出 28:1-43;太 25:31-26:13;箴 8:12-13","0209":"詩 22:19-31;出 29:1-30:10;太 26:14-46;箴 8:14-26","0210":"詩 23:1-6;出 30:11-31:18;太 26:47-68;箴 8:27-32","0211":"詩 24:1-6;出 32:1-33:23;太 26:69-27:14;箴 8:33-36","0212":"詩 24:7-10;出 34:1-35:9;太 27:15-31;箴 9:1-6","0213":"詩 25:1-7;出 35:10-36:38;太 27:32-66;箴 9:7-8","0214":"詩 25:8-15;出 37:1-38:31;太 28:1-20;箴 9:9-10","0215":"詩 25:16-22;出 39:1-40:38;可 1:1-28;箴 9:11-12","0216":"詩 26:1-12;利 1:1-3:17;可 1:29-2:12;箴 9:13-18","0217":"詩 27:1-6;利 4:1-5:19;可 2:13-3:6;箴 10:1-2","0218":"詩 27:7-14;利 6:1-7:27;可 3:7-30;箴 10:3-4","0219":"詩 28:1-9;利 7:28-9:6;可 3:31-4:25;箴 10:5","0220":"詩 29:1-11;利 9:7-10:20;可 4:26-5:20;箴 10:6-7","0221":"詩 30:1-5;利 11:1-12:8;可 5:21-43;箴 10:8-9","0222":"詩 30:6-12;利 13:1-59;可 6:1-29;箴 10:10","0223":"詩 31:1-8;利 14:1-57;可 6:30-56;箴 10:11-12","0224":"詩 31:9-18;利 15:1-16:28;可 7:1-23;箴 10:13-14","0225":"詩 31:19-24;利 16:29-18:30;可 7:24-8:10;箴 10:15-16","0226":"詩 32:1-5;利 19:1-20:21;可 8:11-38;箴 10:17","0227":"詩 32:6-11;利 20:22-22:16;可 9:1-29;箴 10:18","0228":"詩 33:1-11;利 22:17-23:44;可 9:30-10:12;箴 10:19","0229":"詩 91:1-16;創 2:1-25;啟 21:1-21;箴 6:16-19","0301":"詩 33:12-22;利 24:1-25:46;可 10:13-31;箴 10:20-21","0302":"詩 34:1-10;利 25:47-27:13;可 10:32-52;箴 10:22","0303":"詩 34:11-22;利 27:14-27:34;民 1:1-1:54;可 11:1-26;箴 10:23","0304":"詩 35:1-10;民 2:1-3:51;可 11:27-12:17;箴 10:24-25","0305":"詩 35:11-18;民 4:1-5:31;可 12:18-37;箴 10:26","0306":"詩 35:19-28;民 6:1-7:89;可 12:38-13:13;箴 10:27-28","0307":"詩 36:1-12;民 8:1-9:23;可 13:14-37;箴 10:29-30","0308":"詩 37:1-11;民 10:1-11:23;可 14:1-21;箴 10:31-32","0309":"詩 37:12-20;民 11:24-13:33;可 14:22-52;箴 11:1-3","0310":"詩 37:21-29;民 14:1-15:16;可 14:53-72;箴 11:4","0311":"詩 37:30-40;民 15:17-16:40;可 15:1-47;箴 11:5-6","0312":"詩 38:1-12;民 16:41-18:32;可 16:1-20;箴 11:7","0313":"詩 38:13-22;民 19:1-20:29;路 1:1-25;箴 11:8","0314":"詩 39:1-6;民 21:1-22:20;路 1:26-56;箴 11:9-11","0315":"詩 39:7-13;民 22:21-23:30;路 1:57-80;箴 11:12-13","0316":"詩 40:1-5;民 24:1-25:18;路 2:1-35;箴 11:14","0317":"詩 40:6-10;民 26:1-51;路 2:36-52;箴 11:15","0318":"詩 40:11-17;民 26:52-28:15;路 3:1-22;箴 11:16-17","0319":"詩 41:1-3;民 28:16-29:40;路 3:23-38;箴 11:18-19","0320":"詩 41:4-9;民 30:1-31:54;路 4:1-30;箴 11:20-21","0321":"詩 41:10-13;民 32:1-33:39;路 4:31-5:11;箴 11:22","0322":"詩 42:1-5;民 33:40-35:34;路 5:12-28;箴 11:23","0323":"詩 42:6-11;民 36:1-36:13;申 1:1-1:46;路 5:29-6:11;箴 11:24-26","0324":"詩 43:1-5;申 2:1-3:29;路 6:12-38;箴 11:27","0325":"詩 44:1-3;申 4:1-49;路 6:39-7:10;箴 11:28","0326":"詩 44:4-8;申 5:1-6:25;路 7:11-35;箴 11:29-31","0327":"詩 44:9-16;申 7:1-8:20;路 7:36-8:3;箴 12:1","0328":"詩 44:17-26;申 9:1-10:22;路 8:4-21;箴 12:2-3","0329":"詩 45:1-9;申 11:1-12:32;路 8:22-39;箴 12:4","0330":"詩 45:10-17;申 13:1-15:23;路 8:40-9:6;箴 12:5-7","0331":"詩 46:1-7;申 16:1-17:20;路 9:7-27;箴 12:8-9","0401":"詩 46:8-11;申 18:1-20:20;路 9:28-50;箴 12:10","0402":"詩 47:1-4;申 21:1-22:30;路 9:51-10:12;箴 12:11","0403":"詩 47:5-9;申 23:1-25:19;路 10:13-37;箴 12:12-14","0404":"詩 48:1-8;申 26:1-27:26;路 10:38-11:13;箴 12:15-17","0405":"詩 48:9-14;申 28:1-68;路 11:14-36;箴 12:18","0406":"詩 49:1-13;申 29:1-30:20;路 11:37-12:7;箴 12:19-20","0407":"詩 49:14-20;申 31:1-32:27;路 12:8-34;箴 12:21-23","0408":"詩 50:1-6;申 32:28-52;路 12:35-59;箴 12:24","0409":"詩 50:7-23;申 33:1-29;路 13:1-21;箴 12:25","0410":"詩 51:1-12;申 34:1-34:12;書 1:1-2:24;路 13:22-14:6;箴 12:26","0411":"詩 51:13-19;書 3:1-4:24;路 14:7-35;箴 12:27-28","0412":"詩 52:1-9;書 5:1-7:15;路 15:1-32;箴 13:1","0413":"詩 53:1-6;書 7:16-9:2;路 16:1-18;箴 13:2-3","0414":"詩 54:1-7;書 9:3-10:43;路 16:19-17:10;箴 13:4","0415":"詩 55:1-8;書 11:1-12:24;路 17:11-37;箴 13:5-6","0416":"詩 55:9-15;書 13:1-14:15;路 18:1-17;箴 13:7-8","0417":"詩 55:16-23;書 15:1-63;路 18:18-43;箴 13:9-10","0418":"詩 56:1-8;書 16:1-18:28;路 19:1-27;箴 13:11","0419":"詩 56:9-13;書 19:1-20:9;路 19:28-48;箴 13:12-14","0420":"詩 57:1-6;書 21:1-22:20;路 20:1-26;箴 13:15-16","0421":"詩 57:7-11;書 22:21-23:16;路 20:27-47;箴 13:17-19","0422":"詩 58:1-11;書 24:1-33;路 21:1-28;箴 13:20-23","0423":"詩 59:1-5;士 1:1-2:9;路 21:29-22:13;箴 13:24-25","0424":"詩 59:6-13;士 2:10-3:31;路 22:14-34;箴 14:1-2","0425":"詩 59:14-17;士 4:1-5:31;路 22:35-53;箴 14:3-4","0426":"詩 60:1-4;士 6:1-6:40;路 22:54-23:12;箴 14:5-6","0427":"詩 60:5-12;士 7:1-8:17;路 23:13-43;箴 14:7-8","0428":"詩 61:1-4;士 8:18-9:21;路 23:44-24:12;箴 14:9-10","0429":"詩 61:5-8;士 9:22-10:18;路 24:13-53;箴 14:11-12","0430":"詩 62:1-12;士 11:1-12:15;約 1:1-28;箴 14:13-14","0501":"詩 63:1-11;士 13:1-14:20;約 1:29-51;箴 14:15-16","0502":"詩 64:1-10;士 15:1-16:31;約 2:1-25;箴 14:17-19","0503":"詩 65:1-8;士 17:1-18:31;約 3:1-21;箴 14:20-21","0504":"詩 65:9-13;士 19:1-20:48;約 3:22-4:3;箴 14:22-24","0505":"詩 66:1-4;士 21:1-21:25;得 1:1-1:22;約 4:4-42;箴 14:25","0506":"詩 66:5-15;得 2:1-4:22;約 4:43-54;箴 14:26-27","0507":"詩 66:16-20;撒上 1:1-2:21;約 5:1-23;箴 14:28-29","0508":"詩 67:1-7;撒上 2:22-4:22;約 5:24-47;箴 14:30-31","0509":"詩 68:1-6;撒上 5:1-7:17;約 6:1-21;箴 14:32-33","0510":"詩 68:7-18;撒上 8:1-9:27;約 6:22-42;箴 14:34-35","0511":"詩 68:19-27;撒上 10:1-11:15;約 6:43-71;箴 15:1-3","0512":"詩 68:28-35;撒上 12:1-13:22;約 7:1-29;箴 15:4","0513":"詩 69:1-4;撒上 13:23-14:52;約 7:30-52;箴 15:5-7","0514":"詩 69:5-12;撒上 15:1-16:23;約 8:1-20;箴 15:8-10","0515":"詩 69:13-18;撒上 17:1-18:4;約 8:21-30;箴 15:11","0516":"詩 69:19-28;撒上 18:5-19:24;約 8:31-59;箴 15:12-14","0517":"詩 69:29-36;撒上 20:1-21:15;約 9:1-41;箴 15:15-17","0518":"詩 70:1-5;撒上 22:1-23:29;約 10:1-21;箴 15:18-19","0519":"詩 71:1-8;撒上 24:1-25:44;約 10:22-42;箴 15:20-21","0520":"詩 71:9-14;撒上 26:1-28:25;約 11:1-53;箴 15:22-23","0521":"詩 71:15-18;撒上 29:1-31:13;約 11:54-12:19;箴 15:24-26","0522":"詩 71:19-24;撒下 1:1-2:11;約 12:20-50;箴 15:27-28","0523":"詩 72:1-7;撒下 2:12-3:39;約 13:1-30;箴 15:29-30","0524":"詩 72:8-14;撒下 4:1-6:23;約 13:31-14:14;箴 15:31-32","0525":"詩 72:15-20;撒下 7:1-8:18;約 14:15-31;箴 15:33","0526":"詩 120:1-7;撒下 9:1-11:27;約 15:1-27;箴 16:1-3","0527":"詩 121:1-8;撒下 12:1-31;約 16:1-33;箴 16:4-5","0528":"詩 122:1-5;撒下 13:1-39;約 17:1-26;箴 16:6-7","0529":"詩 122:6-9;撒下 14:1-15:22;約 18:1-24;箴 16:8-9","0530":"詩 123:1-4;撒下 15:23-16:23;約 18:25-19:22;箴 16:10-11","0531":"詩 124:1-5;撒下 17:1-29;約 19:23-42;箴 16:12-13","0601":"詩 124:6-8;撒下 18:1-19:10;約 20:1-31;箴 16:14-15","0602":"詩 125:1-5;撒下 19:11-20:13;約 21:1-25;箴 16:16-17","0603":"詩 126:1-3;撒下 20:14-22:20;徒 1:1-26;箴 16:18","0604":"詩 126:4-6;撒下 22:21-23:23;徒 2:1-47;箴 16:19-20","0605":"詩 127:1-2;撒下 23:24-24:25;徒 3:1-26;箴 16:21-23","0606":"詩 127:3-5;王上 1:1-53;徒 4:1-37;箴 16:24","0607":"詩 128:1-6;王上 2:1-3:3;徒 5:1-42;箴 16:25","0608":"詩 129:1-8;王上 3:4-4:34;徒 6:1-15;箴 16:26-27","0609":"詩 130:1-4;王上 5:1-6:38;徒 7:1-29;箴 16:28-30","0610":"詩 130:5-8;王上 7:1-51;徒 7:30-50;箴 16:31-33","0611":"詩 131:1-3;王上 8:1-66;徒 7:51-8:13;箴 17:1","0612":"詩 132:1-5;王上 9:1-10:29;徒 8:14-40;箴 17:2-3","0613":"詩 132:6-12;王上 11:1-12:19;徒 9:1-25;箴 17:4-5","0614":"詩 132:13-18;王上 12:20-13:34;徒 9:26-43;箴 17:6","0615":"詩 133:1-3;王上 14:1-15:24;徒 10:1-23;箴 17:7-8","0616":"詩 134:1-3;王上 15:25-17:24;徒 10:23-48;箴 17:9-11","0617":"詩 135:1-7;王上 18:1-46;徒 11:1-30;箴 17:12-13","0618":"詩 135:8-14;王上 19:1-21;徒 12:1-23;箴 17:14-15","0619":"詩 135:15-21;王上 20:1-21:29;徒 12:24-13:15;箴 17:16","0620":"詩 136:1-9;王上 22:1-53;徒 13:16-41;箴 17:17-18","0621":"詩 136:10-22;王下 1:1-2:25;徒 13:42-14:7;箴 17:19-21","0622":"詩 136:23-26;王下 3:1-4:17;徒 14:8-28;箴 17:22","0623":"詩 137:1-9;王下 4:18-5:27;徒 15:1-35;箴 17:23","0624":"詩 138:1-8;王下 6:1-7:20;徒 15:36-16:15;箴 17:24-25","0625":"詩 139:1-12;王下 8:1-9:13;徒 16:16-40;箴 17:26","0626":"詩 139:13-24;王下 9:14-10:31;徒 17:1-34;箴 17:27-28","0627":"詩 140:1-8;王下 10:32-12:21;徒 18:1-22;箴 18:1","0628":"詩 140:9-13;王下 13:1-14:29;徒 18:23-19:12;箴 18:2-3","0629":"詩 141:1-10;王下 15:1-16:20;徒 19:13-41;箴 18:4-5","0630":"詩 142:1-7;王下 17:1-18:12;徒 20:1-38;箴 18:6-7","0701":"詩 143:1-6;王下 18:13-19:37;徒 21:1-16;箴 18:8","0702":"詩 143:7-12;王下 20:1-22:2;徒 21:17-36;箴 18:9-10","0703":"詩 144:1-8;王下 22:3-23:30;徒 21:37-22:16;箴 18:11-12","0704":"詩 144:9-15;王下 23:31-25:30;徒 22:17-23:10;箴 18:13","0705":"詩 145:1-7;代上 1:1-2:17;徒 23:11-35;箴 18:14-15","0706":"詩 145:8-13;代上 2:18-4:4;徒 24:1-27;箴 18:16-18","0707":"詩 145:14-21;代上 4:5-5:17;徒 25:1-27;箴 18:19","0708":"詩 146:1-10;代上 5:18-6:81;徒 26:1-32;箴 18:20-21","0709":"詩 147:1-11;代上 7:1-8:40;徒 27:1-20;箴 18:22","0710":"詩 147:12-20;代上 9:1-10:14;徒 27:21-44;箴 18:23-24","0711":"詩 148:1-14;代上 11:1-12:18;徒 28:1-31;箴 19:1-3","0712":"詩 149:1-9;代上 12:19-14:17;羅 1:1-17;箴 19:4-5","0713":"詩 150:1-6;代上 15:1-16:36;羅 1:18-32;箴 19:6-7","0714":"詩 73:1-14;代上 16:37-18:17;羅 2:1-24;箴 19:8-9","0715":"詩 73:15-28;代上 19:1-21:30;羅 2:25-3:8;箴 19:10-12","0716":"詩 74:1-11;代上 22:1-23:32;羅 3:9-31;箴 19:13-14","0717":"詩 74:12-23;代上 24:1-26:11;羅 4:1-12;箴 19:15-16","0718":"詩 75:1-10;代上 26:12-27:34;羅 4:13-5:5;箴 19:17","0719":"詩 76:1-9;代上 28:1-29:30;羅 5:6-21;箴 19:18-19","0720":"詩 76:10-12;代下 1:1-3:17;羅 6:1-23;箴 19:20-21","0721":"詩 77:1-15;代下 4:1-6:11;羅 7:1-13;箴 19:22-23","0722":"詩 77:16-20;代下 6:12-7:10;羅 7:14-8:8;箴 19:24-25","0723":"詩 78:1-16;代下 7:11-10:19;羅 8:9-21;箴 19:26","0724":"詩 78:17-31;代下 11:1-13:22;羅 8:22-39;箴 19:27-29","0725":"詩 78:32-55;代下 14:1-16:14;羅 9:1-21;箴 20:1","0726":"詩 78:56-64;代下 17:1-18:34;羅 9:22-10:13;箴 20:2-3","0727":"詩 78:65-72;代下 19:1-20:37;羅 10:14-11:12;箴 20:4-6","0728":"詩 79:1-8;代下 21:1-23:21;羅 11:13-36;箴 20:7","0729":"詩 79:9-13;代下 24:1-25:28;羅 12:1-21;箴 20:8-10","0730":"詩 80:1-7;代下 26:1-28:27;羅 13:1-14;箴 20:11","0731":"詩 80:8-19;代下 29:1-36;羅 14:1-23;箴 20:12","0801":"詩 81:1-7;代下 30:1-31:21;羅 15:1-22;箴 20:13-15","0802":"詩 81:8-16;代下 32:1-33:13;羅 15:23-16:7;箴 20:16-18","0803":"詩 82:1-8;代下 33:14-34:33;羅 16:8-27;箴 20:19","0804":"詩 83:1-8;代下 35:1-36:23;林前 1:1-17;箴 20:20-21","0805":"詩 83:9-18;拉 1:1-2:70;林前 1:18-2:5;箴 20:22-23","0806":"詩 84:1-4;拉 3:1-4:24;林前 2:6-3:4;箴 20:24-25","0807":"詩 84:5-8;拉 5:1-6:22;林前 3:5-23;箴 20:26-27","0808":"詩 84:9-12;拉 7:1-8:20;林前 4:1-21;箴 20:28-30","0809":"詩 85:1-7;拉 8:21-9:15;林前 5:1-13;箴 21:1-2","0810":"詩 85:8-13;拉 10:1-44;林前 6:1-20;箴 21:3","0811":"詩 86:1-7;尼 1:1-3:14;林前 7:1-24;箴 21:4","0812":"詩 86:8-17;尼 3:15-5:13;林前 7:25-40;箴 21:5-7","0813":"詩 87:1-7;尼 5:14-7:60;林前 8:1-13;箴 21:8-10","0814":"詩 88:1-7;尼 7:61-9:21;林前 9:1-18;箴 21:11-12","0815":"詩 88:8-18;尼 9:22-10:39;林前 9:19-10:13;箴 21:13","0816":"詩 89:1-13;尼 11:1-12:26;林前 10:14-11:2;箴 21:14-16","0817":"詩 89:14-37;尼 12:27-13:31;林前 11:3-16;箴 21:17-18","0818":"詩 89:38-45;斯 1:1-3:15;林前 11:17-34;箴 21:19-20","0819":"詩 89:46-52;斯 4:1-7:10;林前 12:1-26;箴 21:21-22","0820":"詩 90:1-10;斯 8:1-10:3;林前 12:27-13:13;箴 21:23-24","0821":"詩 90:11-17;伯 1:1-3:26;林前 14:1-17;箴 21:25-26","0822":"詩 91:1-8;伯 4:1-7:21;林前 14:18-40;箴 21:27","0823":"詩 91:9-16;伯 8:1-11:20;林前 15:1-28;箴 21:28-29","0824":"詩 92:1-8;伯 12:1-15:35;林前 15:29-58;箴 21:30-31","0825":"詩 92:9-15;伯 16:1-19:29;林前 16:1-24;箴 22:1","0826":"詩 93:1-5;伯 20:1-22:30;林後 1:1-11;箴 22:2-4","0827":"詩 94:1-11;伯 23:1-27:23;林後 1:12-2:11;箴 22:5-6","0828":"詩 94:12-23;伯 28:1-30:31;林後 2:12-17;箴 22:7","0829":"詩 95:1-11;伯 31:1-33:33;林後 3:1-18;箴 22:8-9","0830":"詩 96:1-6;伯 34:1-36:33;林後 4:1-12;箴 22:10-12","0831":"詩 96:7-13;伯 37:1-39:30;林後 4:13-5:10;箴 22:13","0901":"詩 97:1-6;伯 40:1-42:17;林後 5:11-21;箴 22:14","0902":"詩 97:7-12;傳 1:1-3:22;林後 6:1-13;箴 22:15","0903":"詩 98:1-9;傳 4:1-6:12;林後 6:14-7:7;箴 22:16","0904":"詩 99:1-9;傳 7:1-9:18;林後 7:8-16;箴 22:17-19","0905":"詩 100:1-5;傳 10:1-12:14;林後 8:1-15;箴 22:20-21","0906":"詩 101:1-8;歌 1:1-4:16;林後 8:16-24;箴 22:22-23","0907":"詩 102:1-11;歌 5:1-8:14;林後 9:1-15;箴 22:24-25","0908":"詩 102:12-17;賽 1:1-2:22;林後 10:1-18;箴 22:26-27","0909":"詩 102:18-28;賽 3:1-5:30;林後 11:1-15;箴 22:28-29","0910":"詩 103:1-5;賽 6:1-7:25;林後 11:16-33;箴 23:1-3","0911":"詩 103:6-19;賽 8:1-9:21;林後 12:1-10;箴 23:4-5","0912":"詩 103:20-22;賽 10:1-11:16;林後 12:11-21;箴 23:6-8","0913":"詩 104:1-9;賽 12:1-14:32;林後 13:1-14;箴 23:9-11","0914":"詩 104:10-18;賽 15:1-18:7;加 1:1-24;箴 23:12","0915":"詩 104:19-30;賽 19:1-21:17;加 2:1-16;箴 23:13-14","0916":"詩 104:31-35;賽 22:1-24:23;加 2:17-3:9;箴 23:15-16","0917":"詩 105:1-7;賽 25:1-28:13;加 3:10-22;箴 23:17-18","0918":"詩 105:8-15;賽 28:14-30:11;加 3:23-4:31;箴 23:19-21","0919":"詩 105:16-22;賽 30:12-33:12;加 5:1-12;箴 23:22","0920":"詩 105:23-36;賽 33:13-36:22;加 5:13-26;箴 23:23","0921":"詩 105:37-45;賽 37:1-38:22;加 6:1-18;箴 23:24","0922":"詩 106:1-5;賽 39:1-41:16;弗 1:1-23;箴 23:25-28","0923":"詩 106:6-12;賽 41:17-43:13;弗 2:1-22;箴 23:29-35","0924":"詩 106:13-23;賽 43:14-45:10;弗 3:1-21;箴 24:1-2","0925":"詩 106:24-31;賽 45:11-48:11;弗 4:1-16;箴 24:3-4","0926":"詩 106:32-39;賽 48:12-50:11;弗 4:17-32;箴 24:5-6","0927":"詩 106:40-48;賽 51:1-53:12;弗 5:1-33;箴 24:7","0928":"詩 107:1-9;賽 54:1-57:13;弗 6:1-24;箴 24:8","0929":"詩 107:10-16;賽 57:14-59:21;腓 1:1-26;箴 24:9-10","0930":"詩 107:17-22;賽 60:1-62:5;腓 1:27-2:18;箴 24:11-12","1001":"詩 107:23-32;賽 62:6-65:25;腓 2:19-3:4;箴 24:13-14","1002":"詩 107:33-43;賽 66:1-24;腓 3:4-21;箴 24:15-16","1003":"詩 108:1-5;耶 1:1-2:30;腓 4:1-23;箴 24:17-20","1004":"詩 108:6-13;耶 2:31-4:18;西 1:1-20;箴 24:21-22","1005":"詩 109:1-15;耶 4:19-6:14;西 1:21-2:7;箴 24:23-25","1006":"詩 109:16-31;耶 6:15-8:7;西 2:8-23;箴 24:26","1007":"詩 110:1-7;耶 8:8-9:26;西 3:1-17;箴 24:27","1008":"詩 111:1-10;耶 10:1-11:23;西 3:18-4:18;箴 24:28-29","1009":"詩 112:1-10;耶 12:1-14:10;帖前 1:1-2:9;箴 24:30-34","1010":"詩 113:1-9;耶 14:11-16:15;帖前 2:10-3:13;箴 25:1-5","1011":"詩 114:1-8;耶 16:16-18:23;帖前 4:1-5:3;箴 25:6-7","1012":"詩 115:1-8;耶 19:1-21:14;帖前 5:4-28;箴 25:8-10","1013":"詩 115:9-13;耶 22:1-23:20;帖後 1:1-12;箴 25:11-14","1014":"詩 115:14-18;耶 23:21-25:38;帖後 2:1-17;箴 25:15","1015":"詩 116:1-6;耶 26:1-27:22;帖後 3:1-18;箴 25:16","1016":"詩 116:7-14;耶 28:1-29:32;提前 1:1-20;箴 25:17","1017":"詩 116:15-19;耶 30:1-31:26;提前 2:1-15;箴 25:18-19","1018":"詩 117:1-2;耶 31:27-32:44;提前 3:1-16;箴 25:20-22","1019":"詩 118:1-4;耶 33:1-34:22;提前 4:1-16;箴 25:23-24","1020":"詩 118:5-21;耶 35:1-36:32;提前 5:1-25;箴 25:25-27","1021":"詩 118:22-29;耶 37:1-38:28;提前 6:1-21;箴 25:28","1022":"詩 119:1-8;耶 39:1-41:18;提後 1:1-18;箴 26:1-2","1023":"詩 119:9-16;耶 42:1-44:23;提後 2:1-21;箴 26:3-5","1024":"詩 119:17-24;耶 44:24-47:7;提後 2:22-3:17;箴 26:6-8","1025":"詩 119:25-32;耶 48:1-49:22;提後 4:1-22;箴 26:9-12","1026":"詩 119:33-40;耶 49:23-50:46;多 1:1-16;箴 26:13-16","1027":"詩 119:41-48;耶 51:1-53;多 2:1-15;箴 26:17","1028":"詩 119:49-56;耶 51:54-52:34;多 3:1-15;箴 26:18-19","1029":"詩 119:57-64;哀 1:1-2:19;門 1-25;箴 26:20","1030":"詩 119:65-72;哀 2:20-3:66;來 1:1-14;箴 26:21-22","1031":"詩 119:73-80;哀 4:1-5:22;來 2:1-18;箴 26:23","1101":"詩 119:81-88;結 1:1-3:15;來 3:1-19;箴 26:24-26","1102":"詩 119:89-96;結 3:16-6:14;來 4:1-16;箴 26:27","1103":"詩 119:97-104;結 7:1-9:11;來 5:1-14;箴 26:28","1104":"詩 119:105-112;結 10:1-11:25;來 6:1-20;箴 27:1-2","1105":"詩 119:113-120;結 12:1-14:11;來 7:1-17;箴 27:3","1106":"詩 119:121-128;結 14:12-16:42;來 7:18-28;箴 27:4-6","1107":"詩 119:129-136;結 16:43-17:24;來 8:1-13;箴 27:7-9","1108":"詩 119:137-144;結 18:1-19:14;來 9:1-10;箴 27:10","1109":"詩 119:145-152;結 20:1-49;來 9:11-28;箴 27:11","1110":"詩 119:153-160;結 21:1-22:31;來 10:1-17;箴 27:12","1111":"詩 119:161-168;結 23:1-49;來 10:18-39;箴 27:13","1112":"詩 119:169-176;結 24:1-26:21;來 11:1-16;箴 27:14","1113":"詩 120:1-7;結 27:1-28:26;來 11:17-31;箴 27:15-16","1114":"詩 121:1-8;結 29:1-30:26;來 11:32-12:13;箴 27:17","1115":"詩 122:1-9;結 31:1-32:32;來 12:14-29;箴 27:18-20","1116":"詩 123:1-4;結 33:1-34:31;來 13:1-25;箴 27:21-22","1117":"詩 124:1-5;結 35:1-36:38;雅 1:1-18;箴 27:23-27","1118":"詩 124:6-8;結 37:1-38:23;雅 1:19-2:17;箴 28:1","1119":"詩 125:1-5;結 39:1-40:27;雅 2:18-3:18;箴 28:2","1120":"詩 126:1-3;結 40:28-41:26;雅 4:1-17;箴 28:3-5","1121":"詩 126:4-6;結 42:1-43:27;雅 5:1-20;箴 28:6-7","1122":"詩 127:1-5;結 44:1-45:12;彼前 1:1-12;箴 28:8-10","1123":"詩 128:1-6;結 45:13-46:24;彼前 1:13-2:10;箴 28:11","1124":"詩 129:1-8;結 47:1-48:35;彼前 2:11-3:7;箴 28:12-13","1125":"詩 130:1-4;但 1:1-2:23;彼前 3:8-4:6;箴 28:14","1126":"詩 130:5-8;但 2:24-3:30;彼前 4:7-5:14;箴 28:15-16","1127":"詩 131:1-3;但 4:1-37;彼後 1:1-21;箴 28:17-18","1128":"詩 132:1-5;但 5:1-31;彼後 2:1-22;箴 28:19-20","1129":"詩 132:6-12;但 6:1-28;彼後 3:1-18;箴 28:21-22","1130":"詩 132:13-18;但 7:1-28;約一 1:1-10;箴 28:23-24","1201":"詩 133:1-3;但 8:1-27;約一 2:1-17;箴 28:25-26","1202":"詩 134:1-3;但 9:1-11:1;約一 2:18-3:6;箴 28:27-28","1203":"詩 135:1-7;但 11:2-35;約一 3:7-24;箴 29:1","1204":"詩 135:8-14;但 11:36-12:13;約一 4:1-21;箴 29:2-4","1205":"詩 135:15-21;何 1:1-3:5;約一 5:1-21;箴 29:5-8","1206":"詩 136:1-9;何 4:1-5:15;約二 1-13;箴 29:9-11","1207":"詩 136:10-26;何 6:1-9:17;約三 1-15;箴 29:12-14","1208":"詩 137:1-9;何 10:1-14:9;猶 1-25;箴 29:15-17","1209":"詩 138:1-8;珥 1:1-3:21;啟 1:1-20;箴 29:18","1210":"詩 139:1-6;摩 1:1-3:15;啟 2:1-17;箴 29:19-20","1211":"詩 139:7-12;摩 4:1-6:14;啟 2:18-3:6;箴 29:21-22","1212":"詩 139:13-18;摩 7:1-9:15;啟 3:7-22;箴 29:23","1213":"詩 139:19-24;俄 1-21;啟 4:1-11;箴 29:24-25","1214":"詩 140:1-8;拿 1:1-4:11;啟 5:1-14;箴 29:26-27","1215":"詩 140:9-13;彌 1:1-4:13;啟 6:1-17;箴 30:1-4","1216":"詩 141:1-10;彌 5:1-7:20;啟 7:1-17;箴 30:5-6","1217":"詩 142:1-7;鴻 1:1-3:19;啟 8:1-13;箴 30:7-9","1218":"詩 143:1-6;哈 1:1-3:19;啟 9:1-21;箴 30:10","1219":"詩 143:7-12;番 1:1-3:20;啟 10:1-11;箴 30:11-14","1220":"詩 144:1-8;該 1:1-2:23;啟 11:1-19;箴 30:15-16","1221":"詩 144:9-15;亞 1:1-21;啟 12:1-13:1;箴 30:17","1222":"詩 145:1-7;亞 2:1-3:10;啟 13:2-18;箴 30:18-20","1223":"詩 145:8-13;亞 4:1-5:11;啟 14:1-20;箴 30:21-23","1224":"詩 145:14-21;亞 6:1-7:14;啟 15:1-8;箴 30:24-28","1225":"詩 146:1-10;亞 8:1-23;啟 16:1-21;箴 30:29-31","1226":"詩 147:1-11;亞 9:1-17;啟 17:1-18;箴 30:32","1227":"詩 147:12-20;亞 10:1-11:17;啟 18:1-24;箴 30:33","1228":"詩 148:1-6;亞 12:1-13:9;啟 19:1-21;箴 31:1-7","1229":"詩 148:7-14;亞 14:1-21;啟 20:1-15;箴 31:8-9","1230":"詩 149:1-9;瑪 1:1-2:17;啟 21:1-27;箴 31:10-24","1231":"詩 150:1-6;瑪 3:1-4:6;啟 22:1-21;箴 31:25-31"}';
+		}
+		//////////////////////////////////////////////////////////
+		// final steps
+		//////////////////////////////////////////////////////////
+
+		// last step: center content vertically and horizontally
+		//$(window).resize(function() { $("div[data-role='content']").center(); });
+		//$(window).resize();
+		window.scrollTo(0, 1); // hide URL bar
+	});
 </script>
 
 </html>
