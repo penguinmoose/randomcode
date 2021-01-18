@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Moving Squares</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #25354b;
+    }
+
+    #toolbar {
+      position: fixed;
+      background-color: #515f73;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #score {
+      margin-right: 50px;
+    }
+
+    .square {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      position: absolute;
+      font-size: 50px;
+      cursor: pointer;
+    }
+
+    #a {
+      background-color: red;
+    }
+
+    #b {
+      background-color: orange;
+    }
+
+    #c {
+      background-color: yellow;
+    }
+
+    #d {
+      background-color: green;
+    }
+
+    #e {
+      background-color: blue;
+    }
+
+    #f {
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="toolbar" onclick="start();">
+    <div>
+      <span id="score"></span>
+      <span id="text">Click the gray bar at the top to start.</span>
+    </div>
+  </div>
+
+  <div class="square" id='a' onclick="squareClicked('A');">A</div>
+  <div class="square" id='b' onclick="squareClicked('B');">B</div>
+  <div class="square" id='c' onclick="squareClicked('C');">C</div>
+  <div class="square" id='d' onclick="squareClicked('D');">D</div>
+  <div class="square" id='e' onclick="squareClicked('E');">E</div>
+  <div class="square" id='f' onclick="squareClicked('F');">F</div>
+
+  <script>
+    function createOrder(lengh) {
+      var squareLetters = "ABCDEF";
+      var result = "";
+      squareLetters = squareLetters.split("");
+      for (i = 0; i < lengh; i++) {
+        result = result + squareLetters[Math.floor(Math.random() * 5)];
+      }
+
+      return result;
+    }
+
+    var score = 0;
+    var speed = 50; // in pixels per second
+    var order = createOrder(2);
+    var orderIndex = 0;
+    var rounds = 0;
+
+    function updateText() {
+      document.getElementById("text").innerHTML = "Press squares " + order + " in order.";
+      document.getElementById("score").innerHTML = "Score: " + score;
+    }
+
+    function squareClicked(square) {
+      if (square == order.split("")[orderIndex]) {
+        if (orderIndex < (order.length - 1)) {
+          score = score + 52;
+          updateText();
+          orderIndex = orderIndex + 1;
+        } else {
+          speed = speed + 80;
+          score = score + 137;
+          orderIndex = 0;
+          rounds = rounds + 1;
+          order = createOrder(rounds + 2);
+          updateText(); // call updateText at the very end because the order is also changed
+        }
+      } else { // Player clicked wrong square
+        score = score - 73;
+        speed = speed - 60;
+        order = createOrder(rounds + 1);
+        updateText();
+      }
+
+      if (score < 0) {
+        alert("Game over!");
+        window.location = window.location; // reset the game by reloading
+      }
+    }
+
+    function RandomObjectMover(obj, container) {
+      this.$object = obj;
+      this.$container = container;
+      this.container_is_window = container === window;
+      this.pixels_per_second = speed;
+      this.current_position = {
+        x: 0,
+        y: 0
+      };
+      this.is_running = false;
+    }
+
+    // Set the speed of movement in Pixels per Second.
+    RandomObjectMover.prototype.setSpeed = function(pxPerSec) {
+      this.pixels_per_second = pxPerSec;
+    }
+
+    RandomObjectMover.prototype._getContainerDimensions = function() {
+      if (this.$container === window) {
+        return {
+          'height': this.$container.innerHeight,
+          'width': this.$container.innerWidth
+        };
+      } else {
+        return {
+          'height': this.$container.clientHeight,
+          'width': this.$container.clientWidth
+        };
+      }
+    }
+
+    RandomObjectMover.prototype._generateNewPosition = function() {
+      // Get container dimensions minus div size
+      var containerSize = this._getContainerDimensions();
+      var availableHeight = containerSize.height - this.$object.clientHeight;
+      var availableWidth = containerSize.width - this.$object.clientHeight;
+
+      // Pick a random place in the space
+      var y = Math.floor(Math.random() * availableHeight);
+      var x = Math.floor(Math.random() * availableWidth);
+
+      return {
+        x: x,
+        y: y
+      };
+    }
+
+    RandomObjectMover.prototype._calcDelta = function(a, b) {
+      var dx = a.x - b.x;
+      var dy = a.y - b.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      return dist;
+    }
+
+    RandomObjectMover.prototype._moveOnce = function() {
+      // Pick a new spot on the page
+      var next = this._generateNewPosition();
+
+      // How far do we have to move?
+      var delta = this._calcDelta(this.current_position, next);
+
+      // Speed of this transition, rounded to 2DP
+      var speed = Math.round((delta / this.pixels_per_second) * 100) / 100;
+
+      this.$object.style.transition = 'transform ' + speed + 's linear';
+      this.$object.style.transform = 'translate3d(' + next.x + 'px, ' + next.y + 'px, 0)';
+
+      this.current_position = next;
+    };
+
+    RandomObjectMover.prototype.start = function() {
+      if (this.is_running) {
+        return;
+      }
+
+      // Make sure our object has the right css set
+      this.$object.willChange = 'transform';
+      this.$object.pointerEvents = 'auto';
+
+      this.boundEvent = this._moveOnce.bind(this)
+
+      // Bind callback to keep things moving
+      this.$object.addEventListener('transitionend', this.boundEvent);
+
+      // Start it moving
+      this._moveOnce();
+
+      this.is_running = true;
+    }
+
+    RandomObjectMover.prototype.stop = function() {
+      if (!this.is_running) {
+        return;
+      }
+
+      this.$object.removeEventListener('transitionend', this.boundEvent);
+      this.is_running = false;
+    }
+
+    // Init it
+    var square1 = new RandomObjectMover(document.getElementById('a'), window);
+    var square2 = new RandomObjectMover(document.getElementById('b'), window);
+    var square3 = new RandomObjectMover(document.getElementById('c'), window);
+    var square4 = new RandomObjectMover(document.getElementById('d'), window);
+    var square5 = new RandomObjectMover(document.getElementById('e'), window);
+    var square6 = new RandomObjectMover(document.getElementById('f'), window);
+
+    function start() {
+      square1.start();
+      square2.start();
+      square3.start();
+      square4.start();
+      square5.start();
+      square6.start();
+
+      updateText();
+      document.getElementById("toolbar").style.cursor = "default";
+    }
+
+    function stop() {
+      square1.stop();
+      square2.stop();
+      square3.stop();
+      square4.stop();
+      square5.stop();
+      square6.stop();
+    }
+  </script>
+</body>
+
+</html>
