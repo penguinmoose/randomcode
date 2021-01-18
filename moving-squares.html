@@ -64,7 +64,8 @@
   <div id="toolbar" onclick="start();">
     <div>
       <span id="score"></span>
-      <span id="text">Click the gray bar at the top to start.</span>
+      <span id="text">You will see which squares to press here when the game is started. Remember what you need to press in order because the order won't be shown when you press the first one. Press the squares in the order you remembered. The
+        squares will move faster as you progress. <br><br> Click this bar to start.</span>
     </div>
   </div>
 
@@ -93,16 +94,26 @@
     var orderIndex = 0;
     var rounds = 0;
 
-    function updateText() {
-      document.getElementById("text").innerHTML = "Press squares " + order + " in order.";
-      document.getElementById("score").innerHTML = "Score: " + score;
+    function updateText(whatText) {
+      if (whatText == "order") {
+        document.getElementById("text").innerHTML = "Remember the order " + order + " and press them in order.";
+      } else if (whatText == "score") {
+        document.getElementById("score").innerHTML = "Score: " + score;
+      } else {
+        document.getElementById("text").innerHTML = "Remember the order " + order + " and press them in order.";
+        document.getElementById("score").innerHTML = "Score: " + score;
+      }
     }
 
     function squareClicked(square) {
+      if (orderIndex == 0) {
+        document.getElementById("text").innerHTML = "Press the squares in the order that you remembered.";
+      }
+
       if (square == order.split("")[orderIndex]) {
         if (orderIndex < (order.length - 1)) {
           score = score + 52;
-          updateText();
+          updateText("score");
           orderIndex = orderIndex + 1;
         } else {
           speed = speed + 80;
