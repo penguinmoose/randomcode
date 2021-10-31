@@ -112,20 +112,20 @@
 
       if (square == order.split("")[orderIndex]) {
         if (orderIndex < (order.length - 1)) {
-          score = score + 52;
+          score = score + 78;
           updateText("score");
           orderIndex = orderIndex + 1;
         } else {
-          speed = speed + 80;
-          score = score + 137;
+          speed = speed - (speed / 5); // the change is proportional to the original value so the speed never becomes 0
+          score = score + 210;
           orderIndex = 0;
           rounds = rounds + 1;
           order = createOrder(rounds + 2);
-          updateText(); // call updateText at the very end because the order is also changed
+          updateText();
         }
       } else { // Player clicked wrong square
-        score = score - 73;
-        speed = speed - 60;
+        score = score - 129;
+        speed = speed - 174;
         order = createOrder(rounds + 1);
         updateText();
       }
@@ -198,7 +198,7 @@
       var delta = this._calcDelta(this.current_position, next);
 
       // Speed of this transition, rounded to 2DP
-      var speed = Math.round((delta / this.pixels_per_second) * 100) / 100;
+      //var speed = Math.round((delta / this.pixels_per_second) * 100) / 100;
 
       this.$object.style.transition = 'transform ' + speed + 's linear';
       this.$object.style.transform = 'translate3d(' + next.x + 'px, ' + next.y + 'px, 0)';
