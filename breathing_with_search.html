@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Breathing Animation</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Breathing animation helps you mindfully breathe. Inhale and exhale as the circles get larger and smaller.">
+  <meta name="keywords" content="breathing, breathe, breath, mindful, mindfulness, animation, circles">
+  <meta name="subject" content="mindfulness">
+  <meta name="language" content="en-us">
+  <meta name="revisit-after" content="7 days">
+  <meta name="robots" content="index, follow">
+
+  <meta name="og:title" content="Breathing Animation">
+  <meta name="og:type" content="animation">
+  <meta name="og:url" content="https://www.johanneschan.com/randomcode/breathing.html">
+  <meta name="og:image" content="https://www.johanneschan.com/randomcode/breathing-image.png">
+  <meta name="og:site_name" content="Johanneschan">
+  <meta name="og:description" content="Breathing animation helps you mindfully breathe. Inhale and exhale as the circles get larger and smaller.">
+
+  <link id="favicon" rel="icon" href="breathing-image.png" type="image/ico" sizes="16x16">
+  <link rel="apple-touch-icon" href="breathing-image.png">
+
+  <style>
+    .heading {
+      font-size: 20pt;
+      font-family: sans-serif;
+      text-align: center;
+      border-width: thick;
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #a7a7a7;
+    }
+
+    #left {
+      top: 50%;
+      left: calc(50% - 95px);
+      background-color: #27fa5b;
+      animation: outer 6s infinite;
+    }
+
+    #right {
+      top: 50%;
+      left: calc(50% + 95px);
+      background-color: #27fa5b;
+      animation: outer 6s infinite;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: #66ff8c;
+      position: absolute;
+      animation: circle 6s infinite;
+    }
+
+    @keyframes circle {
+      0% {
+        background-color: #66ff8c;
+        width: 100px;
+        height: 100px;
+      }
+
+      50% {
+        background-color: #66cdff;
+        width: 300px;
+        height: 300px;
+      }
+
+      100% {
+        background-color: #66ff8c;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @keyframes outer {
+      0% {
+        background-color: #0af946;
+        width: 300px;
+        height: 300px;
+      }
+
+      50% {
+        background-color: #37c3ff;
+        width: 100px;
+        height: 100px;
+      }
+
+      100% {
+        background-color: #0af946;
+        width: 300px;
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script async src="https://cse.google.com/cse.js?cx=002606cdbeabf425b">
+  </script>
+  <div class="gcse-search"></div>
+  <h1 class="heading">Breath with these circles as it gets small then becomes big.</h1>
+
+  <div class="circle"></div>
+  <div class="circle" id="left"></div>
+  <div class="circle" id="right"></div>
+</body>
+
+</html>
